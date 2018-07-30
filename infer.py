@@ -83,6 +83,19 @@ def exportLogs(logs, f="demo/logs.log"):
         file.write(logs)
         file.close()
 
+def createCurrentLog(fp):
+    filepath = fp.split("/")
+    f = "{}.log".format(filepath[len(filepath) - 1].split(".")[0])
+    if(isfile(f)):
+        delayPrint("Resuming {} file".format(f), PRINT_SECONDS)
+        file = open(f, "w")
+        file.close()
+    else:
+        print("{} log file does not exist!".format(f))
+        print("Creating {} file...".format(f))
+        file = open(f, "w+")
+        file.close()
+
 def readResume(f="demo/resume.txt"):
     fp_resume = ""
     delayPrint("Checking {} file...".format(f), PRINT_SECONDS)
@@ -138,6 +151,7 @@ def loop(paintings_path, paintings, current_painting):
     for x in range(index, last):
         current_painting_path = paintings_path + "/" + paintings[x] + ".jpg"
         delayPrint(current_painting_path, PRINT_SECONDS)
+        createCurrentLog(current_painting)
         segmentation(current_painting_path, paintings[x])
         if x == last - 1:
             writeResume(current_painting_path)
@@ -158,7 +172,7 @@ def segmentation(path, current_painting):
     in_ = in_.transpose((2,0,1))
 
     # Own code:
-    # Set mode to GPU
+    # Set mode to CPU since GPU can't handle much memory
     caffe.set_mode_cpu()
     # load net
     net = caffe.Net('voc-fcn8s/deploy.prototxt', 'voc-fcn8s/fcn8s-heavy-pascal.caffemodel', caffe.TEST)
