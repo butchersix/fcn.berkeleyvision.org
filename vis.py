@@ -134,7 +134,7 @@ def totalNumPixels(seg, palette):
     return len(palette[seg.flat])
 
 def extractColors(image):
-    # extract 255 colors from image
+    # extract 255 ^ 3 colors from image
     colors = colorgram.extract(image, 256**3)
 
     # list of rgb and hsv colors present in image and its proportion in the image
