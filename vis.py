@@ -149,7 +149,7 @@ def extractColors(image):
         blue = color.rgb.b
         h, s, v = colorsys.rgb_to_hsv(red, green, blue)
         h *= 360
-        colo_name = ""
+        color_name = ""
 
         # equivalent values of hsv in degrees
         if (h >= 0 and h < 60) or h == 360:
