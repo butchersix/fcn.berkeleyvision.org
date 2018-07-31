@@ -164,7 +164,7 @@ def loop(paintings_path, paintings, current_painting):
         delayPrint(current_painting_path, PRINT_SECONDS)
         createCurrentLog(paintings[x])
         segmentation(current_painting_path, paintings[x])
-        if n > 1: # rest (60 seconds) if images are greater to 1
+        if int(n) > 1: # rest (60 seconds) if images are greater to 1
             time.sleep(REST_SECONDS)
         if x == last - 1:
             writeResume(current_painting_path)

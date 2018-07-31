@@ -123,9 +123,8 @@ def vis_seg(img, seg, palette, alpha=0.5, logfile="unknown.log"):
         exportLogs("Class ID: {:d}".format(class_index))
         exportLogs("Class Color: {}".format(class_color))
         exportLogs("Class Name: {:s}".format(class_name))
-        exportLogs("Class Name: {:s}".format(class_name), logfile, False)
         exportLogs("Percentage of region: {:.3f}%".format(percentage))
-        exportLogs("Percentage of region: {}".format(value), logfile, False)
+        exportLogs("C{:d} - {:s}: {}".format(class_index, class_name, value), logfile, False)
         exportLogs("\n")
         # exportLogs("\n", logfile, False)
     # end
@@ -194,12 +193,13 @@ def extractColors(image, logfile="unknown.log"):
     # show list of hue colors
     exportLogs("\n\n---------- Hue Colors - Hue Proportions ----------\n")
     hue_colors = ["Red    ", "Yellow ", "Green ", "Cyan   ", "Blue   ", "Magenta"] # 7 spaces
+    hue_colors1 = ["Red", "Yellow", "Green", "Cyan", "Blue", "Magenta"] # 7 spaces
     hue_color_count = [red_c, yellow_c, green_c, cyan_c, blue_c, magenta_c]
     hue_color_proportion = [red_p, yellow_p, green_p, cyan_p, blue_p, magenta_p]
     exportLogs("Color\t -\t Color Proportion\t -\t No. of instances")
     for x in range(0, len(hue_colors)):
         exportLogs("{}\t -\t {:.3f}%\t\t\t -\t {}".format(hue_colors[x], hue_color_proportion[x] * 100, hue_color_count[x]))
-        exportLogs("{}: {} - {}".format(hue_colors[x], hue_color_proportion[x], hue_color_count[x]), logfile, False)
+        exportLogs("{}: {} - {}".format(hue_colors1[x], hue_color_proportion[x], hue_color_count[x]), logfile, False)
 
     # show total number of colors present in the image
     exportLogs("--------------------------------------------------")
