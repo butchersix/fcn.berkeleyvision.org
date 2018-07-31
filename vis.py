@@ -61,7 +61,7 @@ def color_seg(seg, palette):
     return palette[seg.flat].reshape(seg.shape + (3,))
 
 
-def vis_seg(img, seg, palette, alpha=0.5):
+def vis_seg(img, seg, palette, alpha=0.5, logfile="unknown.log"):
     """
     Visualize segmentation as an overlay on the image.
 
@@ -116,14 +116,18 @@ def vis_seg(img, seg, palette, alpha=0.5):
         class_name = class_names[class_index]
 
         # compute region percentage of class from the image
-        percentage = (pixel_classes.count(tuple(i))/total_pixels) * 100
+        value = (pixel_classes.count(tuple(i))/total_pixels)
+        percentage = value * 100
         
         # print results
         exportLogs("Class ID: {:d}".format(class_index))
         exportLogs("Class Color: {}".format(class_color))
         exportLogs("Class Name: {:s}".format(class_name))
+        exportLogs("Class Name: {:s}".format(class_name), logfile, False)
         exportLogs("Percentage of region: {:.3f}%".format(percentage))
+        exportLogs("Percentage of region: {}".format(value), logfile, False)
         exportLogs("\n")
+        # exportLogs("\n", logfile, False)
     # end
     return vis
 
@@ -133,7 +137,7 @@ def vis_seg(img, seg, palette, alpha=0.5):
 def totalNumPixels(seg, palette):
     return len(palette[seg.flat])
 
-def extractColors(image):
+def extractColors(image, logfile="unknown.log"):
     # extract 255 ^ 3 colors from image
     colors = colorgram.extract(image, 256**3)
 
@@ -195,6 +199,7 @@ def extractColors(image):
     exportLogs("Color\t -\t Color Proportion\t -\t No. of instances")
     for x in range(0, len(hue_colors)):
         exportLogs("{}\t -\t {:.3f}%\t\t\t -\t {}".format(hue_colors[x], hue_color_proportion[x] * 100, hue_color_count[x]))
+        exportLogs("{}: {} - {}".format(hue_colors[x], hue_color_proportion[x], hue_color_count[x]), logfile, False)
 
     # show total number of colors present in the image
     exportLogs("--------------------------------------------------")
@@ -205,8 +210,9 @@ def delayPrint(string, seconds): # n seconds delay printing
     print(string)
     exportLogs(string)
 
-def exportLogs(logs, f="demo/logs.log"):
-    print(logs)
+def exportLogs(logs, f="demo/logs.log", flag=True):
+    if flag:
+        print(logs)
     logs += "\n"
     if(isfile(f)):
         file = open(f, "a")

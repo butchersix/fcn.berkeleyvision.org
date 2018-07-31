@@ -51,9 +51,12 @@ def trackSession():
         return False
     return False
 
-def setSession(file):
+def setSession(file, flag=True):
     now = datetime.datetime.now()
-    file.write("\n-------------------- SESSION - {} -------------------------\n".format(now.strftime("%Y-%m-%d %H:%M")))
+    if flag:
+        file.write("\n-------------------- SESSION - {} -------------------------\n".format(now.strftime("%Y-%m-%d %H:%M")))
+    else:
+        file.write("-------------------- SESSION - {} -------------------------\n".format(now.strftime("%Y-%m-%d %H:%M")))
 
 
 def delayPrint(string, seconds): # n seconds delay printing
@@ -85,15 +88,17 @@ def exportLogs(logs, f="demo/logs.log"):
 
 def createCurrentLog(fp):
     filepath = fp.split("/")
-    f = "{}.log".format(filepath[len(filepath) - 1].split(".")[0])
+    f = "demo/output/{}.log".format(filepath[len(filepath) - 1].split(".")[0])
     if(isfile(f)):
         delayPrint("Resuming {} file".format(f), PRINT_SECONDS)
-        file = open(f, "w")
+        file = open(f, "a")
+        setSession(file, False)
         file.close()
     else:
         print("{} log file does not exist!".format(f))
         print("Creating {} file...".format(f))
-        file = open(f, "w+")
+        file = open(f, "a+")
+        setSession(file, False)
         file.close()
 
 def readResume(f="demo/resume.txt"):
@@ -144,14 +149,18 @@ def reshapeInputLayer(img, f="voc-fcn8s/test.prototxt"):
 def loop(paintings_path, paintings, current_painting):
     n = input("Enter number of images to segment: ")
     index = paintings.index(current_painting.split(".")[0])
+    end = len(paintings) - 1
     last = index+int(n)
     if(index != 0):
-        index += 1
-        last += 1
+        if(index == end):
+            last = end
+        else:
+            index += 1
+            last += 1
     for x in range(index, last):
         current_painting_path = paintings_path + "/" + paintings[x] + ".jpg"
         delayPrint(current_painting_path, PRINT_SECONDS)
-        createCurrentLog(current_painting)
+        createCurrentLog(paintings[x])
         segmentation(current_painting_path, paintings[x])
         if x == last - 1:
             writeResume(current_painting_path)
@@ -165,7 +174,7 @@ def segmentation(path, current_painting):
     im = Image.open(path)
     # reshape input layer from dimensions of image H x W
     reshapeInputLayer(im)
-    delayPrint("Starting to segment the image: {}".format(current_painting), PRINT_SECONDS)
+    delayPrint("Starting to segment the image: {}".format(current_painting), 3)
     in_ = np.array(im, dtype=np.float32)
     in_ = in_[:,:,::-1]
     in_ -= np.array((104.00698793,116.66876762,122.67891434))
@@ -188,10 +197,11 @@ def segmentation(path, current_painting):
     out_im = Image.fromarray(vis.color_seg(out, voc_palette))
     # out_im.save('demo/output.png')
     out_im.save('demo/output/output_%s.png'%(current_painting.split(".")[0]))
-    masked_im = Image.fromarray(vis.vis_seg(im, out, voc_palette))
+    logfile = "demo/output/"+current_painting+".log"
+    masked_im = Image.fromarray(vis.vis_seg(im, out, voc_palette, 0.5, logfile))
 
     # print extracted colors of original image
-    vis.extractColors(path)
+    vis.extractColors(path, logfile)
 
     # masked_im.save('demo/visualization.jpg')
     masked_im.save('demo/output/output_%s.jpg'%(current_painting))
