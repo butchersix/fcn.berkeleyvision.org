@@ -163,8 +163,14 @@ def loop(paintings_path, paintings, current_painting):
         current_painting_path = paintings_path + "/" + paintings[x] + ".jpg"
         delayPrint(current_painting_path, PRINT_SECONDS)
         createCurrentLog(paintings[x])
+        start_time = datetime.datetime.now()
+        delayPrint("---------- Start Time - {:s} ----------".format(str(start_time)), PRINT_SECONDS)
         segmentation(current_painting_path, paintings[x])
-        if int(n) > 1: # rest (60 seconds) if images are greater to 1
+        end_time = datetime.datetime.now()
+        delayPrint("---------- End Time - {:s} ----------".format(str(end_time)), PRINT_SECONDS)
+        elapsed_time = end_time - start_time
+        delayPrint("Elapsed time is: {:s}".format(str(elapsed_time)), REVIEW_SECONDS)
+        if int(n) > 1 and x != last - 1: # rest (60 seconds) if images are greater to 1 and no rest if last image
             time.sleep(REST_SECONDS)
         if x == last - 1:
             writeResume(current_painting_path)
