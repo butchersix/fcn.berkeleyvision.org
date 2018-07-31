@@ -1,0 +1,19 @@
+-------------------- SESSION - 2018-07-31 11:09 -------------------------
+Class Name: background
+Percentage of region: 0.9710688040946344
+Class Name: boat
+Percentage of region: 0.0139694254085398
+Class Name: pottedplant
+Percentage of region: 0.0017075994935773534
+Class Name: car
+Percentage of region: 0.0018010894394658232
+Class Name: train
+Percentage of region: 0.01138211931569865
+Class Name: person
+Percentage of region: 7.09622480840193e-05
+Red    : 0.33578096769978694 - 6
+Yellow : 0.07554663458722498 - 3
+Green : 0.532855520862901 - 7
+Cyan   : 0.054399884658187236 - 9
+Blue   : 2.7033237365340687e-05 - 1
+Magenta: 0.0013899589545346006 - 7

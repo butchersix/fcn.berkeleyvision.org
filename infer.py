@@ -174,7 +174,9 @@ def segmentation(path, current_painting):
     im = Image.open(path)
     # reshape input layer from dimensions of image H x W
     reshapeInputLayer(im)
-    delayPrint("Starting to segment the image: {}".format(current_painting), 3)
+    delayPrint("Starting to segment the image: {}".format(current_painting), PRINT_SECONDS)
+    # delay for 5 seconds for reviewing of image name
+    time.sleep(5)
     in_ = np.array(im, dtype=np.float32)
     in_ = in_[:,:,::-1]
     in_ -= np.array((104.00698793,116.66876762,122.67891434))
