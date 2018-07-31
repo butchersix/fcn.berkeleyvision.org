@@ -18,6 +18,8 @@ import math
 
 # own code - Jasper
 PRINT_SECONDS = 0.2
+REVIEW_SECONDS = 5
+REST_SECONDS = 60
 # flow
 """
     1. Enter number of images to segment 
@@ -162,6 +164,8 @@ def loop(paintings_path, paintings, current_painting):
         delayPrint(current_painting_path, PRINT_SECONDS)
         createCurrentLog(paintings[x])
         segmentation(current_painting_path, paintings[x])
+        if n > 1: # rest (60 seconds) if images are greater to 1
+            time.sleep(REST_SECONDS)
         if x == last - 1:
             writeResume(current_painting_path)
 
@@ -174,9 +178,9 @@ def segmentation(path, current_painting):
     im = Image.open(path)
     # reshape input layer from dimensions of image H x W
     reshapeInputLayer(im)
-    delayPrint("Starting to segment the image: {}".format(current_painting), PRINT_SECONDS)
+    delayPrint("Starting to segment the image -- {} -- in {} seconds".format(current_painting, REVIEW_SECONDS), PRINT_SECONDS)
     # delay for 5 seconds for reviewing of image name
-    time.sleep(5)
+    time.sleep(REVIEW_SECONDS)
     in_ = np.array(im, dtype=np.float32)
     in_ = in_[:,:,::-1]
     in_ -= np.array((104.00698793,116.66876762,122.67891434))
