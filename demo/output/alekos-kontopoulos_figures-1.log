@@ -1,11 +1,9 @@
--------------------- SESSION - 2018-07-31 18:46 -------------------------
-Class Name: background
-Percentage of region: 0.7860414123040889
-Class Name: person
-Percentage of region: 0.21395858769591108
-Red    : 0.9999999999999998 - 9
-Yellow : 0 - 0
-Green : 0 - 0
-Cyan   : 0 - 0
-Blue   : 0 - 0
+-------------------- SESSION - 2018-08-01 14:47 -------------------------
+C0 - background: 0.855
+C15 - person: 0.145
+Red: 0.9999999999999999 - 7
+Yellow: 0 - 0
+Green: 0 - 0
+Cyan: 0 - 0
+Blue: 0 - 0
 Magenta: 0 - 0

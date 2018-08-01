@@ -1,19 +1,11 @@
--------------------- SESSION - 2018-07-31 18:18 -------------------------
-Class Name: background
-Percentage of region: 0.7873255234297108
-Class Name: cat
-Percentage of region: 0.06023407051572555
-Class Name: dog
-Percentage of region: 0.005841849451645065
-Class Name: cow
-Percentage of region: 0.030901613341792804
-Class Name: sheep
-Percentage of region: 0.0503971041421191
-Class Name: horse
-Percentage of region: 0.06529983911900662
-Red    : 0.6510086218616875 - 10
-Yellow : 0.33096590909090906 - 7
-Green : 0.0037118757364270824 - 1
-Cyan   : 0 - 0
-Blue   : 0.0029796972718209008 - 4
-Magenta: 0.01133389603915526 - 4
+-------------------- SESSION - 2018-08-01 14:41 -------------------------
+C0 - background: 0.7240186979355306
+C8 - cat: 0.005913844621513944
+C10 - cow: 0.23510503440782327
+C13 - horse: 0.034962423035132195
+Red: 0.6275805867439335 - 7
+Yellow: 0.35773383737776165 - 4
+Green: 0.003061617167692865 - 1
+Cyan: 0 - 0
+Blue: 0.00391615356754799 - 1
+Magenta: 0.007707805143064107 - 3

@@ -1,19 +1,12 @@
--------------------- SESSION - 2018-07-31 11:09 -------------------------
-Class Name: background
-Percentage of region: 0.9710688040946344
-Class Name: boat
-Percentage of region: 0.0139694254085398
-Class Name: pottedplant
-Percentage of region: 0.0017075994935773534
-Class Name: car
-Percentage of region: 0.0018010894394658232
-Class Name: train
-Percentage of region: 0.01138211931569865
-Class Name: person
-Percentage of region: 7.09622480840193e-05
-Red    : 0.33578096769978694 - 6
-Yellow : 0.07554663458722498 - 3
-Green : 0.532855520862901 - 7
-Cyan   : 0.054399884658187236 - 9
-Blue   : 2.7033237365340687e-05 - 1
-Magenta: 0.0013899589545346006 - 7
+-------------------- SESSION - 2018-08-01 14:37 -------------------------
+C0 - background: 0.996998496998497
+C16 - pottedplant: 0.0029385029385029385
+C6 - bus: 9.000009000009e-06
+C19 - train: 1.8000018000018e-05
+C9 - chair: 3.6000036000036e-05
+Red: 0.402966402966403 - 6
+Yellow: 0.012856512856512856 - 3
+Green: 0.5335610335610335 - 7
+Cyan: 0.0486000486000486 - 10
+Blue: 0 - 0
+Magenta: 0.002016002016002016 - 7

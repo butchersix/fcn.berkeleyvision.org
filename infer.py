@@ -19,7 +19,7 @@ import math
 # own code - Jasper
 PRINT_SECONDS = 0.2
 REVIEW_SECONDS = 5
-REST_SECONDS = 60
+REST_SECONDS = 10
 # flow
 """
     1. Enter number of images to segment 

@@ -1,20 +1,8 @@
--------------------- SESSION - 2018-07-31 10:39 -------------------------
--------------------- SESSION - 2018-07-31 10:39 -------------------------
-Class Name: background
-Percentage of region: 0.9977666693319585
-Class Name: bicycle
-Percentage of region: 0.0007968303247703943
-Class Name: motorbike
-Percentage of region: 8.271595066820701e-06
-Class Name: bottle
-Percentage of region: 0.0003400544638581844
-Class Name: bird
-Percentage of region: 0.0005900404480998768
-Class Name: diningtable
-Percentage of region: 0.0004981338362463134
-Red    : 0.9204502321101483 - 8
-Yellow : 0.0756299508942973 - 7
-Green : 0.003747032565269778 - 2
-Cyan   : 5.514396711213801e-05 - 5
-Blue   : 9.190661185356336e-07 - 1
-Magenta: 0.00011672139705402545 - 5
+-------------------- SESSION - 2018-08-01 14:34 -------------------------
+C0 - background: 1.0
+Red: 0.931757557523033 - 8
+Yellow: 0.06544288424211958 - 7
+Green: 0.002744521048054802 - 2
+Cyan: 3.669145786169522e-05 - 2
+Blue: 0 - 0
+Magenta: 1.834572893084761e-05 - 1
