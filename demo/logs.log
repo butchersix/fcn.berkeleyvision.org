@@ -32157,3 +32157,2205 @@ Checking demo/resume.txt file...
 Saving last segmented image path...
 Writing file...
 Closing file...
+
+-------------------- SESSION - 2018-08-03 15:57 -------------------------
+Checking demo/resume.txt file...
+Reading file...
+Last segmented image: demo/Batch 1/camille-pissarro_the-railway-bridge-pontoise.jpg
+Closing file...
+demo/Batch 1/camille-pissarro_the-versailles-road-at-louveciennes-1869.jpg
+---------- Start Time - 2018-08-03 15:58:32.061378 ----------
+Checking if image {width, height} has 1000 above pixels...
+Images (H x W) has dimensions 267 x 322
+Image {height, width} has below 1000 pixels - (267 x 322)
+Checking voc-fcn8s/test.prototxt file...
+Reading file...
+Reshaping input layer...
+    shape { dim: 1 dim: 3 dim: 267 dim: 322 }
+
+Writing file...
+Closing file...
+Starting to segment the image -- camille-pissarro_the-versailles-road-at-louveciennes-1869 -- in 5 seconds
+Number of pixels: 85974
+Extract Unique Pixel Classes:
+
+1. [0, 0, 0]
+---------- Class Names - RGB Value ----------
+Class ID: 0
+Class Color: (0, 0, 0)
+Class Name: background
+Percentage of region: 100.000%
+
+
+---------- Colors Present In Image ----------
+
+RGB Color - HSV - Proportion - Hue Color: Rgb(r=97, g=100, b=110) - (226.15384615384616, 0.11818181818181818, 110) - 0.537371763556424% - cyan
+RGB Color - HSV - Proportion - Hue Color: Rgb(r=120, g=131, b=134) - (192.85714285714286, 0.1044776119402985, 134) - 0.0034894270360806756% - cyan
+RGB Color - HSV - Proportion - Hue Color: Rgb(r=182, g=197, b=189) - (148.0, 0.07614213197969544, 197) - 0.1070090957731407% - green
+RGB Color - HSV - Proportion - Hue Color: Rgb(r=104, g=90, b=96) - (334.2857142857143, 0.1346153846153846, 104) - 0.8386256310047224% - magenta
+RGB Color - HSV - Proportion - Hue Color: Rgb(r=161, g=172, b=165) - (141.81818181818184, 0.06395348837209303, 172) - 0.7188219694326192% - green
+RGB Color - HSV - Proportion - Hue Color: Rgb(r=76, g=56, b=60) - (348.0, 0.2631578947368421, 76) - 0.08956196059273734% - magenta
+RGB Color - HSV - Proportion - Hue Color: Rgb(r=179, g=187, b=217) - (227.36842105263162, 0.17511520737327188, 217) - 0.7711633749738293% - cyan
+RGB Color - HSV - Proportion - Hue Color: Rgb(r=54, g=42, b=46) - (340.0, 0.2222222222222222, 54) - 0.5210877707213809% - magenta
+RGB Color - HSV - Proportion - Hue Color: Rgb(r=207, g=201, b=156) - (52.94117647058824, 0.2463768115942029, 207) - 0.806057645334636% - red
+RGB Color - HSV - Proportion - Hue Color: Rgb(r=159, g=165, b=179) - (222.0, 0.11173184357541899, 179) - 2.94507641845209% - cyan
+RGB Color - HSV - Proportion - Hue Color: Rgb(r=98, g=106, b=100) - (135.0, 0.07547169811320754, 106) - 0.15120850489682927% - green
+RGB Color - HSV - Proportion - Hue Color: Rgb(r=179, g=197, b=200) - (188.57142857142858, 0.105, 200) - 0.05117826319584991% - cyan
+RGB Color - HSV - Proportion - Hue Color: Rgb(r=234, g=235, b=217) - (63.33333333333332, 0.07659574468085106, 235) - 3.763928629585689% - yellow
+RGB Color - HSV - Proportion - Hue Color: Rgb(r=123, g=123, b=138) - (240.0, 0.10869565217391304, 138) - 0.06978854072161352% - blue
+RGB Color - HSV - Proportion - Hue Color: Rgb(r=231, g=246, b=240) - (156.0, 0.06097560975609756, 246) - 34.123106985832926% - green
+RGB Color - HSV - Proportion - Hue Color: Rgb(r=80, g=57, b=51) - (12.413793103448274, 0.3625, 80) - 0.21052876451020078% - red
+RGB Color - HSV - Proportion - Hue Color: Rgb(r=197, g=187, b=194) - (318.0, 0.050761421319796954, 197) - 0.024425989252564728% - magenta
+RGB Color - HSV - Proportion - Hue Color: Rgb(r=81, g=67, b=38) - (40.46511627906976, 0.5308641975308642, 81) - 0.6234442971130807% - red
+RGB Color - HSV - Proportion - Hue Color: Rgb(r=48, g=47, b=56) - (246.66666666666663, 0.16071428571428573, 56) - 0.09421452997417824% - blue
+RGB Color - HSV - Proportion - Hue Color: Rgb(r=206, g=185, b=183) - (5.21739130434783, 0.11165048543689321, 206) - 0.010468281108242028% - red
+RGB Color - HSV - Proportion - Hue Color: Rgb(r=63, g=49, b=35) - (30.0, 0.4444444444444444, 63) - 3.6336566869053435% - red
+RGB Color - HSV - Proportion - Hue Color: Rgb(r=221, g=214, b=220) - (308.57142857142856, 0.03167420814479638, 221) - 0.21169190685556097% - magenta
+RGB Color - HSV - Proportion - Hue Color: Rgb(r=115, g=93, b=71) - (30.0, 0.3826086956521739, 115) - 13.921650731616536% - red
+RGB Color - HSV - Proportion - Hue Color: Rgb(r=158, g=135, b=83) - (41.6, 0.47468354430379744, 158) - 1.7621606532207412% - red
+RGB Color - HSV - Proportion - Hue Color: Rgb(r=48, g=52, b=48) - (120.0, 0.07692307692307693, 52) - 0.030241700979365852% - green
+RGB Color - HSV - Proportion - Hue Color: Rgb(r=137, g=121, b=130) - (326.25, 0.11678832116788321, 137) - 0.03722055505152721% - magenta
+RGB Color - HSV - Proportion - Hue Color: Rgb(r=145, g=121, b=113) - (15.0, 0.2206896551724138, 145) - 0.11282480749994185% - red
+RGB Color - HSV - Proportion - Hue Color: Rgb(r=171, g=158, b=129) - (41.42857142857142, 0.24561403508771928, 171) - 7.800032567985669% - red
+RGB Color - HSV - Proportion - Hue Color: Rgb(r=211, g=227, b=241) - (208.00000000000003, 0.12448132780082988, 241) - 25.30765115034778% - cyan
+RGB Color - HSV - Proportion - Hue Color: Rgb(r=62, g=60, b=72) - (250.00000000000003, 0.16666666666666666, 72) - 0.019773419871123826% - blue
+RGB Color - HSV - Proportion - Hue Color: Rgb(r=164, g=153, b=160) - (321.8181818181818, 0.06707317073170732, 164) - 0.6943959801800544% - magenta
+RGB Color - HSV - Proportion - Hue Color: Rgb(r=122, g=133, b=122) - (120.0, 0.08270676691729323, 133) - 0.008141996417521577% - green
+
+
+---------- Hue Colors - Hue Proportions ----------
+
+Color	 -	 Color Proportion	 -	 No. of instances
+Red    	 -	 28.881%			 -	 9
+Yellow 	 -	 3.764%			 -	 1
+Green 	 -	 35.139%			 -	 6
+Cyan   	 -	 29.616%			 -	 6
+Blue   	 -	 0.184%			 -	 3
+Magenta	 -	 2.417%			 -	 7
+--------------------------------------------------
+Total number of colors: 32
+
+---------- End Time - 2018-08-03 15:58:46.596858 ----------
+Elapsed time is: 0:00:14.535480
+Checking demo/resume.txt file...
+Saving last segmented image path...
+Writing file...
+Closing file...
+demo/Batch 1/camille-pissarro_the-wood-cart.jpg
+---------- Start Time - 2018-08-03 15:59:02.817694 ----------
+Checking if image {width, height} has 1000 above pixels...
+Images (H x W) has dimensions 261 x 400
+Image {height, width} has below 1000 pixels - (261 x 400)
+Checking voc-fcn8s/test.prototxt file...
+Reading file...
+Reshaping input layer...
+    shape { dim: 1 dim: 3 dim: 261 dim: 400 }
+
+Writing file...
+Closing file...
+Starting to segment the image -- camille-pissarro_the-wood-cart -- in 5 seconds
+Number of pixels: 104400
+Extract Unique Pixel Classes:
+
+1. [0, 0, 0]
+2. [64, 128, 0]
+3. [192, 0, 128]
+4. [192, 128, 128]
+---------- Class Names - RGB Value ----------
+Class ID: 0
+Class Color: (0, 0, 0)
+Class Name: background
+Percentage of region: 98.186%
+
+
+Class ID: 10
+Class Color: (64, 128, 0)
+Class Name: cow
+Percentage of region: 0.038%
+
+
+Class ID: 13
+Class Color: (192, 0, 128)
+Class Name: horse
+Percentage of region: 1.481%
+
+
+Class ID: 15
+Class Color: (192, 128, 128)
+Class Name: person
+Percentage of region: 0.295%
+
+
+---------- Colors Present In Image ----------
+
+RGB Color - HSV - Proportion - Hue Color: Rgb(r=197, g=203, b=207) - (204.00000000000003, 0.04830917874396135, 207) - 4.3486590038314175% - cyan
+RGB Color - HSV - Proportion - Hue Color: Rgb(r=186, g=193, b=195) - (193.33333333333334, 0.046153846153846156, 195) - 0.023946360153256702% - cyan
+RGB Color - HSV - Proportion - Hue Color: Rgb(r=207, g=203, b=205) - (330.0, 0.01932367149758454, 207) - 0.023946360153256702% - magenta
+RGB Color - HSV - Proportion - Hue Color: Rgb(r=83, g=68, b=36) - (40.851063829787236, 0.5662650602409639, 83) - 1.8812260536398469% - red
+RGB Color - HSV - Proportion - Hue Color: Rgb(r=143, g=123, b=113) - (20.0, 0.2097902097902098, 143) - 0.0047892720306513415% - red
+RGB Color - HSV - Proportion - Hue Color: Rgb(r=29, g=27, b=36) - (253.33333333333334, 0.25, 36) - 0.04597701149425287% - blue
+RGB Color - HSV - Proportion - Hue Color: Rgb(r=64, g=62, b=69) - (257.14285714285717, 0.10144927536231885, 69) - 0.0028735632183908046% - blue
+RGB Color - HSV - Proportion - Hue Color: Rgb(r=195, g=190, b=190) - (0.0, 0.02564102564102564, 195) - 0.0019157088122605363% - red
+RGB Color - HSV - Proportion - Hue Color: Rgb(r=200, g=206, b=202) - (140.0, 0.02912621359223301, 206) - 7.944444444444445% - green
+RGB Color - HSV - Proportion - Hue Color: Rgb(r=83, g=76, b=80) - (325.7142857142857, 0.08433734939759036, 83) - 0.039272030651340994% - magenta
+RGB Color - HSV - Proportion - Hue Color: Rgb(r=179, g=184, b=190) - (212.7272727272727, 0.05789473684210526, 190) - 0.8860153256704981% - cyan
+RGB Color - HSV - Proportion - Hue Color: Rgb(r=83, g=81, b=88) - (257.14285714285717, 0.07954545454545454, 88) - 0.048850574712643674% - blue
+RGB Color - HSV - Proportion - Hue Color: Rgb(r=194, g=190, b=192) - (330.0, 0.020618556701030927, 194) - 0.0019157088122605363% - magenta
+RGB Color - HSV - Proportion - Hue Color: Rgb(r=125, g=130, b=126) - (132.0, 0.038461538461538464, 130) - 0.0009578544061302681% - green
+RGB Color - HSV - Proportion - Hue Color: Rgb(r=199, g=196, b=177) - (51.81818181818182, 0.11055276381909548, 199) - 2.5727969348659006% - red
+RGB Color - HSV - Proportion - Hue Color: Rgb(r=151, g=132, b=93) - (40.3448275862069, 0.3841059602649007, 151) - 1.2452107279693485% - red
+RGB Color - HSV - Proportion - Hue Color: Rgb(r=103, g=108, b=102) - (110.00000000000001, 0.05555555555555555, 108) - 0.011494252873563218% - yellow
+RGB Color - HSV - Proportion - Hue Color: Rgb(r=67, g=60, b=66) - (308.57142857142856, 0.1044776119402985, 67) - 0.008620689655172414% - magenta
+RGB Color - HSV - Proportion - Hue Color: Rgb(r=179, g=184, b=180) - (132.0, 0.02717391304347826, 184) - 0.45689655172413796% - green
+RGB Color - HSV - Proportion - Hue Color: Rgb(r=10, g=14, b=12) - (150.0, 0.2857142857142857, 14) - 0.008620689655172414% - green
+RGB Color - HSV - Proportion - Hue Color: Rgb(r=178, g=169, b=147) - (42.58064516129033, 0.17415730337078653, 178) - 10.620689655172413% - red
+RGB Color - HSV - Proportion - Hue Color: Rgb(r=43, g=29, b=19) - (24.999999999999996, 0.5581395348837209, 43) - 43.2404214559387% - red
+RGB Color - HSV - Proportion - Hue Color: Rgb(r=28, g=16, b=19) - (345.0, 0.42857142857142855, 28) - 2.033524904214559% - magenta
+RGB Color - HSV - Proportion - Hue Color: Rgb(r=182, g=177, b=180) - (324.0, 0.027472527472527472, 182) - 0.03831417624521073% - magenta
+RGB Color - HSV - Proportion - Hue Color: Rgb(r=185, g=191, b=200) - (216.0, 0.075, 200) - 0.16379310344827586% - cyan
+RGB Color - HSV - Proportion - Hue Color: Rgb(r=108, g=92, b=62) - (39.130434782608695, 0.42592592592592593, 108) - 15.380268199233715% - red
+RGB Color - HSV - Proportion - Hue Color: Rgb(r=188, g=194, b=187) - (111.42857142857143, 0.03608247422680412, 194) - 0.07662835249042146% - yellow
+RGB Color - HSV - Proportion - Hue Color: Rgb(r=77, g=59, b=52) - (16.8, 0.3246753246753247, 77) - 0.09482758620689655% - red
+RGB Color - HSV - Proportion - Hue Color: Rgb(r=206, g=206, b=193) - (60.0, 0.06310679611650485, 206) - 8.793103448275861% - yellow
+
+
+---------- Hue Colors - Hue Proportions ----------
+
+Color	 -	 Color Proportion	 -	 No. of instances
+Red    	 -	 75.042%			 -	 9
+Yellow 	 -	 8.881%			 -	 3
+Green 	 -	 8.411%			 -	 4
+Cyan   	 -	 5.422%			 -	 4
+Blue   	 -	 0.098%			 -	 3
+Magenta	 -	 2.146%			 -	 6
+--------------------------------------------------
+Total number of colors: 29
+
+---------- End Time - 2018-08-03 15:59:18.165255 ----------
+Elapsed time is: 0:00:15.347561
+Checking demo/resume.txt file...
+Saving last segmented image path...
+Writing file...
+Closing file...
+demo/Batch 1/camille-pissarro_two-woman-chatting-by-the-sea-st-thomas-1856.jpg
+---------- Start Time - 2018-08-03 15:59:34.387495 ----------
+Checking if image {width, height} has 1000 above pixels...
+Images (H x W) has dimensions 391 x 579
+Image {height, width} has below 1000 pixels - (391 x 579)
+Checking voc-fcn8s/test.prototxt file...
+Reading file...
+Reshaping input layer...
+    shape { dim: 1 dim: 3 dim: 391 dim: 579 }
+
+Writing file...
+Closing file...
+Starting to segment the image -- camille-pissarro_two-woman-chatting-by-the-sea-st-thomas-1856 -- in 5 seconds
+Number of pixels: 226389
+Extract Unique Pixel Classes:
+
+1. [0, 0, 0]
+2. [192, 128, 128]
+---------- Class Names - RGB Value ----------
+Class ID: 0
+Class Color: (0, 0, 0)
+Class Name: background
+Percentage of region: 94.557%
+
+
+Class ID: 15
+Class Color: (192, 128, 128)
+Class Name: person
+Percentage of region: 5.443%
+
+
+---------- Colors Present In Image ----------
+
+RGB Color - HSV - Proportion - Hue Color: Rgb(r=157, g=150, b=166) - (266.25, 0.0963855421686747, 166) - 0.0022085878730857063% - blue
+RGB Color - HSV - Proportion - Hue Color: Rgb(r=37, g=28, b=31) - (340.0, 0.24324324324324326, 37) - 0.8635578583765112% - magenta
+RGB Color - HSV - Proportion - Hue Color: Rgb(r=63, g=31, b=19) - (16.363636363636363, 0.6984126984126984, 63) - 10.865368900432442% - red
+RGB Color - HSV - Proportion - Hue Color: Rgb(r=94, g=59, b=30) - (27.1875, 0.6808510638297872, 94) - 0.030478512648582746% - red
+RGB Color - HSV - Proportion - Hue Color: Rgb(r=86, g=93, b=87) - (128.57142857142858, 0.07526881720430108, 93) - 0.0013251527238514237% - green
+RGB Color - HSV - Proportion - Hue Color: Rgb(r=252, g=245, b=249) - (325.7142857142857, 0.027777777777777776, 252) - 0.02341103145470849% - magenta
+RGB Color - HSV - Proportion - Hue Color: Rgb(r=201, g=185, b=187) - (352.5, 0.07960199004975124, 201) - 0.003975458171554272% - magenta
+RGB Color - HSV - Proportion - Hue Color: Rgb(r=75, g=55, b=62) - (339.0, 0.26666666666666666, 75) - 0.009717786641577108% - magenta
+RGB Color - HSV - Proportion - Hue Color: Rgb(r=150, g=113, b=119) - (350.2702702702703, 0.24666666666666667, 150) - 0.015901832686217088% - magenta
+RGB Color - HSV - Proportion - Hue Color: Rgb(r=62, g=58, b=76) - (253.33333333333334, 0.23684210526315788, 76) - 0.006184046044639978% - blue
+RGB Color - HSV - Proportion - Hue Color: Rgb(r=159, g=117, b=100) - (17.28813559322034, 0.3710691823899371, 159) - 1.0552632857603506% - red
+RGB Color - HSV - Proportion - Hue Color: Rgb(r=110, g=82, b=86) - (351.42857142857144, 0.2545454545454545, 110) - 2.1379130611469637% - magenta
+RGB Color - HSV - Proportion - Hue Color: Rgb(r=130, g=88, b=70) - (18.000000000000004, 0.46153846153846156, 130) - 20.148063731011664% - red
+RGB Color - HSV - Proportion - Hue Color: Rgb(r=117, g=113, b=147) - (247.05882352941174, 0.23129251700680273, 147) - 0.01766870298468565% - blue
+RGB Color - HSV - Proportion - Hue Color: Rgb(r=165, g=124, b=86) - (28.860759493670887, 0.47878787878787876, 165) - 0.13516557783284522% - red
+RGB Color - HSV - Proportion - Hue Color: Rgb(r=38, g=35, b=43) - (262.5, 0.18604651162790697, 43) - 0.03931286414092557% - blue
+RGB Color - HSV - Proportion - Hue Color: Rgb(r=101, g=50, b=32) - (15.65217391304348, 0.6831683168316832, 101) - 1.779238390557845% - red
+RGB Color - HSV - Proportion - Hue Color: Rgb(r=99, g=95, b=124) - (248.27586206896552, 0.23387096774193547, 124) - 0.2897667289488447% - blue
+RGB Color - HSV - Proportion - Hue Color: Rgb(r=249, g=246, b=254) - (262.5, 0.031496062992125984, 254) - 0.0017668702984685652% - blue
+RGB Color - HSV - Proportion - Hue Color: Rgb(r=15, g=20, b=13) - (102.85714285714288, 0.35, 20) - 0.008834351492342825% - yellow
+RGB Color - HSV - Proportion - Hue Color: Rgb(r=124, g=130, b=120) - (96.0, 0.07692307692307693, 130) - 0.0004417175746171413% - yellow
+RGB Color - HSV - Proportion - Hue Color: Rgb(r=219, g=198, b=180) - (27.692307692307693, 0.1780821917808219, 219) - 38.09018989438533% - red
+RGB Color - HSV - Proportion - Hue Color: Rgb(r=196, g=168, b=147) - (25.71428571428572, 0.25, 196) - 20.467867255034474% - red
+RGB Color - HSV - Proportion - Hue Color: Rgb(r=248, g=254, b=246) - (105.0, 0.031496062992125984, 254) - 0.0026503054477028474% - yellow
+RGB Color - HSV - Proportion - Hue Color: Rgb(r=213, g=190, b=167) - (30.0, 0.215962441314554, 213) - 2.3168086788669062% - red
+RGB Color - HSV - Proportion - Hue Color: Rgb(r=205, g=187, b=180) - (16.8, 0.12195121951219512, 205) - 1.563238496570063% - red
+RGB Color - HSV - Proportion - Hue Color: Rgb(r=184, g=166, b=169) - (350.0, 0.09782608695652174, 184) - 0.12323920331818242% - magenta
+RGB Color - HSV - Proportion - Hue Color: Rgb(r=128, g=134, b=124) - (96.0, 0.07462686567164178, 134) - 0.0004417175746171413% - yellow
+
+
+---------- Hue Colors - Hue Proportions ----------
+
+Color	 -	 Color Proportion	 -	 No. of instances
+Red    	 -	 96.452%			 -	 10
+Yellow 	 -	 0.012%			 -	 4
+Green 	 -	 0.001%			 -	 1
+Cyan   	 -	 0.000%			 -	 0
+Blue   	 -	 0.357%			 -	 6
+Magenta	 -	 3.178%			 -	 7
+--------------------------------------------------
+Total number of colors: 28
+
+---------- End Time - 2018-08-03 15:59:53.630135 ----------
+Elapsed time is: 0:00:19.242640
+Checking demo/resume.txt file...
+Saving last segmented image path...
+Writing file...
+Closing file...
+demo/Batch 1/camille-pissarro_view-of-marly-le-roi-1870.jpg
+---------- Start Time - 2018-08-03 16:00:09.847778 ----------
+Checking if image {width, height} has 1000 above pixels...
+Images (H x W) has dimensions 255 x 400
+Image {height, width} has below 1000 pixels - (255 x 400)
+Checking voc-fcn8s/test.prototxt file...
+Reading file...
+Reshaping input layer...
+    shape { dim: 1 dim: 3 dim: 255 dim: 400 }
+
+Writing file...
+Closing file...
+Starting to segment the image -- camille-pissarro_view-of-marly-le-roi-1870 -- in 5 seconds
+Number of pixels: 102000
+Extract Unique Pixel Classes:
+
+1. [0, 0, 0]
+---------- Class Names - RGB Value ----------
+Class ID: 0
+Class Color: (0, 0, 0)
+Class Name: background
+Percentage of region: 100.000%
+
+
+---------- Colors Present In Image ----------
+
+RGB Color - HSV - Proportion - Hue Color: Rgb(r=164, g=139, b=74) - (43.33333333333333, 0.5487804878048781, 164) - 4.280392156862745% - red
+RGB Color - HSV - Proportion - Hue Color: Rgb(r=19, g=16, b=24) - (262.5, 0.3333333333333333, 24) - 0.00784313725490196% - blue
+RGB Color - HSV - Proportion - Hue Color: Rgb(r=224, g=210, b=183) - (39.512195121951216, 0.18303571428571427, 224) - 19.607843137254903% - red
+RGB Color - HSV - Proportion - Hue Color: Rgb(r=203, g=188, b=182) - (17.142857142857142, 0.10344827586206896, 203) - 0.053921568627450976% - red
+RGB Color - HSV - Proportion - Hue Color: Rgb(r=192, g=194, b=191) - (99.99999999999999, 0.015463917525773196, 194) - 0.000980392156862745% - yellow
+RGB Color - HSV - Proportion - Hue Color: Rgb(r=98, g=109, b=103) - (147.27272727272728, 0.10091743119266056, 109) - 0.022549019607843137% - green
+RGB Color - HSV - Proportion - Hue Color: Rgb(r=51, g=36, b=20) - (30.96774193548387, 0.6078431372549019, 51) - 24.016666666666666% - red
+RGB Color - HSV - Proportion - Hue Color: Rgb(r=210, g=195, b=164) - (40.43478260869565, 0.21904761904761905, 210) - 4.42156862745098% - red
+RGB Color - HSV - Proportion - Hue Color: Rgb(r=28, g=16, b=20) - (340.0, 0.42857142857142855, 28) - 0.1176470588235294% - magenta
+RGB Color - HSV - Proportion - Hue Color: Rgb(r=76, g=64, b=66) - (350.0, 0.15789473684210525, 76) - 0.000980392156862745% - magenta
+RGB Color - HSV - Proportion - Hue Color: Rgb(r=185, g=170, b=137) - (41.25, 0.2594594594594595, 185) - 19.007843137254902% - red
+RGB Color - HSV - Proportion - Hue Color: Rgb(r=177, g=167, b=169) - (348.0, 0.05649717514124294, 177) - 0.05588235294117647% - magenta
+RGB Color - HSV - Proportion - Hue Color: Rgb(r=199, g=186, b=189) - (346.1538461538462, 0.06532663316582915, 199) - 0.00196078431372549% - magenta
+RGB Color - HSV - Proportion - Hue Color: Rgb(r=118, g=133, b=128) - (160.0, 0.11278195488721804, 133) - 0.00196078431372549% - green
+RGB Color - HSV - Proportion - Hue Color: Rgb(r=187, g=112, b=72) - (20.869565217391305, 0.6149732620320856, 187) - 0.008823529411764706% - red
+RGB Color - HSV - Proportion - Hue Color: Rgb(r=146, g=150, b=151) - (192.0, 0.033112582781456956, 151) - 0.0058823529411764705% - cyan
+RGB Color - HSV - Proportion - Hue Color: Rgb(r=115, g=92, b=52) - (38.095238095238095, 0.5478260869565217, 115) - 24.019607843137255% - red
+RGB Color - HSV - Proportion - Hue Color: Rgb(r=153, g=157, b=155) - (150.0, 0.025477707006369428, 157) - 0.09705882352941177% - green
+RGB Color - HSV - Proportion - Hue Color: Rgb(r=86, g=51, b=52) - (358.2857142857143, 0.4069767441860465, 86) - 0.00196078431372549% - magenta
+RGB Color - HSV - Proportion - Hue Color: Rgb(r=122, g=126, b=127) - (192.0, 0.03937007874015748, 127) - 0.000980392156862745% - cyan
+RGB Color - HSV - Proportion - Hue Color: Rgb(r=95, g=54, b=36) - (18.30508474576271, 0.6210526315789474, 95) - 0.29901960784313725% - red
+RGB Color - HSV - Proportion - Hue Color: Rgb(r=20, g=29, b=25) - (153.33333333333331, 0.3103448275862069, 29) - 0.0058823529411764705% - green
+RGB Color - HSV - Proportion - Hue Color: Rgb(r=210, g=195, b=197) - (352.0, 0.07142857142857142, 210) - 0.01764705882352941% - magenta
+RGB Color - HSV - Proportion - Hue Color: Rgb(r=84, g=69, b=33) - (42.35294117647058, 0.6071428571428571, 84) - 3.9450980392156865% - red
+
+
+---------- Hue Colors - Hue Proportions ----------
+
+Color	 -	 Color Proportion	 -	 No. of instances
+Red    	 -	 99.661%			 -	 10
+Yellow 	 -	 0.001%			 -	 1
+Green 	 -	 0.127%			 -	 4
+Cyan   	 -	 0.007%			 -	 2
+Blue   	 -	 0.008%			 -	 1
+Magenta	 -	 0.196%			 -	 6
+--------------------------------------------------
+Total number of colors: 24
+
+---------- End Time - 2018-08-03 16:00:24.294482 ----------
+Elapsed time is: 0:00:14.446704
+Checking demo/resume.txt file...
+Saving last segmented image path...
+Writing file...
+Closing file...
+demo/Batch 1/camille-pissarro_view-of-pontoise-quai-au-pothuis-1868.jpg
+---------- Start Time - 2018-08-03 16:00:40.516766 ----------
+Checking if image {width, height} has 1000 above pixels...
+Images (H x W) has dimensions 407 x 640
+Image {height, width} has below 1000 pixels - (407 x 640)
+Checking voc-fcn8s/test.prototxt file...
+Reading file...
+Reshaping input layer...
+    shape { dim: 1 dim: 3 dim: 407 dim: 640 }
+
+Writing file...
+Closing file...
+Starting to segment the image -- camille-pissarro_view-of-pontoise-quai-au-pothuis-1868 -- in 5 seconds
+Number of pixels: 260480
+Extract Unique Pixel Classes:
+
+1. [0, 0, 0]
+2. [192, 128, 128]
+---------- Class Names - RGB Value ----------
+Class ID: 0
+Class Color: (0, 0, 0)
+Class Name: background
+Percentage of region: 97.859%
+
+
+Class ID: 15
+Class Color: (192, 128, 128)
+Class Name: person
+Percentage of region: 2.141%
+
+
+---------- Colors Present In Image ----------
+
+RGB Color - HSV - Proportion - Hue Color: Rgb(r=155, g=178, b=165) - (146.08695652173913, 0.12921348314606743, 178) - 8.914695945945946% - green
+RGB Color - HSV - Proportion - Hue Color: Rgb(r=36, g=43, b=35) - (112.5, 0.18604651162790697, 43) - 0.8015970515970515% - yellow
+RGB Color - HSV - Proportion - Hue Color: Rgb(r=80, g=57, b=50) - (13.999999999999998, 0.375, 80) - 0.020730958230958232% - red
+RGB Color - HSV - Proportion - Hue Color: Rgb(r=138, g=182, b=195) - (193.6842105263158, 0.2923076923076923, 195) - 12.670070638820638% - cyan
+RGB Color - HSV - Proportion - Hue Color: Rgb(r=178, g=208, b=220) - (197.1428571428571, 0.19090909090909092, 220) - 0.9428746928746928% - cyan
+RGB Color - HSV - Proportion - Hue Color: Rgb(r=46, g=41, b=29) - (42.35294117647058, 0.3695652173913043, 46) - 16.898034398034397% - red
+RGB Color - HSV - Proportion - Hue Color: Rgb(r=219, g=222, b=191) - (65.80645161290322, 0.13963963963963963, 222) - 2.552595208845209% - yellow
+RGB Color - HSV - Proportion - Hue Color: Rgb(r=150, g=143, b=82) - (53.8235294117647, 0.4533333333333333, 150) - 10.017275798525798% - red
+RGB Color - HSV - Proportion - Hue Color: Rgb(r=60, g=60, b=68) - (240.0, 0.11764705882352941, 68) - 0.0003839066339066339% - blue
+RGB Color - HSV - Proportion - Hue Color: Rgb(r=86, g=75, b=78) - (343.6363636363636, 0.12790697674418605, 86) - 0.011133292383292383% - magenta
+RGB Color - HSV - Proportion - Hue Color: Rgb(r=171, g=172, b=131) - (61.463414634146346, 0.23837209302325582, 172) - 16.72873157248157% - yellow
+RGB Color - HSV - Proportion - Hue Color: Rgb(r=147, g=123, b=121) - (4.615384615384612, 0.17687074829931973, 147) - 0.0003839066339066339% - red
+RGB Color - HSV - Proportion - Hue Color: Rgb(r=24, g=24, b=29) - (240.0, 0.1724137931034483, 29) - 0.2622082309582309% - blue
+RGB Color - HSV - Proportion - Hue Color: Rgb(r=101, g=142, b=146) - (185.33333333333331, 0.3082191780821918, 146) - 0.0023034398034398034% - cyan
+RGB Color - HSV - Proportion - Hue Color: Rgb(r=104, g=101, b=65) - (55.38461538461539, 0.375, 104) - 18.622542997542997% - red
+RGB Color - HSV - Proportion - Hue Color: Rgb(r=81, g=52, b=56) - (351.7241379310345, 0.35802469135802467, 81) - 0.003839066339066339% - magenta
+RGB Color - HSV - Proportion - Hue Color: Rgb(r=245, g=240, b=245) - (300.0, 0.02040816326530612, 245) - 0.042997542997543% - magenta
+RGB Color - HSV - Proportion - Hue Color: Rgb(r=197, g=213, b=201) - (135.0, 0.07511737089201878, 213) - 1.1494164619164617% - green
+RGB Color - HSV - Proportion - Hue Color: Rgb(r=177, g=200, b=187) - (146.08695652173913, 0.115, 200) - 0.5816185503685504% - green
+RGB Color - HSV - Proportion - Hue Color: Rgb(r=200, g=202, b=161) - (62.926829268292686, 0.20297029702970298, 202) - 3.019041769041769% - yellow
+RGB Color - HSV - Proportion - Hue Color: Rgb(r=86, g=100, b=79) - (99.99999999999999, 0.21, 100) - 0.7513052825552826% - yellow
+RGB Color - HSV - Proportion - Hue Color: Rgb(r=164, g=201, b=211) - (192.7659574468085, 0.22274881516587677, 211) - 0.7324938574938574% - cyan
+RGB Color - HSV - Proportion - Hue Color: Rgb(r=84, g=100, b=104) - (192.0, 0.19230769230769232, 104) - 0.007294226044226045% - cyan
+RGB Color - HSV - Proportion - Hue Color: Rgb(r=27, g=19, b=23) - (330.0, 0.2962962962962963, 27) - 1.047681203931204% - magenta
+RGB Color - HSV - Proportion - Hue Color: Rgb(r=119, g=136, b=112) - (102.50000000000001, 0.17647058823529413, 136) - 0.1608568796068796% - yellow
+RGB Color - HSV - Proportion - Hue Color: Rgb(r=73, g=70, b=44) - (53.793103448275865, 0.3972602739726027, 73) - 3.983031326781327% - red
+RGB Color - HSV - Proportion - Hue Color: Rgb(r=162, g=194, b=226) - (210.0, 0.2831858407079646, 226) - 0.006526412776412776% - cyan
+RGB Color - HSV - Proportion - Hue Color: Rgb(r=58, g=70, b=53) - (102.35294117647061, 0.24285714285714285, 70) - 0.06718366093366093% - yellow
+RGB Color - HSV - Proportion - Hue Color: Rgb(r=160, g=158, b=159) - (330.0, 0.0125, 160) - 0.0011517199017199017% - magenta
+
+
+---------- Hue Colors - Hue Proportions ----------
+
+Color	 -	 Color Proportion	 -	 No. of instances
+Red    	 -	 49.542%			 -	 6
+Yellow 	 -	 24.081%			 -	 7
+Green 	 -	 10.646%			 -	 3
+Cyan   	 -	 14.362%			 -	 6
+Blue   	 -	 0.263%			 -	 2
+Magenta	 -	 1.107%			 -	 5
+--------------------------------------------------
+Total number of colors: 29
+
+---------- End Time - 2018-08-03 16:01:00.444490 ----------
+Elapsed time is: 0:00:19.927724
+Checking demo/resume.txt file...
+Saving last segmented image path...
+Writing file...
+Closing file...
+demo/Batch 1/camille-pissarro_village-church.jpg
+---------- Start Time - 2018-08-03 16:01:16.656591 ----------
+Checking if image {width, height} has 1000 above pixels...
+Images (H x W) has dimensions 512 x 631
+Image {height, width} has below 1000 pixels - (512 x 631)
+Checking voc-fcn8s/test.prototxt file...
+Reading file...
+Reshaping input layer...
+    shape { dim: 1 dim: 3 dim: 512 dim: 631 }
+
+Writing file...
+Closing file...
+Starting to segment the image -- camille-pissarro_village-church -- in 5 seconds
+Number of pixels: 323072
+Extract Unique Pixel Classes:
+
+1. [0, 0, 0]
+---------- Class Names - RGB Value ----------
+Class ID: 0
+Class Color: (0, 0, 0)
+Class Name: background
+Percentage of region: 100.000%
+
+
+---------- Colors Present In Image ----------
+
+RGB Color - HSV - Proportion - Hue Color: Rgb(r=166, g=135, b=63) - (41.94174757281554, 0.6204819277108434, 166) - 4.91283676703645% - red
+RGB Color - HSV - Proportion - Hue Color: Rgb(r=146, g=120, b=123) - (353.07692307692304, 0.1780821917808219, 146) - 0.0009285855784469097% - magenta
+RGB Color - HSV - Proportion - Hue Color: Rgb(r=161, g=164, b=163) - (160.0, 0.018292682926829267, 164) - 0.02723851030110935% - green
+RGB Color - HSV - Proportion - Hue Color: Rgb(r=29, g=18, b=21) - (343.6363636363636, 0.3793103448275862, 29) - 2.219319532488114% - magenta
+RGB Color - HSV - Proportion - Hue Color: Rgb(r=197, g=166, b=135) - (30.0, 0.3147208121827411, 197) - 15.750049524564183% - red
+RGB Color - HSV - Proportion - Hue Color: Rgb(r=120, g=91, b=51) - (34.78260869565217, 0.575, 120) - 37.00754011489698% - red
+RGB Color - HSV - Proportion - Hue Color: Rgb(r=97, g=73, b=77) - (350.0, 0.24742268041237114, 97) - 0.06902486133122028% - magenta
+RGB Color - HSV - Proportion - Hue Color: Rgb(r=9, g=12, b=9) - (120.0, 0.25, 12) - 0.015166897781299524% - green
+RGB Color - HSV - Proportion - Hue Color: Rgb(r=218, g=190, b=158) - (32.0, 0.27522935779816515, 218) - 0.5692229595879557% - red
+RGB Color - HSV - Proportion - Hue Color: Rgb(r=202, g=182, b=183) - (357.0, 0.09900990099009901, 202) - 0.0003095285261489699% - magenta
+RGB Color - HSV - Proportion - Hue Color: Rgb(r=92, g=88, b=99) - (261.8181818181818, 0.1111111111111111, 99) - 0.0009285855784469097% - blue
+RGB Color - HSV - Proportion - Hue Color: Rgb(r=12, g=11, b=17) - (250.00000000000003, 0.35294117647058826, 17) - 0.05911994849445325% - blue
+RGB Color - HSV - Proportion - Hue Color: Rgb(r=83, g=52, b=55) - (354.19354838709677, 0.37349397590361444, 83) - 0.041476822503961966% - magenta
+RGB Color - HSV - Proportion - Hue Color: Rgb(r=53, g=37, b=26) - (24.444444444444446, 0.5094339622641509, 53) - 31.705316461965133% - red
+RGB Color - HSV - Proportion - Hue Color: Rgb(r=169, g=115, b=91) - (18.461538461538463, 0.46153846153846156, 169) - 0.05231032091917591% - red
+RGB Color - HSV - Proportion - Hue Color: Rgb(r=212, g=186, b=173) - (20.0, 0.18396226415094338, 212) - 0.3104571117274168% - red
+RGB Color - HSV - Proportion - Hue Color: Rgb(r=84, g=68, b=35) - (40.40816326530613, 0.5833333333333334, 84) - 3.7805814183835182% - red
+RGB Color - HSV - Proportion - Hue Color: Rgb(r=165, g=160, b=162) - (336.0, 0.030303030303030304, 165) - 0.1265971671949287% - magenta
+RGB Color - HSV - Proportion - Hue Color: Rgb(r=156, g=157, b=162) - (229.99999999999997, 0.037037037037037035, 162) - 0.40022038431061807% - cyan
+RGB Color - HSV - Proportion - Hue Color: Rgb(r=223, g=203, b=205) - (354.0, 0.08968609865470852, 223) - 0.0003095285261489699% - magenta
+RGB Color - HSV - Proportion - Hue Color: Rgb(r=216, g=193, b=175) - (26.341463414634145, 0.18981481481481483, 216) - 2.0404120443740092% - red
+RGB Color - HSV - Proportion - Hue Color: Rgb(r=91, g=54, b=42) - (14.693877551020412, 0.5384615384615384, 91) - 0.9106329239302694% - red
+
+
+---------- Hue Colors - Hue Proportions ----------
+
+Color	 -	 Color Proportion	 -	 No. of instances
+Red    	 -	 97.039%			 -	 10
+Yellow 	 -	 0.000%			 -	 0
+Green 	 -	 0.042%			 -	 2
+Cyan   	 -	 0.400%			 -	 1
+Blue   	 -	 0.060%			 -	 2
+Magenta	 -	 2.458%			 -	 7
+--------------------------------------------------
+Total number of colors: 22
+
+---------- End Time - 2018-08-03 16:01:37.980124 ----------
+Elapsed time is: 0:00:21.323533
+Checking demo/resume.txt file...
+Saving last segmented image path...
+Writing file...
+Closing file...
+demo/Batch 1/carl-bloch_christian-ii-imprisoned-in-the-tower-at-s-nderborg-castle-1871.jpg
+---------- Start Time - 2018-08-03 16:01:54.202108 ----------
+Checking if image {width, height} has 1000 above pixels...
+Images (H x W) has dimensions 1136 x 882
+Image {height, width} has below 1000 pixels - (1136 x 882)
+Checking voc-fcn8s/test.prototxt file...
+Reading file...
+Reshaping input layer...
+    shape { dim: 1 dim: 3 dim: 1136 dim: 882 }
+
+Writing file...
+Closing file...
+Starting to segment the image -- carl-bloch_christian-ii-imprisoned-in-the-tower-at-s-nderborg-castle-1871 -- in 5 seconds
+Number of pixels: 1001952
+Extract Unique Pixel Classes:
+
+1. [0, 0, 0]
+2. [0, 64, 0]
+3. [0, 192, 0]
+4. [64, 0, 0]
+5. [64, 0, 128]
+6. [64, 128, 0]
+7. [128, 0, 128]
+8. [128, 192, 0]
+9. [192, 0, 0]
+10. [192, 0, 128]
+11. [192, 128, 0]
+12. [192, 128, 128]
+---------- Class Names - RGB Value ----------
+Class ID: 0
+Class Color: (0, 0, 0)
+Class Name: background
+Percentage of region: 79.491%
+
+
+Class ID: 16
+Class Color: (0, 64, 0)
+Class Name: pottedplant
+Percentage of region: 0.983%
+
+
+Class ID: 18
+Class Color: (0, 192, 0)
+Class Name: sofa
+Percentage of region: 0.015%
+
+
+Class ID: 8
+Class Color: (64, 0, 0)
+Class Name: cat
+Percentage of region: 0.423%
+
+
+Class ID: 12
+Class Color: (64, 0, 128)
+Class Name: dog
+Percentage of region: 4.356%
+
+
+Class ID: 10
+Class Color: (64, 128, 0)
+Class Name: cow
+Percentage of region: 0.035%
+
+
+Class ID: 5
+Class Color: (128, 0, 128)
+Class Name: bottle
+Percentage of region: 0.757%
+
+
+Class ID: 19
+Class Color: (128, 192, 0)
+Class Name: train
+Percentage of region: 0.095%
+
+
+Class ID: 9
+Class Color: (192, 0, 0)
+Class Name: chair
+Percentage of region: 0.357%
+
+
+Class ID: 13
+Class Color: (192, 0, 128)
+Class Name: horse
+Percentage of region: 0.353%
+
+
+Class ID: 11
+Class Color: (192, 128, 0)
+Class Name: diningtable
+Percentage of region: 0.001%
+
+
+Class ID: 15
+Class Color: (192, 128, 128)
+Class Name: person
+Percentage of region: 13.133%
+
+
+---------- Colors Present In Image ----------
+
+RGB Color - HSV - Proportion - Hue Color: Rgb(r=161, g=107, b=109) - (357.77777777777777, 0.33540372670807456, 161) - 0.0004990259014403884% - magenta
+RGB Color - HSV - Proportion - Hue Color: Rgb(r=186, g=196, b=186) - (120.0, 0.05102040816326531, 196) - 0.000299415540864233% - green
+RGB Color - HSV - Proportion - Hue Color: Rgb(r=76, g=55, b=58) - (351.42857142857144, 0.27631578947368424, 76) - 0.007984414423046215% - magenta
+RGB Color - HSV - Proportion - Hue Color: Rgb(r=93, g=52, b=40) - (13.584905660377355, 0.5698924731182796, 93) - 0.534656350803232% - red
+RGB Color - HSV - Proportion - Hue Color: Rgb(r=50, g=40, b=30) - (30.0, 0.4, 50) - 58.834554948740056% - red
+RGB Color - HSV - Proportion - Hue Color: Rgb(r=147, g=157, b=160) - (193.84615384615384, 0.08125, 160) - 0.002694739867778097% - cyan
+RGB Color - HSV - Proportion - Hue Color: Rgb(r=192, g=190, b=196) - (260.0, 0.030612244897959183, 196) - 0.000299415540864233% - blue
+RGB Color - HSV - Proportion - Hue Color: Rgb(r=176, g=165, b=168) - (343.6363636363636, 0.0625, 176) - 0.01067915429082431% - magenta
+RGB Color - HSV - Proportion - Hue Color: Rgb(r=84, g=96, b=99) - (192.0, 0.15151515151515152, 99) - 0.08882661045638912% - cyan
+RGB Color - HSV - Proportion - Hue Color: Rgb(r=236, g=237, b=241) - (228.0, 0.02074688796680498, 241) - 0.023753632908562486% - cyan
+RGB Color - HSV - Proportion - Hue Color: Rgb(r=151, g=130, b=94) - (37.89473684210526, 0.37748344370860926, 151) - 1.6064641819168983% - red
+RGB Color - HSV - Proportion - Hue Color: Rgb(r=201, g=186, b=189) - (348.0, 0.07462686567164178, 201) - 0.001796493245185398% - magenta
+RGB Color - HSV - Proportion - Hue Color: Rgb(r=235, g=242, b=238) - (145.71428571428572, 0.028925619834710745, 242) - 0.0522979144709527% - green
+RGB Color - HSV - Proportion - Hue Color: Rgb(r=77, g=65, b=44) - (38.18181818181818, 0.42857142857142855, 77) - 1.902885567372489% - red
+RGB Color - HSV - Proportion - Hue Color: Rgb(r=59, g=67, b=61) - (135.0, 0.11940298507462686, 67) - 0.0054892849158442725% - green
+RGB Color - HSV - Proportion - Hue Color: Rgb(r=83, g=95, b=90) - (155.0, 0.12631578947368421, 95) - 0.18124620740314906% - green
+RGB Color - HSV - Proportion - Hue Color: Rgb(r=28, g=31, b=36) - (217.5, 0.2222222222222222, 36) - 1.331101689502092% - cyan
+RGB Color - HSV - Proportion - Hue Color: Rgb(r=160, g=115, b=102) - (13.448275862068966, 0.3625, 160) - 0.023354412187410176% - red
+RGB Color - HSV - Proportion - Hue Color: Rgb(r=114, g=134, b=137) - (187.82608695652172, 0.1678832116788321, 137) - 0.0007984414423046214% - cyan
+RGB Color - HSV - Proportion - Hue Color: Rgb(r=176, g=154, b=118) - (37.241379310344826, 0.32954545454545453, 176) - 7.628409344958641% - red
+RGB Color - HSV - Proportion - Hue Color: Rgb(r=207, g=187, b=179) - (17.142857142857142, 0.13526570048309178, 207) - 0.000598831081728466% - red
+RGB Color - HSV - Proportion - Hue Color: Rgb(r=87, g=79, b=81) - (345.0, 0.09195402298850575, 87) - 0.026248762415764428% - magenta
+RGB Color - HSV - Proportion - Hue Color: Rgb(r=117, g=135, b=129) - (160.0, 0.13333333333333333, 135) - 0.004890453834115806% - green
+RGB Color - HSV - Proportion - Hue Color: Rgb(r=62, g=62, b=68) - (240.0, 0.08823529411764706, 68) - 0.000598831081728466% - blue
+RGB Color - HSV - Proportion - Hue Color: Rgb(r=209, g=195, b=161) - (42.49999999999999, 0.22966507177033493, 209) - 0.18703490785985757% - red
+RGB Color - HSV - Proportion - Hue Color: Rgb(r=22, g=26, b=24) - (150.0, 0.15384615384615385, 26) - 7.659648366388809% - green
+RGB Color - HSV - Proportion - Hue Color: Rgb(r=54, g=67, b=71) - (194.1176470588235, 0.23943661971830985, 71) - 0.002395324326913864% - cyan
+RGB Color - HSV - Proportion - Hue Color: Rgb(r=224, g=218, b=203) - (42.85714285714286, 0.09375, 224) - 0.15300134138162305% - red
+RGB Color - HSV - Proportion - Hue Color: Rgb(r=38, g=32, b=35) - (330.0, 0.15789473684210525, 38) - 0.4424363642170483% - magenta
+RGB Color - HSV - Proportion - Hue Color: Rgb(r=142, g=156, b=146) - (137.14285714285714, 0.08974358974358974, 156) - 0.019761425697039377% - green
+RGB Color - HSV - Proportion - Hue Color: Rgb(r=110, g=89, b=66) - (31.36363636363636, 0.4, 110) - 19.239943630034173% - red
+RGB Color - HSV - Proportion - Hue Color: Rgb(r=237, g=230, b=234) - (325.7142857142857, 0.029535864978902954, 237) - 0.02535051579317173% - magenta
+
+
+---------- Hue Colors - Hue Proportions ----------
+
+Color	 -	 Color Proportion	 -	 No. of instances
+Red    	 -	 90.111%			 -	 10
+Yellow 	 -	 0.000%			 -	 0
+Green 	 -	 7.924%			 -	 7
+Cyan   	 -	 1.450%			 -	 6
+Blue   	 -	 0.001%			 -	 2
+Magenta	 -	 0.515%			 -	 7
+--------------------------------------------------
+Total number of colors: 32
+
+---------- End Time - 2018-08-03 16:11:54.620543 ----------
+Elapsed time is: 0:10:00.418435
+Checking demo/resume.txt file...
+Saving last segmented image path...
+Writing file...
+Closing file...
+demo/Batch 1/charles-demuth_eggplant-and-tomatoes-1926.jpg
+---------- Start Time - 2018-08-03 16:12:10.869981 ----------
+Checking if image {width, height} has 1000 above pixels...
+Images (H x W) has dimensions 176 x 250
+Image {height, width} has below 1000 pixels - (176 x 250)
+Checking voc-fcn8s/test.prototxt file...
+Reading file...
+Reshaping input layer...
+    shape { dim: 1 dim: 3 dim: 176 dim: 250 }
+
+Writing file...
+Closing file...
+Starting to segment the image -- charles-demuth_eggplant-and-tomatoes-1926 -- in 5 seconds
+Number of pixels: 44000
+Extract Unique Pixel Classes:
+
+1. [0, 0, 0]
+2. [192, 128, 0]
+---------- Class Names - RGB Value ----------
+Class ID: 0
+Class Color: (0, 0, 0)
+Class Name: background
+Percentage of region: 86.555%
+
+
+Class ID: 11
+Class Color: (192, 128, 0)
+Class Name: diningtable
+Percentage of region: 13.445%
+
+
+---------- Colors Present In Image ----------
+
+RGB Color - HSV - Proportion - Hue Color: Rgb(r=150, g=150, b=84) - (60.0, 0.44, 150) - 0.5909090909090909% - yellow
+RGB Color - HSV - Proportion - Hue Color: Rgb(r=75, g=96, b=148) - (222.73972602739727, 0.49324324324324326, 148) - 0.2% - cyan
+RGB Color - HSV - Proportion - Hue Color: Rgb(r=189, g=165, b=124) - (37.84615384615385, 0.3439153439153439, 189) - 5.470454545454546% - red
+RGB Color - HSV - Proportion - Hue Color: Rgb(r=146, g=159, b=176) - (214.0, 0.17045454545454544, 176) - 0.27045454545454545% - cyan
+RGB Color - HSV - Proportion - Hue Color: Rgb(r=36, g=36, b=40) - (240.0, 0.1, 40) - 0.00909090909090909% - blue
+RGB Color - HSV - Proportion - Hue Color: Rgb(r=52, g=42, b=43) - (354.0, 0.19230769230769232, 52) - 0.8681818181818182% - magenta
+RGB Color - HSV - Proportion - Hue Color: Rgb(r=231, g=225, b=206) - (45.6, 0.10822510822510822, 231) - 75.77727272727273% - red
+RGB Color - HSV - Proportion - Hue Color: Rgb(r=186, g=194, b=196) - (192.0, 0.05102040816326531, 196) - 0.0022727272727272726% - cyan
+RGB Color - HSV - Proportion - Hue Color: Rgb(r=94, g=70, b=73) - (352.5, 0.2553191489361702, 94) - 0.05227272727272727% - magenta
+RGB Color - HSV - Proportion - Hue Color: Rgb(r=98, g=122, b=167) - (219.13043478260872, 0.41317365269461076, 167) - 0.06363636363636364% - cyan
+RGB Color - HSV - Proportion - Hue Color: Rgb(r=53, g=42, b=41) - (5.000000000000002, 0.22641509433962265, 53) - 4.318181818181818% - red
+RGB Color - HSV - Proportion - Hue Color: Rgb(r=192, g=197, b=192) - (120.0, 0.025380710659898477, 197) - 0.022727272727272728% - green
+RGB Color - HSV - Proportion - Hue Color: Rgb(r=74, g=63, b=52) - (30.0, 0.2972972972972973, 74) - 0.006818181818181819% - red
+RGB Color - HSV - Proportion - Hue Color: Rgb(r=94, g=51, b=48) - (3.913043478260867, 0.48936170212765956, 94) - 0.6863636363636363% - red
+RGB Color - HSV - Proportion - Hue Color: Rgb(r=212, g=203, b=141) - (52.394366197183096, 0.33490566037735847, 212) - 2.938636363636364% - red
+RGB Color - HSV - Proportion - Hue Color: Rgb(r=174, g=180, b=178) - (160.0, 0.03333333333333333, 180) - 0.04318181818181818% - green
+RGB Color - HSV - Proportion - Hue Color: Rgb(r=197, g=95, b=68) - (12.558139534883724, 0.6548223350253807, 197) - 0.9636363636363635% - red
+RGB Color - HSV - Proportion - Hue Color: Rgb(r=91, g=113, b=80) - (99.99999999999999, 0.2920353982300885, 113) - 0.00909090909090909% - yellow
+RGB Color - HSV - Proportion - Hue Color: Rgb(r=156, g=78, b=56) - (13.199999999999998, 0.6410256410256411, 156) - 7.593181818181819% - red
+RGB Color - HSV - Proportion - Hue Color: Rgb(r=22, g=24, b=21) - (99.99999999999999, 0.125, 24) - 0.0022727272727272726% - yellow
+RGB Color - HSV - Proportion - Hue Color: Rgb(r=161, g=157, b=159) - (330.0, 0.024844720496894408, 161) - 0.004545454545454545% - magenta
+RGB Color - HSV - Proportion - Hue Color: Rgb(r=41, g=60, b=135) - (227.87234042553192, 0.6962962962962963, 135) - 0.004545454545454545% - cyan
+RGB Color - HSV - Proportion - Hue Color: Rgb(r=106, g=42, b=44) - (358.125, 0.6037735849056604, 106) - 0.10227272727272728% - magenta
+
+
+---------- Hue Colors - Hue Proportions ----------
+
+Color	 -	 Color Proportion	 -	 No. of instances
+Red    	 -	 97.755%			 -	 8
+Yellow 	 -	 0.602%			 -	 3
+Green 	 -	 0.066%			 -	 2
+Cyan   	 -	 0.541%			 -	 5
+Blue   	 -	 0.009%			 -	 1
+Magenta	 -	 1.027%			 -	 4
+--------------------------------------------------
+Total number of colors: 23
+
+---------- End Time - 2018-08-03 16:12:33.982794 ----------
+Elapsed time is: 0:00:23.112813
+Checking demo/resume.txt file...
+Saving last segmented image path...
+Writing file...
+Closing file...
+demo/Batch 1/charles-francois-daubigny_banks-of-the-oise.jpg
+---------- Start Time - 2018-08-03 16:12:50.203663 ----------
+Checking if image {width, height} has 1000 above pixels...
+Images (H x W) has dimensions 162 x 241
+Image {height, width} has below 1000 pixels - (162 x 241)
+Checking voc-fcn8s/test.prototxt file...
+Reading file...
+Reshaping input layer...
+    shape { dim: 1 dim: 3 dim: 162 dim: 241 }
+
+Writing file...
+Closing file...
+Starting to segment the image -- charles-francois-daubigny_banks-of-the-oise -- in 5 seconds
+Number of pixels: 39042
+Extract Unique Pixel Classes:
+
+1. [0, 0, 0]
+---------- Class Names - RGB Value ----------
+Class ID: 0
+Class Color: (0, 0, 0)
+Class Name: background
+Percentage of region: 100.000%
+
+
+---------- Colors Present In Image ----------
+
+RGB Color - HSV - Proportion - Hue Color: Rgb(r=82, g=52, b=59) - (346.0, 0.36585365853658536, 82) - 0.7120536857742944% - magenta
+RGB Color - HSV - Proportion - Hue Color: Rgb(r=166, g=131, b=134) - (354.8571428571429, 0.21084337349397592, 166) - 1.8518518518518516% - magenta
+RGB Color - HSV - Proportion - Hue Color: Rgb(r=61, g=34, b=31) - (5.999999999999998, 0.4918032786885246, 61) - 3.4014650888786435% - red
+RGB Color - HSV - Proportion - Hue Color: Rgb(r=13, g=8, b=20) - (265.0, 0.6, 20) - 0.402131038368936% - blue
+RGB Color - HSV - Proportion - Hue Color: Rgb(r=223, g=191, b=154) - (32.17391304347826, 0.3094170403587444, 223) - 0.786332667383843% - red
+RGB Color - HSV - Proportion - Hue Color: Rgb(r=156, g=126, b=97) - (29.491525423728817, 0.3782051282051282, 156) - 0.017929409354028994% - red
+RGB Color - HSV - Proportion - Hue Color: Rgb(r=33, g=18, b=29) - (316.0, 0.45454545454545453, 33) - 41.37851544490548% - magenta
+RGB Color - HSV - Proportion - Hue Color: Rgb(r=217, g=177, b=179) - (357.0, 0.18433179723502305, 217) - 0.005122688386865427% - magenta
+RGB Color - HSV - Proportion - Hue Color: Rgb(r=128, g=90, b=82) - (10.434782608695652, 0.359375, 128) - 7.83515188771067% - red
+RGB Color - HSV - Proportion - Hue Color: Rgb(r=152, g=113, b=116) - (355.3846153846154, 0.2565789473684211, 152) - 2.179703908611239% - magenta
+RGB Color - HSV - Proportion - Hue Color: Rgb(r=126, g=88, b=93) - (352.10526315789474, 0.30158730158730157, 126) - 8.61892321090108% - magenta
+RGB Color - HSV - Proportion - Hue Color: Rgb(r=154, g=114, b=110) - (5.454545454545457, 0.2857142857142857, 154) - 3.1530147021156703% - red
+RGB Color - HSV - Proportion - Hue Color: Rgb(r=236, g=207, b=175) - (31.475409836065573, 0.2584745762711864, 236) - 9.99692638696788% - red
+RGB Color - HSV - Proportion - Hue Color: Rgb(r=86, g=52, b=48) - (6.315789473684211, 0.4418604651162791, 86) - 0.7837713231904103% - red
+RGB Color - HSV - Proportion - Hue Color: Rgb(r=217, g=183, b=170) - (16.59574468085106, 0.21658986175115208, 217) - 0.3406587777265509% - red
+RGB Color - HSV - Proportion - Hue Color: Rgb(r=188, g=152, b=137) - (17.64705882352941, 0.2712765957446808, 188) - 18.536447927872548% - red
+
+
+---------- Hue Colors - Hue Proportions ----------
+
+Color	 -	 Color Proportion	 -	 No. of instances
+Red    	 -	 44.852%			 -	 9
+Yellow 	 -	 0.000%			 -	 0
+Green 	 -	 0.000%			 -	 0
+Cyan   	 -	 0.000%			 -	 0
+Blue   	 -	 0.402%			 -	 1
+Magenta	 -	 54.746%			 -	 6
+--------------------------------------------------
+Total number of colors: 16
+
+---------- End Time - 2018-08-03 16:13:02.311648 ----------
+Elapsed time is: 0:00:12.107985
+Checking demo/resume.txt file...
+Saving last segmented image path...
+Writing file...
+Closing file...
+demo/Batch 1/charles-francois-daubigny_boats-on-the-oise-1865.jpg
+---------- Start Time - 2018-08-03 16:13:18.530306 ----------
+Checking if image {width, height} has 1000 above pixels...
+Images (H x W) has dimensions 216 x 379
+Image {height, width} has below 1000 pixels - (216 x 379)
+Checking voc-fcn8s/test.prototxt file...
+Reading file...
+Reshaping input layer...
+    shape { dim: 1 dim: 3 dim: 216 dim: 379 }
+
+Writing file...
+Closing file...
+Starting to segment the image -- charles-francois-daubigny_boats-on-the-oise-1865 -- in 5 seconds
+Number of pixels: 81864
+Extract Unique Pixel Classes:
+
+1. [0, 0, 0]
+---------- Class Names - RGB Value ----------
+Class ID: 0
+Class Color: (0, 0, 0)
+Class Name: background
+Percentage of region: 100.000%
+
+
+---------- Colors Present In Image ----------
+
+RGB Color - HSV - Proportion - Hue Color: Rgb(r=38, g=38, b=43) - (240.0, 0.11627906976744186, 43) - 0.13192612137203166% - blue
+RGB Color - HSV - Proportion - Hue Color: Rgb(r=80, g=58, b=50) - (16.000000000000004, 0.375, 80) - 0.018323072412782176% - red
+RGB Color - HSV - Proportion - Hue Color: Rgb(r=46, g=43, b=33) - (46.153846153846146, 0.2826086956521739, 46) - 38.52731359327665% - red
+RGB Color - HSV - Proportion - Hue Color: Rgb(r=37, g=33, b=35) - (330.0, 0.10810810810810811, 37) - 0.792778266393042% - magenta
+RGB Color - HSV - Proportion - Hue Color: Rgb(r=223, g=209, b=177) - (41.73913043478261, 0.2062780269058296, 223) - 0.2504153229746897% - red
+RGB Color - HSV - Proportion - Hue Color: Rgb(r=144, g=136, b=97) - (49.787234042553195, 0.3263888888888889, 144) - 4.312029707808072% - red
+RGB Color - HSV - Proportion - Hue Color: Rgb(r=181, g=183, b=204) - (234.78260869565213, 0.11274509803921569, 204) - 0.001221538160852145% - cyan
+RGB Color - HSV - Proportion - Hue Color: Rgb(r=173, g=165, b=130) - (48.837209302325576, 0.24855491329479767, 173) - 39.5521841102316% - red
+RGB Color - HSV - Proportion - Hue Color: Rgb(r=39, g=42, b=38) - (105.0, 0.09523809523809523, 42) - 0.14780611746310957% - yellow
+RGB Color - HSV - Proportion - Hue Color: Rgb(r=174, g=180, b=193) - (221.05263157894737, 0.09844559585492228, 193) - 0.0244307632170429% - cyan
+RGB Color - HSV - Proportion - Hue Color: Rgb(r=74, g=68, b=45) - (47.58620689655173, 0.3918918918918919, 74) - 2.46017785595622% - red
+RGB Color - HSV - Proportion - Hue Color: Rgb(r=95, g=99, b=95) - (120.0, 0.04040404040404041, 99) - 0.006107690804260725% - green
+RGB Color - HSV - Proportion - Hue Color: Rgb(r=115, g=98, b=108) - (324.70588235294116, 0.14782608695652175, 115) - 0.01465845793022574% - magenta
+RGB Color - HSV - Proportion - Hue Color: Rgb(r=131, g=143, b=126) - (102.35294117647061, 0.11888111888111888, 143) - 0.04153229746897293% - yellow
+RGB Color - HSV - Proportion - Hue Color: Rgb(r=79, g=78, b=82) - (255.0, 0.04878048780487805, 82) - 0.00244307632170429% - blue
+RGB Color - HSV - Proportion - Hue Color: Rgb(r=121, g=137, b=114) - (101.7391304347826, 0.1678832116788321, 137) - 0.00488615264340858% - yellow
+RGB Color - HSV - Proportion - Hue Color: Rgb(r=107, g=98, b=70) - (45.40540540540541, 0.34579439252336447, 107) - 12.906772207563764% - red
+RGB Color - HSV - Proportion - Hue Color: Rgb(r=205, g=196, b=160) - (48.0, 0.21951219512195122, 205) - 0.8025505716798593% - red
+RGB Color - HSV - Proportion - Hue Color: Rgb(r=70, g=62, b=64) - (345.0, 0.11428571428571428, 70) - 0.00244307632170429% - magenta
+
+
+---------- Hue Colors - Hue Proportions ----------
+
+Color	 -	 Color Proportion	 -	 No. of instances
+Red    	 -	 98.830%			 -	 8
+Yellow 	 -	 0.194%			 -	 3
+Green 	 -	 0.006%			 -	 1
+Cyan   	 -	 0.026%			 -	 2
+Blue   	 -	 0.134%			 -	 2
+Magenta	 -	 0.810%			 -	 3
+--------------------------------------------------
+Total number of colors: 19
+
+---------- End Time - 2018-08-03 16:13:32.167492 ----------
+Elapsed time is: 0:00:13.637186
+Checking demo/resume.txt file...
+Saving last segmented image path...
+Writing file...
+Closing file...
+demo/Batch 1/charles-francois-daubigny_castle-gaillard-in-andelys-eure-1877.jpg
+---------- Start Time - 2018-08-03 16:13:48.440706 ----------
+Checking if image {width, height} has 1000 above pixels...
+Images (H x W) has dimensions 223 x 379
+Image {height, width} has below 1000 pixels - (223 x 379)
+Checking voc-fcn8s/test.prototxt file...
+Reading file...
+Reshaping input layer...
+    shape { dim: 1 dim: 3 dim: 223 dim: 379 }
+
+Writing file...
+Closing file...
+Starting to segment the image -- charles-francois-daubigny_castle-gaillard-in-andelys-eure-1877 -- in 5 seconds
+Number of pixels: 84517
+Extract Unique Pixel Classes:
+
+1. [0, 0, 0]
+---------- Class Names - RGB Value ----------
+Class ID: 0
+Class Color: (0, 0, 0)
+Class Name: background
+Percentage of region: 100.000%
+
+
+---------- Colors Present In Image ----------
+
+RGB Color - HSV - Proportion - Hue Color: Rgb(r=170, g=139, b=68) - (41.764705882352935, 0.6, 170) - 5.5799424967757965% - red
+RGB Color - HSV - Proportion - Hue Color: Rgb(r=24, g=32, b=21) - (103.63636363636364, 0.34375, 32) - 2.3521895003372104% - yellow
+RGB Color - HSV - Proportion - Hue Color: Rgb(r=45, g=43, b=18) - (55.55555555555555, 0.6, 45) - 39.517493522013325% - red
+RGB Color - HSV - Proportion - Hue Color: Rgb(r=220, g=196, b=130) - (44.0, 0.4090909090909091, 220) - 3.301111019084918% - red
+RGB Color - HSV - Proportion - Hue Color: Rgb(r=58, g=69, b=52) - (98.8235294117647, 0.2463768115942029, 69) - 0.007099163481903048% - yellow
+RGB Color - HSV - Proportion - Hue Color: Rgb(r=33, g=30, b=32) - (320.0, 0.09090909090909091, 33) - 0.01893110261840813% - magenta
+RGB Color - HSV - Proportion - Hue Color: Rgb(r=212, g=97, b=52) - (16.875, 0.7547169811320755, 212) - 0.028396653927612193% - red
+RGB Color - HSV - Proportion - Hue Color: Rgb(r=112, g=97, b=54) - (44.48275862068966, 0.5178571428571429, 112) - 5.182389341789226% - red
+RGB Color - HSV - Proportion - Hue Color: Rgb(r=248, g=233, b=181) - (46.56716417910447, 0.2701612903225806, 248) - 0.5572843333293893% - red
+RGB Color - HSV - Proportion - Hue Color: Rgb(r=65, g=74, b=60) - (98.57142857142856, 0.1891891891891892, 74) - 0.015381520877456607% - yellow
+RGB Color - HSV - Proportion - Hue Color: Rgb(r=199, g=175, b=108) - (44.175824175824175, 0.457286432160804, 199) - 37.81014470461564% - red
+RGB Color - HSV - Proportion - Hue Color: Rgb(r=78, g=71, b=33) - (50.66666666666667, 0.5769230769230769, 78) - 5.534981128057077% - red
+RGB Color - HSV - Proportion - Hue Color: Rgb(r=22, g=26, b=31) - (213.33333333333331, 0.2903225806451613, 31) - 0.09347231917839013% - cyan
+RGB Color - HSV - Proportion - Hue Color: Rgb(r=66, g=60, b=70) - (276.0, 0.14285714285714285, 70) - 0.001183193913650508% - blue
+
+
+---------- Hue Colors - Hue Proportions ----------
+
+Color	 -	 Color Proportion	 -	 No. of instances
+Red    	 -	 97.512%			 -	 8
+Yellow 	 -	 2.375%			 -	 3
+Green 	 -	 0.000%			 -	 0
+Cyan   	 -	 0.093%			 -	 1
+Blue   	 -	 0.001%			 -	 1
+Magenta	 -	 0.019%			 -	 1
+--------------------------------------------------
+Total number of colors: 14
+
+---------- End Time - 2018-08-03 16:14:02.225113 ----------
+Elapsed time is: 0:00:13.784407
+Checking demo/resume.txt file...
+Saving last segmented image path...
+Writing file...
+Closing file...
+demo/Batch 1/charles-francois-daubigny_cattle-on-the-bank-of-the-river-1872.jpg
+---------- Start Time - 2018-08-03 16:14:18.448231 ----------
+Checking if image {width, height} has 1000 above pixels...
+Images (H x W) has dimensions 306 x 566
+Image {height, width} has below 1000 pixels - (306 x 566)
+Checking voc-fcn8s/test.prototxt file...
+Reading file...
+Reshaping input layer...
+    shape { dim: 1 dim: 3 dim: 306 dim: 566 }
+
+Writing file...
+Closing file...
+Starting to segment the image -- charles-francois-daubigny_cattle-on-the-bank-of-the-river-1872 -- in 5 seconds
+Number of pixels: 173196
+Extract Unique Pixel Classes:
+
+1. [0, 0, 0]
+---------- Class Names - RGB Value ----------
+Class ID: 0
+Class Color: (0, 0, 0)
+Class Name: background
+Percentage of region: 100.000%
+
+
+---------- Colors Present In Image ----------
+
+RGB Color - HSV - Proportion - Hue Color: Rgb(r=111, g=94, b=55) - (41.785714285714285, 0.5045045045045045, 111) - 5.709716159726553% - red
+RGB Color - HSV - Proportion - Hue Color: Rgb(r=152, g=134, b=87) - (43.38461538461539, 0.4276315789473684, 152) - 0.5537079378276635% - red
+RGB Color - HSV - Proportion - Hue Color: Rgb(r=220, g=226, b=221) - (130.0, 0.02654867256637168, 226) - 1.109725397815192% - green
+RGB Color - HSV - Proportion - Hue Color: Rgb(r=213, g=205, b=211) - (315.0, 0.03755868544600939, 213) - 1.7592785052772582% - magenta
+RGB Color - HSV - Proportion - Hue Color: Rgb(r=47, g=40, b=15) - (46.875, 0.6808510638297872, 47) - 37.67523499387976% - red
+RGB Color - HSV - Proportion - Hue Color: Rgb(r=173, g=178, b=173) - (120.0, 0.028089887640449437, 178) - 0.02367260213861752% - green
+RGB Color - HSV - Proportion - Hue Color: Rgb(r=104, g=48, b=32) - (13.333333333333332, 0.6923076923076923, 104) - 0.022517841058684956% - red
+RGB Color - HSV - Proportion - Hue Color: Rgb(r=181, g=167, b=149) - (33.75, 0.17679558011049723, 181) - 8.008845469872284% - red
+RGB Color - HSV - Proportion - Hue Color: Rgb(r=143, g=122, b=115) - (15.0, 0.1958041958041958, 143) - 0.010970230259359339% - red
+RGB Color - HSV - Proportion - Hue Color: Rgb(r=198, g=187, b=194) - (321.8181818181818, 0.05555555555555555, 198) - 0.3244878634610499% - magenta
+RGB Color - HSV - Proportion - Hue Color: Rgb(r=225, g=222, b=201) - (52.5, 0.10666666666666667, 225) - 20.852675581422204% - red
+RGB Color - HSV - Proportion - Hue Color: Rgb(r=207, g=208, b=224) - (236.47058823529412, 0.07589285714285714, 224) - 7.587357675696898% - cyan
+RGB Color - HSV - Proportion - Hue Color: Rgb(r=17, g=18, b=21) - (225.0, 0.19047619047619047, 21) - 0.009815469179426778% - cyan
+RGB Color - HSV - Proportion - Hue Color: Rgb(r=80, g=72, b=28) - (50.76923076923077, 0.65, 80) - 6.009376659969052% - red
+RGB Color - HSV - Proportion - Hue Color: Rgb(r=25, g=17, b=19) - (345.0, 0.32, 25) - 0.12529157717268297% - magenta
+RGB Color - HSV - Proportion - Hue Color: Rgb(r=111, g=124, b=181) - (228.85714285714283, 0.3867403314917127, 181) - 0.004619044319730248% - cyan
+RGB Color - HSV - Proportion - Hue Color: Rgb(r=116, g=94, b=96) - (354.54545454545456, 0.1896551724137931, 116) - 0.004041663779763967% - magenta
+RGB Color - HSV - Proportion - Hue Color: Rgb(r=182, g=181, b=214) - (241.8181818181818, 0.1542056074766355, 214) - 2.935980045728539% - blue
+RGB Color - HSV - Proportion - Hue Color: Rgb(r=201, g=187, b=186) - (3.999999999999999, 0.07462686567164178, 201) - 0.1789879673895471% - red
+RGB Color - HSV - Proportion - Hue Color: Rgb(r=17, g=24, b=16) - (112.5, 0.3333333333333333, 24) - 0.031178549158179174% - yellow
+RGB Color - HSV - Proportion - Hue Color: Rgb(r=164, g=165, b=201) - (238.3783783783784, 0.18407960199004975, 201) - 3.9406221852698673% - cyan
+RGB Color - HSV - Proportion - Hue Color: Rgb(r=207, g=197, b=166) - (45.36585365853658, 0.19806763285024154, 207) - 1.5468024665696667% - red
+RGB Color - HSV - Proportion - Hue Color: Rgb(r=185, g=175, b=182) - (318.0, 0.05405405405405406, 185) - 1.5704750687082842% - magenta
+RGB Color - HSV - Proportion - Hue Color: Rgb(r=187, g=195, b=186) - (113.33333333333334, 0.046153846153846156, 195) - 0.004619044319730248% - yellow
+
+
+---------- Hue Colors - Hue Proportions ----------
+
+Color	 -	 Color Proportion	 -	 No. of instances
+Red    	 -	 80.569%			 -	 10
+Yellow 	 -	 0.036%			 -	 2
+Green 	 -	 1.133%			 -	 2
+Cyan   	 -	 11.542%			 -	 4
+Blue   	 -	 2.936%			 -	 1
+Magenta	 -	 3.784%			 -	 5
+--------------------------------------------------
+Total number of colors: 24
+
+---------- End Time - 2018-08-03 16:14:35.031711 ----------
+Elapsed time is: 0:00:16.583480
+Checking demo/resume.txt file...
+Saving last segmented image path...
+Writing file...
+Closing file...
+demo/Batch 1/charles-francois-daubigny_cows-on-the-banks-of-the-seine-at-conflans-1876.jpg
+---------- Start Time - 2018-08-03 16:14:51.253431 ----------
+Checking if image {width, height} has 1000 above pixels...
+Images (H x W) has dimensions 281 x 465
+Image {height, width} has below 1000 pixels - (281 x 465)
+Checking voc-fcn8s/test.prototxt file...
+Reading file...
+Reshaping input layer...
+    shape { dim: 1 dim: 3 dim: 281 dim: 465 }
+
+Writing file...
+Closing file...
+Starting to segment the image -- charles-francois-daubigny_cows-on-the-banks-of-the-seine-at-conflans-1876 -- in 5 seconds
+Number of pixels: 130665
+Extract Unique Pixel Classes:
+
+1. [0, 0, 0]
+---------- Class Names - RGB Value ----------
+Class ID: 0
+Class Color: (0, 0, 0)
+Class Name: background
+Percentage of region: 100.000%
+
+
+---------- Colors Present In Image ----------
+
+RGB Color - HSV - Proportion - Hue Color: Rgb(r=121, g=105, b=62) - (43.728813559322035, 0.48760330578512395, 121) - 3.5679026518195385% - red
+RGB Color - HSV - Proportion - Hue Color: Rgb(r=15, g=13, b=14) - (330.0, 0.13333333333333333, 15) - 0.019898212987410555% - magenta
+RGB Color - HSV - Proportion - Hue Color: Rgb(r=202, g=176, b=147) - (31.63636363636364, 0.2722772277227723, 202) - 29.12333065472774% - red
+RGB Color - HSV - Proportion - Hue Color: Rgb(r=40, g=37, b=16) - (52.5, 0.6, 40) - 38.47778670646309% - red
+RGB Color - HSV - Proportion - Hue Color: Rgb(r=208, g=192, b=195) - (348.75, 0.07692307692307693, 208) - 0.0007653158841311751% - magenta
+RGB Color - HSV - Proportion - Hue Color: Rgb(r=170, g=168, b=173) - (264.0, 0.028901734104046242, 173) - 0.0007653158841311751% - blue
+RGB Color - HSV - Proportion - Hue Color: Rgb(r=17, g=22, b=15) - (102.85714285714288, 0.3181818181818182, 22) - 0.467608005204148% - yellow
+RGB Color - HSV - Proportion - Hue Color: Rgb(r=213, g=186, b=172) - (20.48780487804878, 0.19248826291079812, 213) - 0.0864806949068228% - red
+RGB Color - HSV - Proportion - Hue Color: Rgb(r=227, g=202, b=177) - (30.0, 0.22026431718061673, 227) - 20.368882256151227% - red
+RGB Color - HSV - Proportion - Hue Color: Rgb(r=21, g=23, b=25) - (210.0, 0.16, 25) - 0.009949106493705277% - cyan
+RGB Color - HSV - Proportion - Hue Color: Rgb(r=155, g=133, b=84) - (41.40845070422535, 0.45806451612903226, 155) - 1.1923621474763708% - red
+RGB Color - HSV - Proportion - Hue Color: Rgb(r=80, g=70, b=32) - (47.5, 0.6, 80) - 0.9719511728465925% - red
+RGB Color - HSV - Proportion - Hue Color: Rgb(r=179, g=163, b=166) - (348.75, 0.0893854748603352, 179) - 0.17219607392951441% - magenta
+RGB Color - HSV - Proportion - Hue Color: Rgb(r=206, g=187, b=189) - (353.6842105263158, 0.09223300970873786, 206) - 0.0007653158841311751% - magenta
+RGB Color - HSV - Proportion - Hue Color: Rgb(r=220, g=191, b=154) - (33.63636363636363, 0.3, 220) - 5.537825737573184% - red
+RGB Color - HSV - Proportion - Hue Color: Rgb(r=90, g=52, b=51) - (1.5384615384615397, 0.43333333333333335, 90) - 0.0015306317682623502% - red
+
+
+---------- Hue Colors - Hue Proportions ----------
+
+Color	 -	 Color Proportion	 -	 No. of instances
+Red    	 -	 99.328%			 -	 9
+Yellow 	 -	 0.468%			 -	 1
+Green 	 -	 0.000%			 -	 0
+Cyan   	 -	 0.010%			 -	 1
+Blue   	 -	 0.001%			 -	 1
+Magenta	 -	 0.194%			 -	 4
+--------------------------------------------------
+Total number of colors: 16
+
+---------- End Time - 2018-08-03 16:15:06.445291 ----------
+Elapsed time is: 0:00:15.191860
+Checking demo/resume.txt file...
+Saving last segmented image path...
+Writing file...
+Closing file...
+demo/Batch 1/charles-francois-daubigny_french-river-scene-1871.jpg
+---------- Start Time - 2018-08-03 16:15:22.702968 ----------
+Checking if image {width, height} has 1000 above pixels...
+Images (H x W) has dimensions 167 x 300
+Image {height, width} has below 1000 pixels - (167 x 300)
+Checking voc-fcn8s/test.prototxt file...
+Reading file...
+Reshaping input layer...
+    shape { dim: 1 dim: 3 dim: 167 dim: 300 }
+
+Writing file...
+Closing file...
+Starting to segment the image -- charles-francois-daubigny_french-river-scene-1871 -- in 5 seconds
+Number of pixels: 50100
+Extract Unique Pixel Classes:
+
+1. [0, 0, 0]
+---------- Class Names - RGB Value ----------
+Class ID: 0
+Class Color: (0, 0, 0)
+Class Name: background
+Percentage of region: 100.000%
+
+
+---------- Colors Present In Image ----------
+
+RGB Color - HSV - Proportion - Hue Color: Rgb(r=86, g=53, b=45) - (11.707317073170728, 0.47674418604651164, 86) - 0.003992015968063873% - red
+RGB Color - HSV - Proportion - Hue Color: Rgb(r=24, g=39, b=41) - (187.05882352941174, 0.4146341463414634, 41) - 1.3552894211576845% - cyan
+RGB Color - HSV - Proportion - Hue Color: Rgb(r=151, g=170, b=157) - (138.94736842105263, 0.11176470588235295, 170) - 24.870259481037923% - green
+RGB Color - HSV - Proportion - Hue Color: Rgb(r=79, g=154, b=167) - (188.86363636363635, 0.5269461077844312, 167) - 0.4471057884231537% - cyan
+RGB Color - HSV - Proportion - Hue Color: Rgb(r=38, g=52, b=45) - (150.0, 0.2692307692307692, 52) - 15.283433133732535% - green
+RGB Color - HSV - Proportion - Hue Color: Rgb(r=54, g=71, b=52) - (113.68421052631581, 0.2676056338028169, 71) - 1.3812375249500999% - yellow
+RGB Color - HSV - Proportion - Hue Color: Rgb(r=96, g=94, b=63) - (56.36363636363637, 0.34375, 96) - 10.674650698602795% - red
+RGB Color - HSV - Proportion - Hue Color: Rgb(r=146, g=137, b=90) - (50.35714285714286, 0.3835616438356164, 146) - 2.9820359281437123% - red
+RGB Color - HSV - Proportion - Hue Color: Rgb(r=57, g=59, b=47) - (69.99999999999999, 0.2033898305084746, 59) - 2.5788423153692617% - yellow
+RGB Color - HSV - Proportion - Hue Color: Rgb(r=117, g=137, b=119) - (126.00000000000001, 0.145985401459854, 137) - 0.47904191616766467% - green
+RGB Color - HSV - Proportion - Hue Color: Rgb(r=170, g=169, b=143) - (57.777777777777786, 0.1588235294117647, 170) - 25.686626746506985% - red
+RGB Color - HSV - Proportion - Hue Color: Rgb(r=49, g=45, b=46) - (345.0, 0.08163265306122448, 49) - 0.007984031936127746% - magenta
+RGB Color - HSV - Proportion - Hue Color: Rgb(r=216, g=205, b=186) - (38.0, 0.1388888888888889, 216) - 2.568862275449102% - red
+RGB Color - HSV - Proportion - Hue Color: Rgb(r=189, g=200, b=191) - (130.9090909090909, 0.055, 200) - 0.18962075848303395% - green
+RGB Color - HSV - Proportion - Hue Color: Rgb(r=200, g=195, b=174) - (48.46153846153846, 0.13, 200) - 2.3293413173652695% - red
+RGB Color - HSV - Proportion - Hue Color: Rgb(r=68, g=70, b=50) - (66.0, 0.2857142857142857, 70) - 2.6766467065868262% - yellow
+RGB Color - HSV - Proportion - Hue Color: Rgb(r=184, g=196, b=186) - (130.0, 0.061224489795918366, 196) - 0.2435129740518962% - green
+RGB Color - HSV - Proportion - Hue Color: Rgb(r=81, g=99, b=80) - (116.84210526315788, 0.1919191919191919, 99) - 2.8902195608782435% - yellow
+RGB Color - HSV - Proportion - Hue Color: Rgb(r=55, g=69, b=70) - (184.0, 0.21428571428571427, 70) - 0.0019960079840319364% - cyan
+RGB Color - HSV - Proportion - Hue Color: Rgb(r=68, g=105, b=113) - (190.66666666666669, 0.39823008849557523, 113) - 0.003992015968063873% - cyan
+RGB Color - HSV - Proportion - Hue Color: Rgb(r=111, g=164, b=171) - (186.99999999999997, 0.3508771929824561, 171) - 3.3453093812375245% - cyan
+
+
+---------- Hue Colors - Hue Proportions ----------
+
+Color	 -	 Color Proportion	 -	 No. of instances
+Red    	 -	 44.246%			 -	 6
+Yellow 	 -	 9.527%			 -	 4
+Green 	 -	 41.066%			 -	 5
+Cyan   	 -	 5.154%			 -	 5
+Blue   	 -	 0.000%			 -	 0
+Magenta	 -	 0.008%			 -	 1
+--------------------------------------------------
+Total number of colors: 21
+
+---------- End Time - 2018-08-03 16:15:35.330738 ----------
+Elapsed time is: 0:00:12.627770
+Checking demo/resume.txt file...
+Saving last segmented image path...
+Writing file...
+Closing file...
+demo/Batch 1/charles-francois-daubigny_landscape-trees-on-the-slope-of-a-ravine.jpg
+---------- Start Time - 2018-08-03 16:15:51.551108 ----------
+Checking if image {width, height} has 1000 above pixels...
+Images (H x W) has dimensions 223 x 320
+Image {height, width} has below 1000 pixels - (223 x 320)
+Checking voc-fcn8s/test.prototxt file...
+Reading file...
+Reshaping input layer...
+    shape { dim: 1 dim: 3 dim: 223 dim: 320 }
+
+Writing file...
+Closing file...
+Starting to segment the image -- charles-francois-daubigny_landscape-trees-on-the-slope-of-a-ravine -- in 5 seconds
+Number of pixels: 71360
+Extract Unique Pixel Classes:
+
+1. [0, 0, 0]
+---------- Class Names - RGB Value ----------
+Class ID: 0
+Class Color: (0, 0, 0)
+Class Name: background
+Percentage of region: 100.000%
+
+
+---------- Colors Present In Image ----------
+
+RGB Color - HSV - Proportion - Hue Color: Rgb(r=243, g=199, b=121) - (38.36065573770492, 0.5020576131687243, 243) - 22.09921524663677% - red
+RGB Color - HSV - Proportion - Hue Color: Rgb(r=86, g=31, b=3) - (20.240963855421686, 0.9651162790697675, 86) - 4.600616591928251% - red
+RGB Color - HSV - Proportion - Hue Color: Rgb(r=254, g=244, b=250) - (324.0, 0.03937007874015748, 254) - 0.3419282511210762% - magenta
+RGB Color - HSV - Proportion - Hue Color: Rgb(r=115, g=62, b=4) - (31.35135135135135, 0.9652173913043478, 115) - 0.7385089686098655% - red
+RGB Color - HSV - Proportion - Hue Color: Rgb(r=56, g=12, b=16) - (354.54545454545456, 0.7857142857142857, 56) - 0.028026905829596414% - magenta
+RGB Color - HSV - Proportion - Hue Color: Rgb(r=223, g=177, b=179) - (357.39130434782606, 0.2062780269058296, 223) - 0.016816143497757848% - magenta
+RGB Color - HSV - Proportion - Hue Color: Rgb(r=217, g=162, b=94) - (33.170731707317074, 0.5668202764976958, 217) - 31.056614349775785% - red
+RGB Color - HSV - Proportion - Hue Color: Rgb(r=100, g=46, b=50) - (355.55555555555554, 0.54, 100) - 0.004204035874439462% - magenta
+RGB Color - HSV - Proportion - Hue Color: Rgb(r=177, g=113, b=84) - (18.709677419354836, 0.5254237288135594, 177) - 0.08968609865470852% - red
+RGB Color - HSV - Proportion - Hue Color: Rgb(r=245, g=249, b=253) - (210.0, 0.03162055335968379, 253) - 0.033632286995515695% - cyan
+RGB Color - HSV - Proportion - Hue Color: Rgb(r=250, g=226, b=167) - (42.65060240963855, 0.332, 250) - 20.647421524663677% - red
+RGB Color - HSV - Proportion - Hue Color: Rgb(r=182, g=131, b=58) - (35.32258064516128, 0.6813186813186813, 182) - 4.460482062780269% - red
+RGB Color - HSV - Proportion - Hue Color: Rgb(r=136, g=83, b=89) - (353.20754716981133, 0.3897058823529412, 136) - 0.005605381165919282% - magenta
+RGB Color - HSV - Proportion - Hue Color: Rgb(r=151, g=93, b=39) - (28.928571428571427, 0.7417218543046358, 151) - 15.346132286995514% - red
+RGB Color - HSV - Proportion - Hue Color: Rgb(r=240, g=253, b=242) - (129.23076923076923, 0.05138339920948617, 253) - 0.2886771300448431% - green
+RGB Color - HSV - Proportion - Hue Color: Rgb(r=109, g=49, b=24) - (17.64705882352941, 0.7798165137614679, 109) - 0.19338565022421525% - red
+RGB Color - HSV - Proportion - Hue Color: Rgb(r=160, g=100, b=102) - (358.0, 0.375, 160) - 0.0014013452914798206% - magenta
+RGB Color - HSV - Proportion - Hue Color: Rgb(r=242, g=177, b=147) - (18.94736842105263, 0.3925619834710744, 242) - 0.0476457399103139% - red
+
+
+---------- Hue Colors - Hue Proportions ----------
+
+Color	 -	 Color Proportion	 -	 No. of instances
+Red    	 -	 99.280%			 -	 10
+Yellow 	 -	 0.000%			 -	 0
+Green 	 -	 0.289%			 -	 1
+Cyan   	 -	 0.034%			 -	 1
+Blue   	 -	 0.000%			 -	 0
+Magenta	 -	 0.398%			 -	 6
+--------------------------------------------------
+Total number of colors: 18
+
+---------- End Time - 2018-08-03 16:16:04.811837 ----------
+Elapsed time is: 0:00:13.260729
+Checking demo/resume.txt file...
+Saving last segmented image path...
+Writing file...
+Closing file...
+demo/Batch 1/charles-francois-daubigny_le-ru-de-valmondois.jpg
+---------- Start Time - 2018-08-03 16:16:21.079066 ----------
+Checking if image {width, height} has 1000 above pixels...
+Images (H x W) has dimensions 767 x 500
+Image {height, width} has below 1000 pixels - (767 x 500)
+Checking voc-fcn8s/test.prototxt file...
+Reading file...
+Reshaping input layer...
+    shape { dim: 1 dim: 3 dim: 767 dim: 500 }
+
+Writing file...
+Closing file...
+Starting to segment the image -- charles-francois-daubigny_le-ru-de-valmondois -- in 5 seconds
+Number of pixels: 383500
+Extract Unique Pixel Classes:
+
+1. [0, 0, 0]
+2. [64, 0, 128]
+3. [128, 64, 0]
+4. [128, 128, 0]
+---------- Class Names - RGB Value ----------
+Class ID: 0
+Class Color: (0, 0, 0)
+Class Name: background
+Percentage of region: 99.951%
+
+
+Class ID: 12
+Class Color: (64, 0, 128)
+Class Name: dog
+Percentage of region: 0.000%
+
+
+Class ID: 17
+Class Color: (128, 64, 0)
+Class Name: sheep
+Percentage of region: 0.045%
+
+
+Class ID: 3
+Class Color: (128, 128, 0)
+Class Name: bird
+Percentage of region: 0.003%
+
+
+---------- Colors Present In Image ----------
+
+RGB Color - HSV - Proportion - Hue Color: Rgb(r=97, g=42, b=47) - (354.54545454545456, 0.5670103092783505, 97) - 0.14915254237288136% - magenta
+RGB Color - HSV - Proportion - Hue Color: Rgb(r=164, g=140, b=59) - (46.28571428571429, 0.6402439024390244, 164) - 1.6534550195567144% - red
+RGB Color - HSV - Proportion - Hue Color: Rgb(r=217, g=206, b=118) - (53.33333333333333, 0.45622119815668205, 217) - 0.07249022164276402% - red
+RGB Color - HSV - Proportion - Hue Color: Rgb(r=90, g=107, b=100) - (155.29411764705884, 0.1588785046728972, 107) - 0.0010430247718383311% - green
+RGB Color - HSV - Proportion - Hue Color: Rgb(r=75, g=27, b=32) - (353.75, 0.64, 75) - 0.4075619295958279% - magenta
+RGB Color - HSV - Proportion - Hue Color: Rgb(r=175, g=144, b=152) - (344.51612903225805, 0.17714285714285713, 175) - 0.008604954367666232% - magenta
+RGB Color - HSV - Proportion - Hue Color: Rgb(r=97, g=65, b=21) - (34.73684210526316, 0.7835051546391752, 97) - 7.9397653194263365% - red
+RGB Color - HSV - Proportion - Hue Color: Rgb(r=227, g=213, b=174) - (44.15094339622642, 0.23348017621145375, 227) - 0.010951760104302478% - red
+RGB Color - HSV - Proportion - Hue Color: Rgb(r=147, g=165, b=144) - (111.42857142857143, 0.12727272727272726, 165) - 0.0031290743155149934% - yellow
+RGB Color - HSV - Proportion - Hue Color: Rgb(r=195, g=208, b=191) - (105.88235294117648, 0.08173076923076923, 208) - 0.0005215123859191656% - yellow
+RGB Color - HSV - Proportion - Hue Color: Rgb(r=210, g=205, b=212) - (282.85714285714283, 0.0330188679245283, 212) - 0.0002607561929595828% - blue
+RGB Color - HSV - Proportion - Hue Color: Rgb(r=118, g=79, b=38) - (30.749999999999996, 0.6779661016949152, 118) - 39.34185136897001% - red
+RGB Color - HSV - Proportion - Hue Color: Rgb(r=168, g=112, b=94) - (14.594594594594593, 0.44047619047619047, 168) - 0.02946544980443285% - red
+RGB Color - HSV - Proportion - Hue Color: Rgb(r=192, g=197, b=200) - (202.5, 0.04, 200) - 0.0002607561929595828% - cyan
+RGB Color - HSV - Proportion - Hue Color: Rgb(r=83, g=43, b=19) - (22.5, 0.7710843373493976, 83) - 45.260495436766625% - red
+RGB Color - HSV - Proportion - Hue Color: Rgb(r=141, g=142, b=151) - (234.0, 0.06622516556291391, 151) - 0.0010430247718383311% - cyan
+RGB Color - HSV - Proportion - Hue Color: Rgb(r=186, g=157, b=98) - (40.22727272727273, 0.4731182795698925, 186) - 0.7590612777053455% - red
+RGB Color - HSV - Proportion - Hue Color: Rgb(r=101, g=50, b=32) - (15.65217391304348, 0.6831683168316832, 101) - 4.282398956975228% - red
+RGB Color - HSV - Proportion - Hue Color: Rgb(r=152, g=113, b=121) - (347.6923076923077, 0.2565789473684211, 152) - 0.003389830508474576% - magenta
+RGB Color - HSV - Proportion - Hue Color: Rgb(r=115, g=69, b=75) - (352.17391304347825, 0.4, 115) - 0.07405475880052151% - magenta
+RGB Color - HSV - Proportion - Hue Color: Rgb(r=113, g=122, b=127) - (201.4285714285714, 0.11023622047244094, 127) - 0.0010430247718383311% - cyan
+
+
+---------- Hue Colors - Hue Proportions ----------
+
+Color	 -	 Color Proportion	 -	 No. of instances
+Red    	 -	 99.350%			 -	 9
+Yellow 	 -	 0.004%			 -	 2
+Green 	 -	 0.001%			 -	 1
+Cyan   	 -	 0.002%			 -	 3
+Blue   	 -	 0.000%			 -	 1
+Magenta	 -	 0.643%			 -	 5
+--------------------------------------------------
+Total number of colors: 21
+
+---------- End Time - 2018-08-03 16:16:47.277313 ----------
+Elapsed time is: 0:00:26.198247
+Checking demo/resume.txt file...
+Saving last segmented image path...
+Writing file...
+Closing file...
+demo/Batch 1/charles-francois-daubigny_riverbank-in-moonlight-1875.jpg
+---------- Start Time - 2018-08-03 16:17:03.506539 ----------
+Checking if image {width, height} has 1000 above pixels...
+Images (H x W) has dimensions 261 x 427
+Image {height, width} has below 1000 pixels - (261 x 427)
+Checking voc-fcn8s/test.prototxt file...
+Reading file...
+Reshaping input layer...
+    shape { dim: 1 dim: 3 dim: 261 dim: 427 }
+
+Writing file...
+Closing file...
+Starting to segment the image -- charles-francois-daubigny_riverbank-in-moonlight-1875 -- in 5 seconds
+Number of pixels: 111447
+Extract Unique Pixel Classes:
+
+1. [0, 0, 0]
+---------- Class Names - RGB Value ----------
+Class ID: 0
+Class Color: (0, 0, 0)
+Class Name: background
+Percentage of region: 100.000%
+
+
+---------- Colors Present In Image ----------
+
+RGB Color - HSV - Proportion - Hue Color: Rgb(r=112, g=108, b=77) - (53.142857142857146, 0.3125, 112) - 26.560607284179927% - red
+RGB Color - HSV - Proportion - Hue Color: Rgb(r=77, g=68, b=41) - (45.0, 0.4675324675324675, 77) - 1.1467334248566583% - red
+RGB Color - HSV - Proportion - Hue Color: Rgb(r=24, g=27, b=24) - (120.0, 0.1111111111111111, 27) - 0.36429872495446264% - green
+RGB Color - HSV - Proportion - Hue Color: Rgb(r=209, g=201, b=152) - (51.57894736842105, 0.2727272727272727, 209) - 4.926108374384237% - red
+RGB Color - HSV - Proportion - Hue Color: Rgb(r=228, g=221, b=171) - (52.631578947368425, 0.25, 228) - 1.1395551248575557% - red
+RGB Color - HSV - Proportion - Hue Color: Rgb(r=143, g=137, b=96) - (52.340425531914896, 0.32867132867132864, 143) - 11.51847963606019% - red
+RGB Color - HSV - Proportion - Hue Color: Rgb(r=19, g=20, b=23) - (225.0, 0.17391304347826086, 23) - 0.23778118747027735% - cyan
+RGB Color - HSV - Proportion - Hue Color: Rgb(r=127, g=148, b=114) - (97.05882352941175, 0.22972972972972974, 148) - 0.08165316248979336% - yellow
+RGB Color - HSV - Proportion - Hue Color: Rgb(r=20, g=18, b=19) - (330.0, 0.1, 20) - 0.17138191247857726% - magenta
+RGB Color - HSV - Proportion - Hue Color: Rgb(r=117, g=138, b=106) - (99.375, 0.2318840579710145, 138) - 0.2996940249625382% - yellow
+RGB Color - HSV - Proportion - Hue Color: Rgb(r=95, g=112, b=88) - (102.50000000000001, 0.21428571428571427, 112) - 3.835904062020512% - yellow
+RGB Color - HSV - Proportion - Hue Color: Rgb(r=38, g=36, b=24) - (51.42857142857144, 0.3684210526315789, 38) - 20.671709422416036% - red
+RGB Color - HSV - Proportion - Hue Color: Rgb(r=177, g=167, b=121) - (49.28571428571428, 0.3163841807909605, 177) - 29.04609365886924% - red
+
+
+---------- Hue Colors - Hue Proportions ----------
+
+Color	 -	 Color Proportion	 -	 No. of instances
+Red    	 -	 95.009%			 -	 7
+Yellow 	 -	 4.217%			 -	 3
+Green 	 -	 0.364%			 -	 1
+Cyan   	 -	 0.238%			 -	 1
+Blue   	 -	 0.000%			 -	 0
+Magenta	 -	 0.171%			 -	 1
+--------------------------------------------------
+Total number of colors: 13
+
+---------- End Time - 2018-08-03 16:17:18.219409 ----------
+Elapsed time is: 0:00:14.712870
+Checking demo/resume.txt file...
+Saving last segmented image path...
+Writing file...
+Closing file...
+demo/Batch 1/charles-francois-daubigny_sunset-lower-meudon-1869.jpg
+---------- Start Time - 2018-08-03 16:17:34.441905 ----------
+Checking if image {width, height} has 1000 above pixels...
+Images (H x W) has dimensions 183 x 320
+Image {height, width} has below 1000 pixels - (183 x 320)
+Checking voc-fcn8s/test.prototxt file...
+Reading file...
+Reshaping input layer...
+    shape { dim: 1 dim: 3 dim: 183 dim: 320 }
+
+Writing file...
+Closing file...
+Starting to segment the image -- charles-francois-daubigny_sunset-lower-meudon-1869 -- in 5 seconds
+Number of pixels: 58560
+Extract Unique Pixel Classes:
+
+1. [0, 0, 0]
+---------- Class Names - RGB Value ----------
+Class ID: 0
+Class Color: (0, 0, 0)
+Class Name: background
+Percentage of region: 100.000%
+
+
+---------- Colors Present In Image ----------
+
+RGB Color - HSV - Proportion - Hue Color: Rgb(r=225, g=202, b=136) - (44.49438202247191, 0.39555555555555555, 225) - 8.901980874316939% - red
+RGB Color - HSV - Proportion - Hue Color: Rgb(r=80, g=70, b=35) - (46.666666666666664, 0.5625, 80) - 6.605191256830602% - red
+RGB Color - HSV - Proportion - Hue Color: Rgb(r=220, g=212, b=220) - (300.0, 0.03636363636363636, 220) - 0.0034153005464480873% - magenta
+RGB Color - HSV - Proportion - Hue Color: Rgb(r=64, g=63, b=68) - (252.00000000000003, 0.07352941176470588, 68) - 0.0017076502732240437% - blue
+RGB Color - HSV - Proportion - Hue Color: Rgb(r=137, g=149, b=135) - (111.42857142857143, 0.09395973154362416, 149) - 0.010245901639344262% - yellow
+RGB Color - HSV - Proportion - Hue Color: Rgb(r=214, g=177, b=171) - (8.372093023255815, 0.20093457943925233, 214) - 0.0017076502732240437% - red
+RGB Color - HSV - Proportion - Hue Color: Rgb(r=58, g=69, b=55) - (107.14285714285714, 0.2028985507246377, 69) - 0.1127049180327869% - yellow
+RGB Color - HSV - Proportion - Hue Color: Rgb(r=152, g=119, b=103) - (19.591836734693878, 0.3223684210526316, 152) - 0.0034153005464480873% - red
+RGB Color - HSV - Proportion - Hue Color: Rgb(r=123, g=134, b=115) - (94.73684210526315, 0.1417910447761194, 134) - 0.00853825136612022% - yellow
+RGB Color - HSV - Proportion - Hue Color: Rgb(r=160, g=137, b=76) - (43.57142857142857, 0.525, 160) - 3.989071038251366% - red
+RGB Color - HSV - Proportion - Hue Color: Rgb(r=243, g=222, b=167) - (43.421052631578945, 0.31275720164609055, 243) - 9.1974043715847% - red
+RGB Color - HSV - Proportion - Hue Color: Rgb(r=74, g=86, b=88) - (188.57142857142858, 0.1590909090909091, 88) - 0.006830601092896175% - cyan
+RGB Color - HSV - Proportion - Hue Color: Rgb(r=109, g=96, b=59) - (44.4, 0.45871559633027525, 109) - 21.716188524590162% - red
+RGB Color - HSV - Proportion - Hue Color: Rgb(r=98, g=86, b=91) - (335.0, 0.12244897959183673, 98) - 0.02219945355191257% - magenta
+RGB Color - HSV - Proportion - Hue Color: Rgb(r=192, g=170, b=112) - (43.5, 0.4166666666666667, 192) - 13.77049180327869% - red
+RGB Color - HSV - Proportion - Hue Color: Rgb(r=25, g=28, b=31) - (210.0, 0.1935483870967742, 31) - 0.18442622950819673% - cyan
+RGB Color - HSV - Proportion - Hue Color: Rgb(r=91, g=53, b=41) - (14.4, 0.5494505494505495, 91) - 0.006830601092896175% - red
+RGB Color - HSV - Proportion - Hue Color: Rgb(r=45, g=41, b=21) - (50.0, 0.5333333333333333, 45) - 31.557377049180328% - red
+RGB Color - HSV - Proportion - Hue Color: Rgb(r=78, g=87, b=74) - (101.53846153846156, 0.14942528735632185, 87) - 0.701844262295082% - yellow
+RGB Color - HSV - Proportion - Hue Color: Rgb(r=40, g=30, b=34) - (336.0, 0.25, 40) - 0.0665983606557377% - magenta
+RGB Color - HSV - Proportion - Hue Color: Rgb(r=28, g=37, b=27) - (114.0, 0.2702702702702703, 37) - 3.121584699453552% - yellow
+RGB Color - HSV - Proportion - Hue Color: Rgb(r=173, g=149, b=152) - (352.5, 0.13872832369942195, 173) - 0.010245901639344262% - magenta
+
+
+---------- Hue Colors - Hue Proportions ----------
+
+Color	 -	 Color Proportion	 -	 No. of instances
+Red    	 -	 95.750%			 -	 10
+Yellow 	 -	 3.955%			 -	 5
+Green 	 -	 0.000%			 -	 0
+Cyan   	 -	 0.191%			 -	 2
+Blue   	 -	 0.002%			 -	 1
+Magenta	 -	 0.102%			 -	 4
+--------------------------------------------------
+Total number of colors: 22
+
+---------- End Time - 2018-08-03 16:17:47.200307 ----------
+Elapsed time is: 0:00:12.758402
+Checking demo/resume.txt file...
+Saving last segmented image path...
+Writing file...
+Closing file...
+demo/Batch 1/charles-francois-daubigny_the-banks-of-the-oise(1).jpg
+---------- Start Time - 2018-08-03 16:18:03.421923 ----------
+Checking if image {width, height} has 1000 above pixels...
+Images (H x W) has dimensions 149 x 250
+Image {height, width} has below 1000 pixels - (149 x 250)
+Checking voc-fcn8s/test.prototxt file...
+Reading file...
+Reshaping input layer...
+    shape { dim: 1 dim: 3 dim: 149 dim: 250 }
+
+Writing file...
+Closing file...
+Starting to segment the image -- charles-francois-daubigny_the-banks-of-the-oise(1) -- in 5 seconds
+Number of pixels: 37250
+Extract Unique Pixel Classes:
+
+1. [0, 0, 0]
+---------- Class Names - RGB Value ----------
+Class ID: 0
+Class Color: (0, 0, 0)
+Class Name: background
+Percentage of region: 100.000%
+
+
+---------- Colors Present In Image ----------
+
+RGB Color - HSV - Proportion - Hue Color: Rgb(r=82, g=67, b=38) - (39.54545454545455, 0.5365853658536586, 82) - 0.5664429530201343% - red
+RGB Color - HSV - Proportion - Hue Color: Rgb(r=100, g=76, b=82) - (345.0, 0.24, 100) - 0.08590604026845639% - magenta
+RGB Color - HSV - Proportion - Hue Color: Rgb(r=241, g=208, b=158) - (36.14457831325301, 0.34439834024896265, 241) - 20.421476510067112% - red
+RGB Color - HSV - Proportion - Hue Color: Rgb(r=230, g=197, b=139) - (38.24175824175824, 0.39565217391304347, 230) - 20.5744966442953% - red
+RGB Color - HSV - Proportion - Hue Color: Rgb(r=61, g=44, b=48) - (345.88235294117646, 0.2786885245901639, 61) - 0.10469798657718121% - magenta
+RGB Color - HSV - Proportion - Hue Color: Rgb(r=163, g=115, b=96) - (17.014925373134332, 0.4110429447852761, 163) - 0.024161073825503355% - red
+RGB Color - HSV - Proportion - Hue Color: Rgb(r=69, g=53, b=36) - (30.909090909090907, 0.4782608695652174, 69) - 1.6993288590604025% - red
+RGB Color - HSV - Proportion - Hue Color: Rgb(r=167, g=133, b=73) - (38.297872340425535, 0.562874251497006, 167) - 8.257718120805368% - red
+RGB Color - HSV - Proportion - Hue Color: Rgb(r=124, g=98, b=65) - (33.55932203389831, 0.47580645161290325, 124) - 32.23892617449665% - red
+RGB Color - HSV - Proportion - Hue Color: Rgb(r=82, g=53, b=61) - (343.448275862069, 0.35365853658536583, 82) - 0.018791946308724834% - magenta
+RGB Color - HSV - Proportion - Hue Color: Rgb(r=79, g=82, b=85) - (210.0, 0.07058823529411765, 85) - 0.02953020134228188% - cyan
+RGB Color - HSV - Proportion - Hue Color: Rgb(r=77, g=86, b=72) - (98.57142857142856, 0.16279069767441862, 86) - 0.056375838926174496% - yellow
+RGB Color - HSV - Proportion - Hue Color: Rgb(r=197, g=165, b=105) - (39.130434782608695, 0.467005076142132, 197) - 15.820134228187918% - red
+RGB Color - HSV - Proportion - Hue Color: Rgb(r=56, g=65, b=55) - (114.0, 0.15384615384615385, 65) - 0.005369127516778524% - yellow
+RGB Color - HSV - Proportion - Hue Color: Rgb(r=80, g=58, b=50) - (16.000000000000004, 0.375, 80) - 0.09664429530201342% - red
+
+
+---------- Hue Colors - Hue Proportions ----------
+
+Color	 -	 Color Proportion	 -	 No. of instances
+Red    	 -	 99.699%			 -	 9
+Yellow 	 -	 0.062%			 -	 2
+Green 	 -	 0.000%			 -	 0
+Cyan   	 -	 0.030%			 -	 1
+Blue   	 -	 0.000%			 -	 0
+Magenta	 -	 0.209%			 -	 3
+--------------------------------------------------
+Total number of colors: 15
+
+---------- End Time - 2018-08-03 16:18:15.354301 ----------
+Elapsed time is: 0:00:11.932378
+Checking demo/resume.txt file...
+Saving last segmented image path...
+Writing file...
+Closing file...
+demo/Batch 1/charles-francois-daubigny_the-banks-of-the-river-1863.jpg
+---------- Start Time - 2018-08-03 16:18:31.628081 ----------
+Checking if image {width, height} has 1000 above pixels...
+Images (H x W) has dimensions 299 x 556
+Image {height, width} has below 1000 pixels - (299 x 556)
+Checking voc-fcn8s/test.prototxt file...
+Reading file...
+Reshaping input layer...
+    shape { dim: 1 dim: 3 dim: 299 dim: 556 }
+
+Writing file...
+Closing file...
+Starting to segment the image -- charles-francois-daubigny_the-banks-of-the-river-1863 -- in 5 seconds
+Number of pixels: 166244
+Extract Unique Pixel Classes:
+
+1. [0, 0, 0]
+---------- Class Names - RGB Value ----------
+Class ID: 0
+Class Color: (0, 0, 0)
+Class Name: background
+Percentage of region: 100.000%
+
+
+---------- Colors Present In Image ----------
+
+RGB Color - HSV - Proportion - Hue Color: Rgb(r=12, g=15, b=13) - (140.0, 0.2, 15) - 0.18827747166815043% - green
+RGB Color - HSV - Proportion - Hue Color: Rgb(r=193, g=190, b=192) - (320.0, 0.015544041450777202, 193) - 0.00481220374870672% - magenta
+RGB Color - HSV - Proportion - Hue Color: Rgb(r=105, g=99, b=72) - (49.090909090909086, 0.3142857142857143, 105) - 10.52007892014148% - red
+RGB Color - HSV - Proportion - Hue Color: Rgb(r=74, g=56, b=59) - (350.0, 0.24324324324324326, 74) - 0.00240610187435336% - magenta
+RGB Color - HSV - Proportion - Hue Color: Rgb(r=94, g=98, b=94) - (120.0, 0.04081632653061224, 98) - 0.00781983109164842% - green
+RGB Color - HSV - Proportion - Hue Color: Rgb(r=194, g=196, b=181) - (68.0, 0.07653061224489796, 196) - 1.0201871947258248% - yellow
+RGB Color - HSV - Proportion - Hue Color: Rgb(r=103, g=102, b=108) - (250.00000000000003, 0.05555555555555555, 108) - 0.012030509371766801% - blue
+RGB Color - HSV - Proportion - Hue Color: Rgb(r=135, g=124, b=144) - (273.0, 0.1388888888888889, 144) - 0.00120305093717668% - blue
+RGB Color - HSV - Proportion - Hue Color: Rgb(r=184, g=196, b=192) - (160.0, 0.061224489795918366, 196) - 0.1834652679194437% - green
+RGB Color - HSV - Proportion - Hue Color: Rgb(r=76, g=70, b=39) - (50.27027027027027, 0.4868421052631579, 76) - 2.167296263323789% - red
+RGB Color - HSV - Proportion - Hue Color: Rgb(r=210, g=208, b=209) - (330.0, 0.009523809523809525, 210) - 0.3055749380428767% - magenta
+RGB Color - HSV - Proportion - Hue Color: Rgb(r=170, g=166, b=169) - (315.0, 0.023529411764705882, 170) - 0.07519068357354251% - magenta
+RGB Color - HSV - Proportion - Hue Color: Rgb(r=186, g=191, b=198) - (215.0, 0.06060606060606061, 198) - 0.028873222492240322% - cyan
+RGB Color - HSV - Proportion - Hue Color: Rgb(r=229, g=230, b=220) - (66.0, 0.043478260869565216, 230) - 35.78114097350882% - yellow
+RGB Color - HSV - Proportion - Hue Color: Rgb(r=108, g=101, b=104) - (334.2857142857143, 0.06481481481481481, 108) - 0.012030509371766801% - magenta
+RGB Color - HSV - Proportion - Hue Color: Rgb(r=169, g=169, b=155) - (60.0, 0.08284023668639054, 169) - 6.957243569692741% - yellow
+RGB Color - HSV - Proportion - Hue Color: Rgb(r=38, g=31, b=17) - (40.0, 0.5526315789473685, 38) - 33.74497726233729% - red
+RGB Color - HSV - Proportion - Hue Color: Rgb(r=21, g=13, b=16) - (337.5, 0.38095238095238093, 21) - 0.8607829455499146% - magenta
+RGB Color - HSV - Proportion - Hue Color: Rgb(r=125, g=130, b=123) - (102.85714285714288, 0.05384615384615385, 130) - 0.00060152546858834% - yellow
+RGB Color - HSV - Proportion - Hue Color: Rgb(r=201, g=211, b=208) - (162.0, 0.04739336492890995, 211) - 3.8768316450518516% - green
+RGB Color - HSV - Proportion - Hue Color: Rgb(r=76, g=60, b=53) - (18.26086956521739, 0.3026315789473684, 76) - 0.0072183056230600805% - red
+RGB Color - HSV - Proportion - Hue Color: Rgb(r=199, g=190, b=187) - (15.0, 0.06030150753768844, 199) - 0.0018045764057650201% - red
+RGB Color - HSV - Proportion - Hue Color: Rgb(r=136, g=125, b=122) - (12.85714285714286, 0.10294117647058823, 136) - 0.00120305093717668% - red
+RGB Color - HSV - Proportion - Hue Color: Rgb(r=174, g=184, b=180) - (156.0, 0.05434782608695652, 184) - 0.49625851158538054% - green
+RGB Color - HSV - Proportion - Hue Color: Rgb(r=14, g=14, b=17) - (240.0, 0.17647058823529413, 17) - 0.40001443661124614% - blue
+RGB Color - HSV - Proportion - Hue Color: Rgb(r=184, g=195, b=197) - (189.23076923076923, 0.06598984771573604, 197) - 0.01985034046341522% - cyan
+RGB Color - HSV - Proportion - Hue Color: Rgb(r=173, g=178, b=183) - (210.0, 0.0546448087431694, 183) - 0.30737951444864176% - cyan
+RGB Color - HSV - Proportion - Hue Color: Rgb(r=138, g=133, b=105) - (50.90909090909091, 0.2391304347826087, 138) - 0.8024349750968456% - red
+RGB Color - HSV - Proportion - Hue Color: Rgb(r=200, g=206, b=212) - (210.0, 0.05660377358490566, 212) - 2.213012198936503% - cyan
+
+
+---------- Hue Colors - Hue Proportions ----------
+
+Color	 -	 Color Proportion	 -	 No. of instances
+Red    	 -	 47.245%			 -	 7
+Yellow 	 -	 43.759%			 -	 4
+Green 	 -	 4.753%			 -	 5
+Cyan   	 -	 2.569%			 -	 4
+Blue   	 -	 0.413%			 -	 3
+Magenta	 -	 1.261%			 -	 6
+--------------------------------------------------
+Total number of colors: 29
+
+---------- End Time - 2018-08-03 16:18:47.965780 ----------
+Elapsed time is: 0:00:16.337699
+Checking demo/resume.txt file...
+Saving last segmented image path...
+Writing file...
+Closing file...
+
+-------------------- SESSION - 2018-08-03 16:23 -------------------------
+Checking demo/resume.txt file...
+Reading file...
+Last segmented image: demo/Batch 1/charles-francois-daubigny_the-banks-of-the-river-1863.jpg
+Closing file...
+demo/Batch 1/charles-francois-daubigny_the-banks-of-the-river-1868.jpg
+---------- Start Time - 2018-08-03 16:23:24.131353 ----------
+Checking if image {width, height} has 1000 above pixels...
+Images (H x W) has dimensions 262 x 478
+Image {height, width} has below 1000 pixels - (262 x 478)
+Checking voc-fcn8s/test.prototxt file...
+Reading file...
+Reshaping input layer...
+    shape { dim: 1 dim: 3 dim: 262 dim: 478 }
+
+Writing file...
+Closing file...
+Starting to segment the image -- charles-francois-daubigny_the-banks-of-the-river-1868 -- in 5 seconds
+Number of pixels: 125236
+Extract Unique Pixel Classes:
+
+1. [0, 0, 0]
+---------- Class Names - RGB Value ----------
+Class ID: 0
+Class Color: (0, 0, 0)
+Class Name: background
+Percentage of region: 100.000%
+
+
+---------- Colors Present In Image ----------
+
+RGB Color - HSV - Proportion - Hue Color: Rgb(r=68, g=74, b=40) - (70.58823529411764, 0.4594594594594595, 74) - 6.1763390718323805% - yellow
+RGB Color - HSV - Proportion - Hue Color: Rgb(r=141, g=137, b=96) - (54.666666666666664, 0.3191489361702128, 141) - 1.5458813759621834% - red
+RGB Color - HSV - Proportion - Hue Color: Rgb(r=42, g=42, b=26) - (60.0, 0.38095238095238093, 42) - 19.899230253281804% - yellow
+RGB Color - HSV - Proportion - Hue Color: Rgb(r=218, g=208, b=180) - (44.21052631578948, 0.1743119266055046, 218) - 27.439394423328757% - red
+RGB Color - HSV - Proportion - Hue Color: Rgb(r=177, g=166, b=131) - (45.652173913043484, 0.2598870056497175, 177) - 10.034654572167748% - red
+RGB Color - HSV - Proportion - Hue Color: Rgb(r=67, g=87, b=56) - (98.70967741935483, 0.3563218390804598, 87) - 0.06228241080839375% - yellow
+RGB Color - HSV - Proportion - Hue Color: Rgb(r=32, g=40, b=28) - (99.99999999999999, 0.3, 40) - 1.503561276310326% - yellow
+RGB Color - HSV - Proportion - Hue Color: Rgb(r=211, g=199, b=162) - (45.30612244897959, 0.23222748815165878, 211) - 17.97007250311412% - red
+RGB Color - HSV - Proportion - Hue Color: Rgb(r=55, g=74, b=43) - (96.77419354838709, 0.4189189189189189, 74) - 0.1477211025583698% - yellow
+RGB Color - HSV - Proportion - Hue Color: Rgb(r=21, g=21, b=26) - (240.0, 0.19230769230769232, 26) - 2.235778849532083% - blue
+RGB Color - HSV - Proportion - Hue Color: Rgb(r=98, g=100, b=62) - (63.15789473684211, 0.38, 100) - 11.841642978057427% - yellow
+RGB Color - HSV - Proportion - Hue Color: Rgb(r=63, g=63, b=65) - (240.0, 0.03076923076923077, 65) - 0.0007984924462614584% - blue
+RGB Color - HSV - Proportion - Hue Color: Rgb(r=68, g=67, b=72) - (252.00000000000003, 0.06944444444444445, 72) - 0.0007984924462614584% - blue
+RGB Color - HSV - Proportion - Hue Color: Rgb(r=29, g=24, b=27) - (324.0, 0.1724137931034483, 29) - 1.1314637963524865% - magenta
+RGB Color - HSV - Proportion - Hue Color: Rgb(r=88, g=55, b=42) - (16.956521739130437, 0.5227272727272727, 88) - 0.010380401801398959% - red
+
+
+---------- Hue Colors - Hue Proportions ----------
+
+Color	 -	 Color Proportion	 -	 No. of instances
+Red    	 -	 57.000%			 -	 5
+Yellow 	 -	 39.631%			 -	 6
+Green 	 -	 0.000%			 -	 0
+Cyan   	 -	 0.000%			 -	 0
+Blue   	 -	 2.237%			 -	 3
+Magenta	 -	 1.131%			 -	 1
+--------------------------------------------------
+Total number of colors: 15
+
+---------- End Time - 2018-08-03 16:23:45.662190 ----------
+Elapsed time is: 0:00:21.530837
+Checking demo/resume.txt file...
+Saving last segmented image path...
+Writing file...
+Closing file...
+demo/Batch 1/charles-francois-daubigny_the-harvest-1851.jpg
+---------- Start Time - 2018-08-03 16:24:01.881105 ----------
+Checking if image {width, height} has 1000 above pixels...
+Images (H x W) has dimensions 295 x 431
+Image {height, width} has below 1000 pixels - (295 x 431)
+Checking voc-fcn8s/test.prototxt file...
+Reading file...
+Reshaping input layer...
+    shape { dim: 1 dim: 3 dim: 295 dim: 431 }
+
+Writing file...
+Closing file...
+Starting to segment the image -- charles-francois-daubigny_the-harvest-1851 -- in 5 seconds
+Number of pixels: 127145
+Extract Unique Pixel Classes:
+
+1. [0, 0, 0]
+---------- Class Names - RGB Value ----------
+Class ID: 0
+Class Color: (0, 0, 0)
+Class Name: background
+Percentage of region: 100.000%
+
+
+---------- Colors Present In Image ----------
+
+RGB Color - HSV - Proportion - Hue Color: Rgb(r=77, g=109, b=70) - (109.23076923076923, 0.3577981651376147, 109) - 0.7385268787604703% - yellow
+RGB Color - HSV - Proportion - Hue Color: Rgb(r=169, g=203, b=197) - (169.41176470588238, 0.16748768472906403, 203) - 4.097683746903142% - green
+RGB Color - HSV - Proportion - Hue Color: Rgb(r=136, g=189, b=195) - (186.10169491525423, 0.30256410256410254, 195) - 5.935742656022652% - cyan
+RGB Color - HSV - Proportion - Hue Color: Rgb(r=222, g=214, b=218) - (330.0, 0.036036036036036036, 222) - 0.02438161154587282% - magenta
+RGB Color - HSV - Proportion - Hue Color: Rgb(r=159, g=141, b=57) - (49.41176470588235, 0.6415094339622641, 159) - 5.435526367533131% - red
+RGB Color - HSV - Proportion - Hue Color: Rgb(r=86, g=115, b=120) - (188.82352941176472, 0.2833333333333333, 120) - 0.005505525187777734% - cyan
+RGB Color - HSV - Proportion - Hue Color: Rgb(r=105, g=145, b=114) - (133.5, 0.27586206896551724, 145) - 0.16201974124031618% - green
+RGB Color - HSV - Proportion - Hue Color: Rgb(r=19, g=36, b=12) - (102.50000000000001, 0.6666666666666666, 36) - 0.6850446340792009% - yellow
+RGB Color - HSV - Proportion - Hue Color: Rgb(r=120, g=106, b=41) - (49.36708860759494, 0.6583333333333333, 120) - 17.145778441936372% - red
+RGB Color - HSV - Proportion - Hue Color: Rgb(r=201, g=218, b=211) - (155.29411764705884, 0.0779816513761468, 218) - 26.74269534783122% - green
+RGB Color - HSV - Proportion - Hue Color: Rgb(r=190, g=214, b=218) - (188.57142857142858, 0.12844036697247707, 218) - 2.467261787722679% - cyan
+RGB Color - HSV - Proportion - Hue Color: Rgb(r=189, g=184, b=186) - (336.0, 0.026455026455026454, 189) - 0.011011050375555468% - magenta
+RGB Color - HSV - Proportion - Hue Color: Rgb(r=149, g=187, b=180) - (168.94736842105263, 0.20320855614973263, 187) - 11.286326634944356% - green
+RGB Color - HSV - Proportion - Hue Color: Rgb(r=12, g=11, b=18) - (248.5714285714286, 0.3888888888888889, 18) - 0.033819654724920364% - blue
+RGB Color - HSV - Proportion - Hue Color: Rgb(r=162, g=205, b=209) - (185.10638297872336, 0.22488038277511962, 209) - 1.9410908804907785% - cyan
+RGB Color - HSV - Proportion - Hue Color: Rgb(r=21, g=9, b=12) - (345.0, 0.5714285714285714, 21) - 0.2595461874238075% - magenta
+RGB Color - HSV - Proportion - Hue Color: Rgb(r=197, g=189, b=186) - (16.363636363636363, 0.05583756345177665, 197) - 0.00393251799126981% - red
+RGB Color - HSV - Proportion - Hue Color: Rgb(r=41, g=32, b=10) - (42.58064516129033, 0.7560975609756098, 41) - 12.335522435015141% - red
+RGB Color - HSV - Proportion - Hue Color: Rgb(r=86, g=79, b=20) - (53.63636363636363, 0.7674418604651163, 86) - 5.9640567855597935% - red
+RGB Color - HSV - Proportion - Hue Color: Rgb(r=49, g=82, b=34) - (101.25, 0.5853658536585366, 82) - 0.17853631680364937% - yellow
+RGB Color - HSV - Proportion - Hue Color: Rgb(r=209, g=205, b=146) - (56.19047619047619, 0.3014354066985646, 209) - 0.23123205788666482% - red
+RGB Color - HSV - Proportion - Hue Color: Rgb(r=196, g=189, b=191) - (342.85714285714283, 0.03571428571428571, 196) - 0.002359510794761886% - magenta
+RGB Color - HSV - Proportion - Hue Color: Rgb(r=185, g=191, b=203) - (220.00000000000003, 0.08866995073891626, 203) - 0.007078532384285657% - cyan
+RGB Color - HSV - Proportion - Hue Color: Rgb(r=100, g=48, b=35) - (11.999999999999996, 0.65, 100) - 0.02359510794761886% - red
+RGB Color - HSV - Proportion - Hue Color: Rgb(r=218, g=220, b=207) - (69.23076923076923, 0.05909090909090909, 220) - 2.8927602343780725% - yellow
+RGB Color - HSV - Proportion - Hue Color: Rgb(r=112, g=32, b=37) - (356.25, 0.7142857142857143, 112) - 0.007078532384285657% - magenta
+RGB Color - HSV - Proportion - Hue Color: Rgb(r=175, g=170, b=123) - (54.230769230769226, 0.29714285714285715, 175) - 1.3567187069880846% - red
+RGB Color - HSV - Proportion - Hue Color: Rgb(r=111, g=73, b=75) - (356.84210526315786, 0.34234234234234234, 111) - 0.002359510794761886% - magenta
+RGB Color - HSV - Proportion - Hue Color: Rgb(r=144, g=124, b=117) - (15.555555555555557, 0.1875, 144) - 0.000786503598253962% - red
+RGB Color - HSV - Proportion - Hue Color: Rgb(r=78, g=157, b=162) - (183.57142857142856, 0.5185185185185185, 162) - 0.022022100751110937% - cyan
+
+
+---------- Hue Colors - Hue Proportions ----------
+
+Color	 -	 Color Proportion	 -	 No. of instances
+Red    	 -	 42.497%			 -	 9
+Yellow 	 -	 4.495%			 -	 4
+Green 	 -	 42.289%			 -	 4
+Cyan   	 -	 10.379%			 -	 6
+Blue   	 -	 0.034%			 -	 1
+Magenta	 -	 0.307%			 -	 6
+--------------------------------------------------
+Total number of colors: 30
+
+---------- End Time - 2018-08-03 16:24:17.271682 ----------
+Elapsed time is: 0:00:15.390577
+Checking demo/resume.txt file...
+Saving last segmented image path...
+Writing file...
+Closing file...
+demo/Batch 1/charles-francois-daubigny_the-mill-of-the-gylieu-1868.jpg
+---------- Start Time - 2018-08-03 16:24:33.488049 ----------
+Checking if image {width, height} has 1000 above pixels...
+Images (H x W) has dimensions 220 x 379
+Image {height, width} has below 1000 pixels - (220 x 379)
+Checking voc-fcn8s/test.prototxt file...
+Reading file...
+Reshaping input layer...
+    shape { dim: 1 dim: 3 dim: 220 dim: 379 }
+
+Writing file...
+Closing file...
+Starting to segment the image -- charles-francois-daubigny_the-mill-of-the-gylieu-1868 -- in 5 seconds
+Number of pixels: 83380
+Extract Unique Pixel Classes:
+
+1. [0, 0, 0]
+---------- Class Names - RGB Value ----------
+Class ID: 0
+Class Color: (0, 0, 0)
+Class Name: background
+Percentage of region: 100.000%
+
+
+---------- Colors Present In Image ----------
+
+RGB Color - HSV - Proportion - Hue Color: Rgb(r=248, g=219, b=153) - (41.68421052631579, 0.38306451612903225, 248) - 8.800671623890622% - red
+RGB Color - HSV - Proportion - Hue Color: Rgb(r=34, g=25, b=28) - (340.0, 0.2647058823529412, 34) - 0.46414008155432956% - magenta
+RGB Color - HSV - Proportion - Hue Color: Rgb(r=236, g=201, b=126) - (40.909090909090914, 0.4661016949152542, 236) - 30.58047493403694% - red
+RGB Color - HSV - Proportion - Hue Color: Rgb(r=238, g=180, b=149) - (20.89887640449438, 0.3739495798319328, 238) - 0.008395298632765651% - red
+RGB Color - HSV - Proportion - Hue Color: Rgb(r=68, g=71, b=68) - (120.0, 0.04225352112676056, 71) - 0.005996641880546894% - green
+RGB Color - HSV - Proportion - Hue Color: Rgb(r=135, g=90, b=38) - (32.16494845360825, 0.7185185185185186, 135) - 9.930438954185657% - red
+RGB Color - HSV - Proportion - Hue Color: Rgb(r=95, g=69, b=18) - (39.74025974025974, 0.8105263157894737, 95) - 2.5089949628208204% - red
+RGB Color - HSV - Proportion - Hue Color: Rgb(r=173, g=136, b=64) - (39.633027522935784, 0.630057803468208, 173) - 2.3075077956344447% - red
+RGB Color - HSV - Proportion - Hue Color: Rgb(r=238, g=252, b=238) - (120.0, 0.05555555555555555, 252) - 0.04677380666826577% - green
+RGB Color - HSV - Proportion - Hue Color: Rgb(r=22, g=24, b=28) - (220.00000000000003, 0.21428571428571427, 28) - 0.17270328615975056% - cyan
+RGB Color - HSV - Proportion - Hue Color: Rgb(r=182, g=108, b=82) - (15.600000000000001, 0.5494505494505495, 182) - 0.031182537778843843% - red
+RGB Color - HSV - Proportion - Hue Color: Rgb(r=67, g=71, b=72) - (192.0, 0.06944444444444445, 72) - 0.002398656752218757% - cyan
+RGB Color - HSV - Proportion - Hue Color: Rgb(r=206, g=170, b=99) - (39.81308411214953, 0.5194174757281553, 206) - 14.552650515711202% - red
+RGB Color - HSV - Proportion - Hue Color: Rgb(r=44, g=32, b=14) - (36.0, 0.6818181818181818, 44) - 30.06116574718158% - red
+RGB Color - HSV - Proportion - Hue Color: Rgb(r=109, g=48, b=26) - (15.903614457831324, 0.7614678899082569, 109) - 0.2146797793235788% - red
+RGB Color - HSV - Proportion - Hue Color: Rgb(r=254, g=245, b=248) - (340.0, 0.03543307086614173, 254) - 0.014391940513312546% - magenta
+RGB Color - HSV - Proportion - Hue Color: Rgb(r=92, g=42, b=53) - (346.8, 0.5434782608695652, 92) - 0.0011993283761093786% - magenta
+RGB Color - HSV - Proportion - Hue Color: Rgb(r=22, g=29, b=22) - (120.0, 0.2413793103448276, 29) - 0.2962341088990165% - green
+
+
+---------- Hue Colors - Hue Proportions ----------
+
+Color	 -	 Color Proportion	 -	 No. of instances
+Red    	 -	 98.996%			 -	 10
+Yellow 	 -	 0.000%			 -	 0
+Green 	 -	 0.349%			 -	 3
+Cyan   	 -	 0.175%			 -	 2
+Blue   	 -	 0.000%			 -	 0
+Magenta	 -	 0.480%			 -	 3
+--------------------------------------------------
+Total number of colors: 18
+
+---------- End Time - 2018-08-03 16:24:47.118088 ----------
+Elapsed time is: 0:00:13.630039
+Checking demo/resume.txt file...
+Saving last segmented image path...
+Writing file...
+Closing file...
+demo/Batch 1/charles-francois-daubigny_the-river-seine-at-mantes.jpg
+---------- Start Time - 2018-08-03 16:25:03.338618 ----------
+Checking if image {width, height} has 1000 above pixels...
+Images (H x W) has dimensions 256 x 384
+Image {height, width} has below 1000 pixels - (256 x 384)
+Checking voc-fcn8s/test.prototxt file...
+Reading file...
+Reshaping input layer...
+    shape { dim: 1 dim: 3 dim: 256 dim: 384 }
+
+Writing file...
+Closing file...
+Starting to segment the image -- charles-francois-daubigny_the-river-seine-at-mantes -- in 5 seconds
+Number of pixels: 98304
+Extract Unique Pixel Classes:
+
+1. [0, 0, 0]
+---------- Class Names - RGB Value ----------
+Class ID: 0
+Class Color: (0, 0, 0)
+Class Name: background
+Percentage of region: 100.000%
+
+
+---------- Colors Present In Image ----------
+
+RGB Color - HSV - Proportion - Hue Color: Rgb(r=95, g=93, b=64) - (56.12903225806452, 0.3263157894736842, 95) - 11.472574869791668% - red
+RGB Color - HSV - Proportion - Hue Color: Rgb(r=57, g=71, b=47) - (95.0, 0.3380281690140845, 71) - 0.1312255859375% - yellow
+RGB Color - HSV - Proportion - Hue Color: Rgb(r=87, g=81, b=84) - (330.0, 0.06896551724137931, 87) - 0.03560384114583333% - magenta
+RGB Color - HSV - Proportion - Hue Color: Rgb(r=218, g=208, b=191) - (37.77777777777778, 0.12385321100917432, 218) - 36.0382080078125% - red
+RGB Color - HSV - Proportion - Hue Color: Rgb(r=138, g=133, b=104) - (51.17647058823529, 0.2463768115942029, 138) - 0.5167643229166667% - red
+RGB Color - HSV - Proportion - Hue Color: Rgb(r=70, g=73, b=43) - (66.0, 0.410958904109589, 73) - 6.064860026041666% - yellow
+RGB Color - HSV - Proportion - Hue Color: Rgb(r=196, g=189, b=190) - (351.42857142857144, 0.03571428571428571, 196) - 0.06815592447916666% - magenta
+RGB Color - HSV - Proportion - Hue Color: Rgb(r=202, g=193, b=177) - (38.400000000000006, 0.12376237623762376, 202) - 1.0660807291666665% - red
+RGB Color - HSV - Proportion - Hue Color: Rgb(r=37, g=42, b=34) - (97.5, 0.19047619047619047, 42) - 4.462687174479166% - yellow
+RGB Color - HSV - Proportion - Hue Color: Rgb(r=197, g=189, b=187) - (11.999999999999996, 0.050761421319796954, 197) - 0.4252115885416667% - red
+RGB Color - HSV - Proportion - Hue Color: Rgb(r=199, g=192, b=194) - (342.85714285714283, 0.035175879396984924, 199) - 0.03458658854166667% - magenta
+RGB Color - HSV - Proportion - Hue Color: Rgb(r=71, g=61, b=59) - (9.999999999999998, 0.16901408450704225, 71) - 0.0010172526041666665% - red
+RGB Color - HSV - Proportion - Hue Color: Rgb(r=176, g=176, b=179) - (240.0, 0.01675977653631285, 179) - 0.10986328125% - blue
+RGB Color - HSV - Proportion - Hue Color: Rgb(r=146, g=149, b=145) - (105.0, 0.026845637583892617, 149) - 0.005086263020833334% - yellow
+RGB Color - HSV - Proportion - Hue Color: Rgb(r=6, g=2, b=6) - (300.0, 0.6666666666666666, 6) - 1.0325113932291665% - magenta
+RGB Color - HSV - Proportion - Hue Color: Rgb(r=197, g=199, b=196) - (99.99999999999999, 0.01507537688442211, 199) - 0.0010172526041666665% - yellow
+RGB Color - HSV - Proportion - Hue Color: Rgb(r=71, g=59, b=65) - (330.0, 0.16901408450704225, 71) - 0.002034505208333333% - magenta
+RGB Color - HSV - Proportion - Hue Color: Rgb(r=71, g=80, b=65) - (96.0, 0.1875, 80) - 0.0457763671875% - yellow
+RGB Color - HSV - Proportion - Hue Color: Rgb(r=45, g=47, b=33) - (68.57142857142857, 0.2978723404255319, 47) - 19.295247395833336% - yellow
+RGB Color - HSV - Proportion - Hue Color: Rgb(r=179, g=172, b=163) - (33.75, 0.0893854748603352, 179) - 9.955851236979168% - red
+RGB Color - HSV - Proportion - Hue Color: Rgb(r=183, g=178, b=180) - (336.0, 0.0273224043715847, 183) - 1.2430826822916665% - magenta
+RGB Color - HSV - Proportion - Hue Color: Rgb(r=2, g=1, b=9) - (247.5, 0.8888888888888888, 9) - 7.985432942708333% - blue
+RGB Color - HSV - Proportion - Hue Color: Rgb(r=135, g=125, b=121) - (17.142857142857142, 0.1037037037037037, 135) - 0.007120768229166667% - red
+
+
+---------- Hue Colors - Hue Proportions ----------
+
+Color	 -	 Color Proportion	 -	 No. of instances
+Red    	 -	 59.483%			 -	 8
+Yellow 	 -	 30.006%			 -	 7
+Green 	 -	 0.000%			 -	 0
+Cyan   	 -	 0.000%			 -	 0
+Blue   	 -	 8.095%			 -	 2
+Magenta	 -	 2.416%			 -	 6
+--------------------------------------------------
+Total number of colors: 23
+
+---------- End Time - 2018-08-03 16:25:17.641873 ----------
+Elapsed time is: 0:00:14.303255
+Checking demo/resume.txt file...
+Saving last segmented image path...
+Writing file...
+Closing file...
+demo/Batch 1/charles-francois-daubigny_the-seine-in-bezons-val-d-oise-1851.jpg
+---------- Start Time - 2018-08-03 16:25:33.859654 ----------
+Checking if image {width, height} has 1000 above pixels...
+Images (H x W) has dimensions 246 x 379
+Image {height, width} has below 1000 pixels - (246 x 379)
+Checking voc-fcn8s/test.prototxt file...
+Reading file...
+Reshaping input layer...
+    shape { dim: 1 dim: 3 dim: 246 dim: 379 }
+
+Writing file...
+Closing file...
+Starting to segment the image -- charles-francois-daubigny_the-seine-in-bezons-val-d-oise-1851 -- in 5 seconds
+Number of pixels: 93234
+Extract Unique Pixel Classes:
+
+1. [0, 0, 0]
+---------- Class Names - RGB Value ----------
+Class ID: 0
+Class Color: (0, 0, 0)
+Class Name: background
+Percentage of region: 100.000%
+
+
+---------- Colors Present In Image ----------
+
+RGB Color - HSV - Proportion - Hue Color: Rgb(r=201, g=191, b=199) - (312.0, 0.04975124378109453, 201) - 0.012870841109466504% - magenta
+RGB Color - HSV - Proportion - Hue Color: Rgb(r=138, g=124, b=118) - (18.000000000000004, 0.14492753623188406, 138) - 0.009653130832099878% - red
+RGB Color - HSV - Proportion - Hue Color: Rgb(r=124, g=130, b=125) - (130.0, 0.046153846153846156, 130) - 0.01823369157174421% - green
+RGB Color - HSV - Proportion - Hue Color: Rgb(r=109, g=99, b=71) - (44.21052631578948, 0.3486238532110092, 109) - 8.02389686165991% - red
+RGB Color - HSV - Proportion - Hue Color: Rgb(r=172, g=178, b=187) - (216.0, 0.08021390374331551, 187) - 42.1906171568312% - cyan
+RGB Color - HSV - Proportion - Hue Color: Rgb(r=110, g=116, b=114) - (160.0, 0.05172413793103448, 116) - 0.1512323830362314% - green
+RGB Color - HSV - Proportion - Hue Color: Rgb(r=186, g=194, b=195) - (186.66666666666666, 0.046153846153846156, 195) - 0.19306261664199756% - cyan
+RGB Color - HSV - Proportion - Hue Color: Rgb(r=220, g=213, b=191) - (45.51724137931034, 0.1318181818181818, 220) - 1.0039256065383872% - red
+RGB Color - HSV - Proportion - Hue Color: Rgb(r=121, g=127, b=137) - (217.5, 0.11678832116788321, 137) - 0.047193084068043845% - cyan
+RGB Color - HSV - Proportion - Hue Color: Rgb(r=26, g=25, b=28) - (260.0, 0.10714285714285714, 28) - 0.004290280369822168% - blue
+RGB Color - HSV - Proportion - Hue Color: Rgb(r=158, g=163, b=161) - (156.0, 0.03067484662576687, 163) - 3.330330137074458% - green
+RGB Color - HSV - Proportion - Hue Color: Rgb(r=150, g=133, b=91) - (42.71186440677966, 0.3933333333333333, 150) - 1.482291867773559% - red
+RGB Color - HSV - Proportion - Hue Color: Rgb(r=166, g=162, b=149) - (45.882352941176464, 0.10240963855421686, 166) - 8.346740459489027% - red
+RGB Color - HSV - Proportion - Hue Color: Rgb(r=45, g=34, b=22) - (31.304347826086957, 0.5111111111111111, 45) - 21.92011497951391% - red
+RGB Color - HSV - Proportion - Hue Color: Rgb(r=191, g=194, b=200) - (220.00000000000003, 0.045, 200) - 5.330673359504043% - cyan
+RGB Color - HSV - Proportion - Hue Color: Rgb(r=86, g=59, b=42) - (23.18181818181818, 0.5116279069767442, 86) - 0.004290280369822168% - red
+RGB Color - HSV - Proportion - Hue Color: Rgb(r=186, g=190, b=199) - (221.53846153846155, 0.06532663316582915, 199) - 4.923096724370938% - cyan
+RGB Color - HSV - Proportion - Hue Color: Rgb(r=209, g=195, b=161) - (42.49999999999999, 0.22966507177033493, 209) - 0.18340948580989766% - red
+RGB Color - HSV - Proportion - Hue Color: Rgb(r=37, g=26, b=29) - (343.6363636363636, 0.2972972972972973, 37) - 0.2874487847780853% - magenta
+RGB Color - HSV - Proportion - Hue Color: Rgb(r=196, g=198, b=196) - (120.0, 0.010101010101010102, 198) - 0.5234142051183045% - green
+RGB Color - HSV - Proportion - Hue Color: Rgb(r=133, g=123, b=124) - (354.0, 0.07518796992481203, 133) - 0.00536285046227771% - magenta
+RGB Color - HSV - Proportion - Hue Color: Rgb(r=115, g=120, b=125) - (210.0, 0.08, 125) - 0.1458695325739537% - cyan
+RGB Color - HSV - Proportion - Hue Color: Rgb(r=188, g=193, b=192) - (167.99999999999997, 0.025906735751295335, 193) - 0.07078962610206577% - green
+RGB Color - HSV - Proportion - Hue Color: Rgb(r=70, g=59, b=65) - (327.27272727272725, 0.15714285714285714, 70) - 0.003217710277366626% - magenta
+RGB Color - HSV - Proportion - Hue Color: Rgb(r=168, g=164, b=168) - (300.0, 0.023809523809523808, 168) - 0.421520046335028% - magenta
+RGB Color - HSV - Proportion - Hue Color: Rgb(r=81, g=68, b=36) - (42.66666666666667, 0.5555555555555556, 81) - 1.191625372718107% - red
+RGB Color - HSV - Proportion - Hue Color: Rgb(r=102, g=92, b=98) - (324.0, 0.09803921568627451, 102) - 0.13192612137203166% - magenta
+RGB Color - HSV - Proportion - Hue Color: Rgb(r=123, g=129, b=131) - (195.0, 0.061068702290076333, 131) - 0.002145140184911084% - cyan
+RGB Color - HSV - Proportion - Hue Color: Rgb(r=35, g=38, b=33) - (96.0, 0.13157894736842105, 38) - 0.03110453268121072% - yellow
+RGB Color - HSV - Proportion - Hue Color: Rgb(r=199, g=187, b=197) - (310.0, 0.06030150753768844, 199) - 0.009653130832099878% - magenta
+
+
+---------- Hue Colors - Hue Proportions ----------
+
+Color	 -	 Color Proportion	 -	 No. of instances
+Red    	 -	 42.166%			 -	 9
+Yellow 	 -	 0.031%			 -	 1
+Green 	 -	 4.094%			 -	 5
+Cyan   	 -	 52.833%			 -	 7
+Blue   	 -	 0.004%			 -	 1
+Magenta	 -	 0.872%			 -	 7
+--------------------------------------------------
+Total number of colors: 30
+
+---------- End Time - 2018-08-03 16:25:47.814937 ----------
+Elapsed time is: 0:00:13.955283
+Checking demo/resume.txt file...
+Saving last segmented image path...
+Writing file...
+Closing file...
+demo/Batch 1/charles-francois-daubigny_the-studio-on-the-boat-1861.jpg
+---------- Start Time - 2018-08-03 16:26:04.031134 ----------
+Checking if image {width, height} has 1000 above pixels...
+Images (H x W) has dimensions 258 x 379
+Image {height, width} has below 1000 pixels - (258 x 379)
+Checking voc-fcn8s/test.prototxt file...
+Reading file...
+Reshaping input layer...
+    shape { dim: 1 dim: 3 dim: 258 dim: 379 }
+
+Writing file...
+Closing file...
+Starting to segment the image -- charles-francois-daubigny_the-studio-on-the-boat-1861 -- in 5 seconds
+Number of pixels: 97782
+Extract Unique Pixel Classes:
+
+1. [0, 0, 0]
+2. [64, 0, 0]
+3. [192, 0, 0]
+---------- Class Names - RGB Value ----------
+Class ID: 0
+Class Color: (0, 0, 0)
+Class Name: background
+Percentage of region: 96.936%
+
+
+Class ID: 8
+Class Color: (64, 0, 0)
+Class Name: cat
+Percentage of region: 0.150%
+
+
+Class ID: 9
+Class Color: (192, 0, 0)
+Class Name: chair
+Percentage of region: 2.914%
+
+
+---------- Colors Present In Image ----------
+
+RGB Color - HSV - Proportion - Hue Color: Rgb(r=86, g=61, b=38) - (28.749999999999996, 0.5581395348837209, 86) - 0.08590538135853223% - red
+RGB Color - HSV - Proportion - Hue Color: Rgb(r=182, g=158, b=143) - (23.076923076923073, 0.21428571428571427, 182) - 23.221042727700393% - red
+RGB Color - HSV - Proportion - Hue Color: Rgb(r=28, g=10, b=16) - (340.0, 0.6428571428571429, 28) - 7.932952895215889% - magenta
+RGB Color - HSV - Proportion - Hue Color: Rgb(r=82, g=57, b=48) - (15.882352941176467, 0.4146341463414634, 82) - 0.739399889550224% - red
+RGB Color - HSV - Proportion - Hue Color: Rgb(r=180, g=159, b=162) - (351.42857142857144, 0.11666666666666667, 180) - 0.41930007567855027% - magenta
+RGB Color - HSV - Proportion - Hue Color: Rgb(r=229, g=210, b=215) - (344.2105263157895, 0.08296943231441048, 229) - 8.366570534454194% - magenta
+RGB Color - HSV - Proportion - Hue Color: Rgb(r=153, g=126, b=98) - (30.545454545454543, 0.35947712418300654, 153) - 0.19430979116810865% - red
+RGB Color - HSV - Proportion - Hue Color: Rgb(r=51, g=27, b=18) - (16.363636363636363, 0.6470588235294118, 51) - 19.569041336851363% - red
+RGB Color - HSV - Proportion - Hue Color: Rgb(r=205, g=184, b=187) - (351.42857142857144, 0.1024390243902439, 205) - 0.14726636804319812% - magenta
+RGB Color - HSV - Proportion - Hue Color: Rgb(r=79, g=55, b=57) - (355.0, 0.3037974683544304, 79) - 0.05113415557055491% - magenta
+RGB Color - HSV - Proportion - Hue Color: Rgb(r=141, g=120, b=123) - (351.42857142857144, 0.14893617021276595, 141) - 0.024544394673866356% - magenta
+RGB Color - HSV - Proportion - Hue Color: Rgb(r=213, g=189, b=167) - (28.695652173913047, 0.215962441314554, 213) - 0.14931173426602035% - red
+RGB Color - HSV - Proportion - Hue Color: Rgb(r=116, g=91, b=77) - (21.538461538461533, 0.33620689655172414, 116) - 17.430610950890756% - red
+RGB Color - HSV - Proportion - Hue Color: Rgb(r=227, g=205, b=196) - (17.419354838709676, 0.13656387665198239, 227) - 19.768464543576528% - red
+RGB Color - HSV - Proportion - Hue Color: Rgb(r=209, g=185, b=178) - (13.548387096774194, 0.14832535885167464, 209) - 1.1218833732179747% - red
+RGB Color - HSV - Proportion - Hue Color: Rgb(r=105, g=83, b=86) - (351.8181818181818, 0.20952380952380953, 105) - 0.24033053118160808% - magenta
+RGB Color - HSV - Proportion - Hue Color: Rgb(r=146, g=121, b=112) - (15.882352941176467, 0.2328767123287671, 146) - 0.5379313166022377% - red
+
+
+---------- Hue Colors - Hue Proportions ----------
+
+Color	 -	 Color Proportion	 -	 No. of instances
+Red    	 -	 82.818%			 -	 10
+Yellow 	 -	 0.000%			 -	 0
+Green 	 -	 0.000%			 -	 0
+Cyan   	 -	 0.000%			 -	 0
+Blue   	 -	 0.000%			 -	 0
+Magenta	 -	 17.182%			 -	 7
+--------------------------------------------------
+Total number of colors: 17
+
+---------- End Time - 2018-08-03 16:26:18.662786 ----------
+Elapsed time is: 0:00:14.631652
+Checking demo/resume.txt file...
+Saving last segmented image path...
+Writing file...
+Closing file...
+demo/Batch 1/charles-francois-daubigny_the-themse-in-erith-1866.jpg
+---------- Start Time - 2018-08-03 16:26:34.885473 ----------
+Checking if image {width, height} has 1000 above pixels...
+Images (H x W) has dimensions 178 x 320
+Image {height, width} has below 1000 pixels - (178 x 320)
+Checking voc-fcn8s/test.prototxt file...
+Reading file...
+Reshaping input layer...
+    shape { dim: 1 dim: 3 dim: 178 dim: 320 }
+
+Writing file...
+Closing file...
+Starting to segment the image -- charles-francois-daubigny_the-themse-in-erith-1866 -- in 5 seconds
+Number of pixels: 56960
+Extract Unique Pixel Classes:
+
+1. [0, 0, 0]
+2. [0, 0, 128]
+---------- Class Names - RGB Value ----------
+Class ID: 0
+Class Color: (0, 0, 0)
+Class Name: background
+Percentage of region: 98.167%
+
+
+Class ID: 4
+Class Color: (0, 0, 128)
+Class Name: boat
+Percentage of region: 1.833%
+
+
+---------- Colors Present In Image ----------
+
+RGB Color - HSV - Proportion - Hue Color: Rgb(r=154, g=121, b=102) - (21.923076923076927, 0.33766233766233766, 154) - 0.00175561797752809% - red
+RGB Color - HSV - Proportion - Hue Color: Rgb(r=77, g=59, b=52) - (16.8, 0.3246753246753247, 77) - 0.07373595505617977% - red
+RGB Color - HSV - Proportion - Hue Color: Rgb(r=203, g=173, b=127) - (36.315789473684205, 0.37438423645320196, 203) - 29.506671348314605% - red
+RGB Color - HSV - Proportion - Hue Color: Rgb(r=45, g=40, b=42) - (336.0, 0.1111111111111111, 45) - 0.16678370786516852% - magenta
+RGB Color - HSV - Proportion - Hue Color: Rgb(r=236, g=213, b=170) - (39.090909090909086, 0.2796610169491525, 236) - 27.587780898876403% - red
+RGB Color - HSV - Proportion - Hue Color: Rgb(r=29, g=35, b=32) - (150.0, 0.17142857142857143, 35) - 0.3441011235955056% - green
+RGB Color - HSV - Proportion - Hue Color: Rgb(r=82, g=64, b=39) - (34.883720930232556, 0.524390243902439, 82) - 1.3184691011235956% - red
+RGB Color - HSV - Proportion - Hue Color: Rgb(r=66, g=68, b=71) - (216.0, 0.07042253521126761, 71) - 0.00877808988764045% - cyan
+RGB Color - HSV - Proportion - Hue Color: Rgb(r=222, g=195, b=149) - (37.8082191780822, 0.32882882882882886, 222) - 13.044241573033707% - red
+RGB Color - HSV - Proportion - Hue Color: Rgb(r=161, g=131, b=83) - (36.92307692307693, 0.484472049689441, 161) - 1.0323033707865168% - red
+RGB Color - HSV - Proportion - Hue Color: Rgb(r=34, g=37, b=40) - (210.0, 0.15, 40) - 0.23700842696629215% - cyan
+RGB Color - HSV - Proportion - Hue Color: Rgb(r=70, g=61, b=63) - (346.6666666666667, 0.12857142857142856, 70) - 0.00351123595505618% - magenta
+RGB Color - HSV - Proportion - Hue Color: Rgb(r=106, g=85, b=61) - (32.0, 0.42452830188679247, 106) - 11.632724719101123% - red
+RGB Color - HSV - Proportion - Hue Color: Rgb(r=72, g=70, b=72) - (300.0, 0.027777777777777776, 72) - 0.00351123595505618% - magenta
+RGB Color - HSV - Proportion - Hue Color: Rgb(r=56, g=45, b=32) - (32.50000000000001, 0.42857142857142855, 56) - 15.038623595505618% - red
+
+
+---------- Hue Colors - Hue Proportions ----------
+
+Color	 -	 Color Proportion	 -	 No. of instances
+Red    	 -	 99.236%			 -	 9
+Yellow 	 -	 0.000%			 -	 0
+Green 	 -	 0.344%			 -	 1
+Cyan   	 -	 0.246%			 -	 2
+Blue   	 -	 0.000%			 -	 0
+Magenta	 -	 0.174%			 -	 3
+--------------------------------------------------
+Total number of colors: 15
+
+---------- End Time - 2018-08-03 16:26:48.003682 ----------
+Elapsed time is: 0:00:13.118209
+Checking demo/resume.txt file...
+Saving last segmented image path...
+Writing file...
+Closing file...
+demo/Batch 1/charles-francois-daubigny_the-village-auvers-sur-oise.jpg
+---------- Start Time - 2018-08-03 16:27:04.225848 ----------
+Checking if image {width, height} has 1000 above pixels...
+Images (H x W) has dimensions 344 x 509
+Image {height, width} has below 1000 pixels - (344 x 509)
+Checking voc-fcn8s/test.prototxt file...
+Reading file...
+Reshaping input layer...
+    shape { dim: 1 dim: 3 dim: 344 dim: 509 }
+
+Writing file...
+Closing file...
+Starting to segment the image -- charles-francois-daubigny_the-village-auvers-sur-oise -- in 5 seconds
+Number of pixels: 175096
+Extract Unique Pixel Classes:
+
+1. [0, 0, 0]
+---------- Class Names - RGB Value ----------
+Class ID: 0
+Class Color: (0, 0, 0)
+Class Name: background
+Percentage of region: 100.000%
+
+
+---------- Colors Present In Image ----------
+
+RGB Color - HSV - Proportion - Hue Color: Rgb(r=60, g=63, b=72) - (225.0, 0.16666666666666666, 72) - 0.0005711152739068854% - cyan
+RGB Color - HSV - Proportion - Hue Color: Rgb(r=84, g=56, b=46) - (15.789473684210527, 0.4523809523809524, 84) - 0.043975876090830174% - red
+RGB Color - HSV - Proportion - Hue Color: Rgb(r=144, g=122, b=116) - (12.85714285714286, 0.19444444444444445, 144) - 0.0034266916434413123% - red
+RGB Color - HSV - Proportion - Hue Color: Rgb(r=180, g=162, b=134) - (36.52173913043478, 0.25555555555555554, 180) - 14.839288161922603% - red
+RGB Color - HSV - Proportion - Hue Color: Rgb(r=70, g=71, b=77) - (231.42857142857142, 0.09090909090909091, 77) - 0.02684241787362361% - cyan
+RGB Color - HSV - Proportion - Hue Color: Rgb(r=72, g=82, b=68) - (102.85714285714288, 0.17073170731707318, 82) - 0.009708959656417052% - yellow
+RGB Color - HSV - Proportion - Hue Color: Rgb(r=23, g=28, b=22) - (110.00000000000001, 0.21428571428571427, 28) - 0.5305660894594966% - yellow
+RGB Color - HSV - Proportion - Hue Color: Rgb(r=68, g=61, b=65) - (325.7142857142857, 0.10294117647058823, 68) - 0.006282268012975739% - magenta
+RGB Color - HSV - Proportion - Hue Color: Rgb(r=45, g=35, b=18) - (37.77777777777778, 0.6, 45) - 29.91901585416% - red
+RGB Color - HSV - Proportion - Hue Color: Rgb(r=86, g=68, b=29) - (41.05263157894737, 0.6627906976744186, 86) - 4.285077900123361% - red
+RGB Color - HSV - Proportion - Hue Color: Rgb(r=11, g=11, b=15) - (240.0, 0.26666666666666666, 15) - 1.9200895508749487% - blue
+RGB Color - HSV - Proportion - Hue Color: Rgb(r=122, g=94, b=54) - (35.294117647058826, 0.5573770491803278, 122) - 26.34783204642025% - red
+RGB Color - HSV - Proportion - Hue Color: Rgb(r=180, g=171, b=173) - (346.6666666666667, 0.05, 180) - 0.012564536025951478% - magenta
+RGB Color - HSV - Proportion - Hue Color: Rgb(r=209, g=194, b=166) - (39.06976744186047, 0.20574162679425836, 209) - 1.9080961301229038% - red
+RGB Color - HSV - Proportion - Hue Color: Rgb(r=230, g=220, b=200) - (40.0, 0.13043478260869565, 230) - 17.152876136519396% - red
+RGB Color - HSV - Proportion - Hue Color: Rgb(r=78, g=71, b=74) - (334.2857142857143, 0.08974358974358974, 78) - 0.041120299721295744% - magenta
+RGB Color - HSV - Proportion - Hue Color: Rgb(r=55, g=73, b=45) - (98.57142857142856, 0.3835616438356164, 73) - 0.013135651299858364% - yellow
+RGB Color - HSV - Proportion - Hue Color: Rgb(r=19, g=13, b=15) - (340.0, 0.3157894736842105, 19) - 1.0599899483711792% - magenta
+RGB Color - HSV - Proportion - Hue Color: Rgb(r=202, g=189, b=182) - (20.999999999999996, 0.09900990099009901, 202) - 0.0022844610956275417% - red
+RGB Color - HSV - Proportion - Hue Color: Rgb(r=157, g=129, b=88) - (35.65217391304348, 0.4394904458598726, 157) - 1.873829213688491% - red
+RGB Color - HSV - Proportion - Hue Color: Rgb(r=250, g=240, b=241) - (354.0, 0.04, 250) - 0.0034266916434413123% - magenta
+
+
+---------- Hue Colors - Hue Proportions ----------
+
+Color	 -	 Color Proportion	 -	 No. of instances
+Red    	 -	 96.376%			 -	 10
+Yellow 	 -	 0.553%			 -	 3
+Green 	 -	 0.000%			 -	 0
+Cyan   	 -	 0.027%			 -	 2
+Blue   	 -	 1.920%			 -	 1
+Magenta	 -	 1.123%			 -	 5
+--------------------------------------------------
+Total number of colors: 21
+
+---------- End Time - 2018-08-03 16:27:20.810630 ----------
+Elapsed time is: 0:00:16.584782
+Checking demo/resume.txt file...
+Saving last segmented image path...
+Writing file...
+Closing file...
+demo/Batch 1/charles-francois-daubigny_the-woods-and-creek.jpg
+---------- Start Time - 2018-08-03 16:27:37.033146 ----------
+Checking if image {width, height} has 1000 above pixels...
+Images (H x W) has dimensions 325 x 184
+Image {height, width} has below 1000 pixels - (325 x 184)
+Checking voc-fcn8s/test.prototxt file...
+Reading file...
+Reshaping input layer...
+    shape { dim: 1 dim: 3 dim: 325 dim: 184 }
+
+Writing file...
+Closing file...
+Starting to segment the image -- charles-francois-daubigny_the-woods-and-creek -- in 5 seconds
+Number of pixels: 59800
+Extract Unique Pixel Classes:
+
+1. [0, 0, 0]
+---------- Class Names - RGB Value ----------
+Class ID: 0
+Class Color: (0, 0, 0)
+Class Name: background
+Percentage of region: 100.000%
+
+
+---------- Colors Present In Image ----------
+
+RGB Color - HSV - Proportion - Hue Color: Rgb(r=144, g=136, b=97) - (49.787234042553195, 0.3263888888888889, 144) - 3.4816053511705682% - red
+RGB Color - HSV - Proportion - Hue Color: Rgb(r=40, g=38, b=25) - (52.00000000000001, 0.375, 40) - 63.90468227424749% - red
+RGB Color - HSV - Proportion - Hue Color: Rgb(r=25, g=27, b=31) - (220.00000000000003, 0.1935483870967742, 31) - 0.07859531772575251% - cyan
+RGB Color - HSV - Proportion - Hue Color: Rgb(r=29, g=21, b=24) - (337.5, 0.27586206896551724, 29) - 0.49665551839464883% - magenta
+RGB Color - HSV - Proportion - Hue Color: Rgb(r=164, g=154, b=117) - (47.234042553191486, 0.2865853658536585, 164) - 8.187290969899665% - red
+RGB Color - HSV - Proportion - Hue Color: Rgb(r=97, g=91, b=93) - (340.0, 0.061855670103092786, 97) - 0.0016722408026755853% - magenta
+RGB Color - HSV - Proportion - Hue Color: Rgb(r=139, g=122, b=117) - (13.636363636363637, 0.15827338129496402, 139) - 0.006688963210702341% - red
+RGB Color - HSV - Proportion - Hue Color: Rgb(r=29, g=34, b=28) - (110.00000000000001, 0.17647058823529413, 34) - 0.697324414715719% - yellow
+RGB Color - HSV - Proportion - Hue Color: Rgb(r=212, g=194, b=160) - (39.23076923076923, 0.24528301886792453, 212) - 0.026755852842809364% - red
+RGB Color - HSV - Proportion - Hue Color: Rgb(r=59, g=67, b=52) - (92.0, 0.22388059701492538, 67) - 0.0016722408026755853% - yellow
+RGB Color - HSV - Proportion - Hue Color: Rgb(r=107, g=98, b=63) - (47.72727272727273, 0.411214953271028, 107) - 16.72742474916388% - red
+RGB Color - HSV - Proportion - Hue Color: Rgb(r=228, g=222, b=224) - (340.0, 0.02631578947368421, 228) - 0.030100334448160536% - magenta
+RGB Color - HSV - Proportion - Hue Color: Rgb(r=179, g=171, b=173) - (345.0, 0.0446927374301676, 179) - 0.006688963210702341% - magenta
+RGB Color - HSV - Proportion - Hue Color: Rgb(r=227, g=217, b=201) - (36.92307692307693, 0.1145374449339207, 227) - 0.10702341137123746% - red
+RGB Color - HSV - Proportion - Hue Color: Rgb(r=141, g=139, b=144) - (264.0, 0.034722222222222224, 144) - 0.0016722408026755853% - blue
+RGB Color - HSV - Proportion - Hue Color: Rgb(r=76, g=72, b=38) - (53.68421052631579, 0.5, 76) - 6.2441471571906355% - red
+
+
+---------- Hue Colors - Hue Proportions ----------
+
+Color	 -	 Color Proportion	 -	 No. of instances
+Red    	 -	 98.686%			 -	 8
+Yellow 	 -	 0.699%			 -	 2
+Green 	 -	 0.000%			 -	 0
+Cyan   	 -	 0.079%			 -	 1
+Blue   	 -	 0.002%			 -	 1
+Magenta	 -	 0.535%			 -	 4
+--------------------------------------------------
+Total number of colors: 16
+
+---------- End Time - 2018-08-03 16:27:49.860936 ----------
+Elapsed time is: 0:00:12.827790
+Checking demo/resume.txt file...
+Saving last segmented image path...
+Writing file...
+Closing file...
+demo/Batch 1/charles-francois-daubigny_young-corn(1).jpg
+---------- Start Time - 2018-08-03 16:28:06.083136 ----------
+Checking if image {width, height} has 1000 above pixels...
+Images (H x W) has dimensions 139 x 250
+Image {height, width} has below 1000 pixels - (139 x 250)
+Checking voc-fcn8s/test.prototxt file...
+Reading file...
+Reshaping input layer...
+    shape { dim: 1 dim: 3 dim: 139 dim: 250 }
+
+Writing file...
+Closing file...
+Starting to segment the image -- charles-francois-daubigny_young-corn(1) -- in 5 seconds
+Number of pixels: 34750
+Extract Unique Pixel Classes:
+
+1. [0, 0, 0]
+---------- Class Names - RGB Value ----------
+Class ID: 0
+Class Color: (0, 0, 0)
+Class Name: background
+Percentage of region: 100.000%
+
+
+---------- Colors Present In Image ----------
+
+RGB Color - HSV - Proportion - Hue Color: Rgb(r=67, g=59, b=23) - (49.090909090909086, 0.6567164179104478, 67) - 0.08057553956834533% - red
+RGB Color - HSV - Proportion - Hue Color: Rgb(r=158, g=140, b=66) - (48.2608695652174, 0.5822784810126582, 158) - 20.34820143884892% - red
+RGB Color - HSV - Proportion - Hue Color: Rgb(r=222, g=202, b=147) - (44.0, 0.33783783783783783, 222) - 4.794244604316547% - red
+RGB Color - HSV - Proportion - Hue Color: Rgb(r=188, g=170, b=115) - (45.20547945205479, 0.3882978723404255, 188) - 6.972661870503598% - red
+RGB Color - HSV - Proportion - Hue Color: Rgb(r=84, g=76, b=32) - (50.76923076923077, 0.6190476190476191, 84) - 0.7827338129496403% - red
+RGB Color - HSV - Proportion - Hue Color: Rgb(r=218, g=213, b=217) - (312.0, 0.022935779816513763, 218) - 0.4% - magenta
+RGB Color - HSV - Proportion - Hue Color: Rgb(r=187, g=195, b=191) - (150.0, 0.041025641025641026, 195) - 0.04316546762589928% - green
+RGB Color - HSV - Proportion - Hue Color: Rgb(r=185, g=194, b=197) - (195.0, 0.06091370558375635, 197) - 0.028776978417266185% - cyan
+RGB Color - HSV - Proportion - Hue Color: Rgb(r=194, g=190, b=194) - (300.0, 0.020618556701030927, 194) - 0.0057553956834532375% - magenta
+RGB Color - HSV - Proportion - Hue Color: Rgb(r=227, g=215, b=188) - (41.53846153846153, 0.17180616740088106, 227) - 32.607194244604315% - red
+RGB Color - HSV - Proportion - Hue Color: Rgb(r=175, g=183, b=190) - (208.00000000000003, 0.07894736842105263, 190) - 1.4964028776978417% - cyan
+RGB Color - HSV - Proportion - Hue Color: Rgb(r=200, g=204, b=213) - (221.53846153846155, 0.06103286384976526, 213) - 2.158273381294964% - cyan
+RGB Color - HSV - Proportion - Hue Color: Rgb(r=186, g=184, b=186) - (300.0, 0.010752688172043012, 186) - 0.017266187050359715% - magenta
+RGB Color - HSV - Proportion - Hue Color: Rgb(r=123, g=112, b=55) - (50.294117647058826, 0.5528455284552846, 123) - 28.28776978417266% - red
+RGB Color - HSV - Proportion - Hue Color: Rgb(r=172, g=178, b=174) - (140.0, 0.033707865168539325, 178) - 1.3266187050359712% - green
+RGB Color - HSV - Proportion - Hue Color: Rgb(r=199, g=204, b=201) - (144.0, 0.024509803921568627, 204) - 0.4892086330935252% - green
+RGB Color - HSV - Proportion - Hue Color: Rgb(r=185, g=190, b=201) - (221.25, 0.07960199004975124, 201) - 0.16115107913669066% - cyan
+
+
+---------- Hue Colors - Hue Proportions ----------
+
+Color	 -	 Color Proportion	 -	 No. of instances
+Red    	 -	 93.873%			 -	 7
+Yellow 	 -	 0.000%			 -	 0
+Green 	 -	 1.859%			 -	 3
+Cyan   	 -	 3.845%			 -	 4
+Blue   	 -	 0.000%			 -	 0
+Magenta	 -	 0.423%			 -	 3
+--------------------------------------------------
+Total number of colors: 17
+
+---------- End Time - 2018-08-03 16:28:17.914844 ----------
+Elapsed time is: 0:00:11.831708
+Checking demo/resume.txt file...
+Saving last segmented image path...
+Writing file...
+Closing file...
