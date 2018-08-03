@@ -3,3 +3,4 @@ demo/Batch 1/boris-kustodiev_on-the-bridge-the-wife-and-daughter-of-the-artist-1
 demo/Batch 1/boris-kustodiev_portrait-of-vsevolod-voinov-1921-1.jpg - <class 'IndexError'>
 demo/Batch 1/camille-corot_passiance-in-saint-avit-1872.jpg - Image {width, height} has above 1000 pixels
 demo/Batch 1/camille-corot_portrait-of-a-gentleman-1829.jpg - Image {width, height} has above 1000 pixels
+demo/Batch 1/camille-corot_rome-castle-sant-angelo.jpg - Image {width, height} has above 1000 pixels

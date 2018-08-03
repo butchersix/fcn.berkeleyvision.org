@@ -21,8 +21,9 @@ import sys
 PRINT_SECONDS = 0.2
 REVIEW_SECONDS = 5
 REST_SECONDS = 10
-ERROR_ABOVE = "Image {width, height} has above 1000 pixels"
-PASS_BELOW = "Image {width, height} has below 1000 pixels"
+ERROR_ABOVE = "Image {height, width} has above 1000 pixels"
+PASS_BELOW = "Image {height, width} has below 1000 pixels"
+dm = "" # global dimensions string
 # flow
 """
     1. Enter number of images to segment 
@@ -96,13 +97,13 @@ def createCurrentLog(fp):
     f = "demo/output/{}.log".format(filepath[len(filepath) - 1].split(".")[0])
     if(isfile(f)):
         delayPrint("Resuming {} file".format(f), PRINT_SECONDS)
-        file = open(f, "a")
+        file = open(f, "w")
         setSession(file, False)
         file.close()
     else:
         print("{} log file does not exist!".format(f))
         print("Creating {} file...".format(f))
-        file = open(f, "a+")
+        file = open(f, "w+")
         setSession(file, False)
         file.close()
 
@@ -171,11 +172,14 @@ def reshapeInputLayer(img, f="voc-fcn8s/test.prototxt"):
 def checkImageSize1000(img):
     delayPrint("Checking if image {width, height} has 1000 above pixels...", PRINT_SECONDS)
     width, height = img.size
+    dimensions = " - ({} x {})".format(height, width)
+    dm = dimensions
+    delayPrint("Images (H x W) has dimensions {} x {}".format(height, width), PRINT_SECONDS)
     if(width >= 1000 and height >= 1000):
-        delayPrint(ERROR_ABOVE, PRINT_SECONDS)
+        delayPrint(ERROR_ABOVE+dimensions, PRINT_SECONDS)
         return True
     else:
-        delayPrint(PASS_BELOW, PRINT_SECONDS)
+        delayPrint(PASS_BELOW+dimensions, PRINT_SECONDS)
         return False
     return False
 
@@ -219,7 +223,7 @@ def segmentation(path, current_painting):
     # path = "demo/Trials/twice.jpg"
     im = Image.open(path)
     if checkImageSize1000(im):
-        writeErrorFile(path, ERROR_ABOVE)
+        writeErrorFile(path, ERROR_ABOVE+dm)
     else:
         # reshape input layer from dimensions of image H x W
         reshapeInputLayer(im)
