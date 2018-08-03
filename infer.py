@@ -173,6 +173,7 @@ def checkImageSize1000(img):
     delayPrint("Checking if image {width, height} has 1000 above pixels...", PRINT_SECONDS)
     width, height = img.size
     dimensions = " - ({} x {})".format(height, width)
+    global dm
     dm = dimensions
     delayPrint("Images (H x W) has dimensions {} x {}".format(height, width), PRINT_SECONDS)
     if(width >= 1000 and height >= 1000):
