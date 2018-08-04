@@ -19,3 +19,5 @@ demo/Batch 1/ferdinand-hodler_the-reaper.jpg - Image {height, width} has above 1
 demo/Batch 1/ferdinand-hodler_the-shoemaker-1878.jpg - Image {height, width} has above 1000 pixels - (1209 x 1003)
 demo/Batch 1/frederic-remington_a-misdeal-1897.jpg - <class 'IndexError'>
 demo/Batch 1/frederic-remington_cracker-cowboys-of-florida-1895.jpg - <class 'IndexError'>
+demo/Batch 1/gustave-courbet_paysage-guyere-1876.jpg - Image {height, width} has above 1000 pixels - (1118 x 1327)
+demo/Batch 1/gustave-courbet_seascape-the-poplar.jpg - Image {height, width} has above 1000 pixels - (1230 x 1500)
