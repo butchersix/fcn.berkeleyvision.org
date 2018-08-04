@@ -8,3 +8,14 @@ demo/Batch 1/david-burliuk_a-lakeshore-1953.jpg - Image {height, width} has abov
 demo/Batch 1/david-burliuk_portrait-of-nicholas-roerich-1929-1.jpg - <class 'IndexError'>
 demo/Batch 1/edouard-manet_sketch-of-moving-farmer.jpg - <class 'IndexError'>
 demo/Batch 1/edouard-manet_the-races-in-the-bois-de-boulogne-1872.jpg - Image {height, width} has above 1000 pixels
+demo/Batch 1/felix-vallotton_martello-tower-in-guernsey-1907.jpg - Image {height, width} has above 1000 pixels - (1275 x 1749)
+demo/Batch 1/felix-vallotton_reclining-nude-on-a-couch.jpg - Image {height, width} has above 1000 pixels - (1125 x 1770)
+demo/Batch 1/ferdinand-hodler_olive-trees-in-spain-1878.jpg - Image {height, width} has above 1000 pixels - (1758 x 2244)
+demo/Batch 1/ferdinand-hodler_on-the-banks-of-the-manzanares-1878.jpg - Image {height, width} has above 1000 pixels - (1392 x 2082)
+demo/Batch 1/ferdinand-hodler_portrait-of-louise-delphine-duchosal-1885.jpg - Image {height, width} has above 1000 pixels - (1923 x 1602)
+demo/Batch 1/ferdinand-hodler_the-black-lutschina-1905.jpg - Image {height, width} has above 1000 pixels - (1250 x 1104)
+demo/Batch 1/ferdinand-hodler_the-pastor-1879.jpg - Image {height, width} has above 1000 pixels - (2502 x 1836)
+demo/Batch 1/ferdinand-hodler_the-reaper.jpg - Image {height, width} has above 1000 pixels - (1590 x 2583)
+demo/Batch 1/ferdinand-hodler_the-shoemaker-1878.jpg - Image {height, width} has above 1000 pixels - (1209 x 1003)
+demo/Batch 1/frederic-remington_a-misdeal-1897.jpg - <class 'IndexError'>
+demo/Batch 1/frederic-remington_cracker-cowboys-of-florida-1895.jpg - <class 'IndexError'>
