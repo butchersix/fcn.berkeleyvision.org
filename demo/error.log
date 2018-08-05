@@ -21,3 +21,6 @@ demo/Batch 1/frederic-remington_a-misdeal-1897.jpg - <class 'IndexError'>
 demo/Batch 1/frederic-remington_cracker-cowboys-of-florida-1895.jpg - <class 'IndexError'>
 demo/Batch 1/gustave-courbet_paysage-guyere-1876.jpg - Image {height, width} has above 1000 pixels - (1118 x 1327)
 demo/Batch 1/gustave-courbet_seascape-the-poplar.jpg - Image {height, width} has above 1000 pixels - (1230 x 1500)
+demo/Batch 1/henri-fantin-latour_charlotte-dubourg-1882.jpg - Image {height, width} has above 1000 pixels - (1402 x 1098)
+demo/Batch 1/henri-fantin-latour_flowers-and-fruit-1865.jpg - Image {height, width} has above 1000 pixels - (1188 x 1012)
+demo/Batch 1/henri-fantin-latour_still-life-1866.jpg - Image {height, width} has above 1000 pixels - (1200 x 1455)
