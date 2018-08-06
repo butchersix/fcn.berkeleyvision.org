@@ -26,3 +26,11 @@ demo/Batch 1/henri-fantin-latour_flowers-and-fruit-1865.jpg - Image {height, wid
 demo/Batch 1/henri-fantin-latour_still-life-1866.jpg - Image {height, width} has above 1000 pixels - (1200 x 1455)
 demo/Batch 1/isaac-levitan_autumn-1885-1.jpg - <class 'IndexError'>
 demo/Batch 1/isaac-levitan_high-waters-1885-2.jpg - <class 'IndexError'>
+demo/Batch 1/ivan-kramskoy_d-i-mendeleev-1878.jpg - Image {height, width} has above 1000 pixels - (1566 x 1122)
+demo/Batch 1/ivan-kramskoy_portrait-of-sofia-nikolaevna-kramskoy-in-hat-1863.jpg - <class 'IndexError'>
+demo/Batch 1/ivan-kramskoy_portrait-of-the-artist-nikolai-dmitrievich-dmitriev-orenburg-1866.jpg - <class 'IndexError'>
+demo/Batch 1/ivan-shishkin_bank-of-the-stream-1885.jpg - <class 'IndexError'>
+demo/Batch 1/ivan-shishkin_broken-birch-1872.jpg - <class 'IndexError'>
+demo/Batch 1/ivan-shishkin_carved-wood.jpg - <class 'IndexError'>
+demo/Batch 1/ivan-shishkin_crimean-view-near-yalta-1879.jpg - <class 'IndexError'>
+demo/Batch 1/ivan-shishkin_deciduous-forest-1873.jpg - <class 'IndexError'>
