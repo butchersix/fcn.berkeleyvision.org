@@ -61,11 +61,11 @@ def resize(path, paintings):
         delayPrint("{}. Resizing image {}".format(i, x), PRINT_SECONDS, getUpperPath(path))
         im = Image.open(image_path)
         height, width = im.size
-        resized_scale = (int(height/2), int(width/2))
+        resized_scale = (int(round(height/2)), int(round(width/2)))
         rh, rw = resized_scale
         j += 1
         while((rh*rw) >= 1000000): # this checks if total number of pixels is greater than or equal to 1 million
-            rh, rw = (int(rh/2), int(rw/2))
+            rh, rw = (int(round(rh/2)), int(round(rw/2)))
             resized_scale = (rh, rw)
             j += 1
         im = im.resize((resized_scale), Image.ANTIALIAS)
