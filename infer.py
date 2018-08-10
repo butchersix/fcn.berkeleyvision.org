@@ -203,7 +203,7 @@ def loop(paintings_path, paintings, current_painting):
         start_time = datetime.datetime.now()
         delayPrint("---------- Start Time - {:s} ----------".format(str(start_time)), PRINT_SECONDS)
         delayPrint("Index of painting: {}".format(x), PRINT_SECONDS)
-        delayPrint("Last expected painting index: {}".format(last), PRINT_SECONDS)
+        delayPrint("Last expected painting index: {}".format(last - 1), PRINT_SECONDS)
         delayPrint("", REVIEW_SECONDS)
         try:
             segmentation(current_painting_path, paintings[x])
@@ -216,7 +216,7 @@ def loop(paintings_path, paintings, current_painting):
         elapsed_time = end_time - start_time
         delayPrint("Elapsed time is: {:s}".format(str(elapsed_time)), REVIEW_SECONDS)
         delayPrint("Index of painting: {}".format(x), PRINT_SECONDS)
-        delayPrint("Last expected painting index: {}".format(last), PRINT_SECONDS)
+        delayPrint("Last expected painting index: {}".format(last - 1), PRINT_SECONDS)
         delayPrint("", REVIEW_SECONDS)
         if int(n) > 1 and x != last - 1: # rest (60 seconds) if images are greater to 1 and no rest if last image
             time.sleep(REST_SECONDS)
