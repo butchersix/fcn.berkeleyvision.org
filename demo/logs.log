@@ -1,0 +1,73 @@
+
+-------------------- SESSION - 2018-08-10 16:17 -------------------------
+Checking demo/resume.txt file...
+Reading file...
+Last segmented image: demo/Whole Batch/Batch 1_resized/adolf-hitler_shelter-in-fournes.jpg
+Closing file...
+demo/Whole Batch/Batch 1_resized/adolf-hitler_shelter-in-fournes.jpg
+---------- Start Time - 2018-08-10 16:17:27.941237 ----------
+Checking if image {width, height} has 1,000,000 and above pixels...
+Images (H x W) has dimensions 448 x 606
+Image {height, width} has below 1000 pixels - (448 x 606)
+Checking voc-fcn8s/test.prototxt file...
+Reading file...
+Reshaping input layer...
+    shape { dim: 1 dim: 3 dim: 448 dim: 606 }
+
+Writing file...
+Closing file...
+Starting to segment the image -- adolf-hitler_shelter-in-fournes -- in 5 seconds
+Number of pixels: 271488
+Extract Unique Pixel Classes:
+
+1. [0, 0, 0]
+---------- Class Names - RGB Value ----------
+Class ID: 0
+Class Color: (0, 0, 0)
+Class Name: background
+Percentage of region: 100.000%
+
+
+---------- Colors Present In Image ----------
+
+RGB Color - HSV - Proportion - Hue Color: Rgb(r=186, g=196, b=181) - (99.99999999999999, 0.07653061224489796, 196) - 0.49689120697784067% - yellow
+RGB Color - HSV - Proportion - Hue Color: Rgb(r=169, g=180, b=165) - (104.00000000000001, 0.08333333333333333, 180) - 3.2535508015087222% - yellow
+RGB Color - HSV - Proportion - Hue Color: Rgb(r=142, g=132, b=103) - (44.61538461538461, 0.2746478873239437, 142) - 5.775209217350306% - red
+RGB Color - HSV - Proportion - Hue Color: Rgb(r=92, g=56, b=38) - (20.0, 0.5869565217391305, 92) - 0.021732083922677982% - red
+RGB Color - HSV - Proportion - Hue Color: Rgb(r=67, g=53, b=30) - (37.2972972972973, 0.5522388059701493, 67) - 3.4049387081565294% - red
+RGB Color - HSV - Proportion - Hue Color: Rgb(r=121, g=134, b=116) - (103.33333333333333, 0.13432835820895522, 134) - 0.021363743517208864% - yellow
+RGB Color - HSV - Proportion - Hue Color: Rgb(r=79, g=67, b=40) - (41.53846153846153, 0.4936708860759494, 79) - 1.7927127534181992% - red
+RGB Color - HSV - Proportion - Hue Color: Rgb(r=69, g=78, b=81) - (195.0, 0.14814814814814814, 81) - 0.0029467232437529467% - cyan
+RGB Color - HSV - Proportion - Hue Color: Rgb(r=196, g=206, b=192) - (102.85714285714288, 0.06796116504854369, 206) - 0.7274723008015087% - yellow
+RGB Color - HSV - Proportion - Hue Color: Rgb(r=107, g=90, b=94) - (345.88235294117646, 0.1588785046728972, 107) - 0.00221004243281471% - magenta
+RGB Color - HSV - Proportion - Hue Color: Rgb(r=57, g=69, b=54) - (108.0, 0.21739130434782608, 69) - 0.019153701084394154% - yellow
+RGB Color - HSV - Proportion - Hue Color: Rgb(r=116, g=100, b=73) - (37.674418604651166, 0.3706896551724138, 116) - 34.991970179160774% - red
+RGB Color - HSV - Proportion - Hue Color: Rgb(r=197, g=197, b=173) - (60.0, 0.1218274111675127, 197) - 1.786450966525224% - yellow
+RGB Color - HSV - Proportion - Hue Color: Rgb(r=181, g=175, b=177) - (340.0, 0.03314917127071823, 181) - 0.00036834040546911834% - magenta
+RGB Color - HSV - Proportion - Hue Color: Rgb(r=163, g=169, b=171) - (195.0, 0.04678362573099415, 171) - 0.0029467232437529467% - cyan
+RGB Color - HSV - Proportion - Hue Color: Rgb(r=30, g=40, b=44) - (197.1428571428571, 0.3181818181818182, 44) - 0.01989038189533239% - cyan
+RGB Color - HSV - Proportion - Hue Color: Rgb(r=161, g=119, b=96) - (21.230769230769226, 0.40372670807453415, 161) - 0.0221004243281471% - red
+RGB Color - HSV - Proportion - Hue Color: Rgb(r=168, g=162, b=138) - (48.0, 0.17857142857142858, 168) - 46.279761904761905% - red
+RGB Color - HSV - Proportion - Hue Color: Rgb(r=206, g=206, b=186) - (60.0, 0.0970873786407767, 206) - 0.8195574021687883% - yellow
+RGB Color - HSV - Proportion - Hue Color: Rgb(r=86, g=98, b=83) - (108.0, 0.15306122448979592, 98) - 0.26815181518151815% - yellow
+RGB Color - HSV - Proportion - Hue Color: Rgb(r=32, g=47, b=36) - (136.0, 0.3191489361702128, 47) - 0.2906205799151344% - green
+
+
+---------- Hue Colors - Hue Proportions ----------
+
+Color	 -	 Color Proportion	 -	 No. of instances
+Red    	 -	 92.288%			 -	 7
+Yellow 	 -	 7.393%			 -	 8
+Green 	 -	 0.291%			 -	 1
+Cyan   	 -	 0.026%			 -	 3
+Blue   	 -	 0.000%			 -	 0
+Magenta	 -	 0.003%			 -	 2
+--------------------------------------------------
+Total number of colors: 21
+
+---------- End Time - 2018-08-10 16:18:01.714419 ----------
+Elapsed time is: 0:00:33.773182
+Checking demo/resume.txt file...
+Saving last segmented image path...
+Writing file...
+Closing file...

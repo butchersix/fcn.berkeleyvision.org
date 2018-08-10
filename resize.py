@@ -30,7 +30,7 @@ def delayPrint(string, seconds, f=""): # n seconds delay printing
     exportLogs(string)
     print(string)
 
-def exportLogs(logs, f="demo/resized_logs.log"):
+def exportLogs(logs, f="demo/resized_logs_test.log"):
     logs += "\n"
     if(isfile(f)):
         file = open(f, "a")
@@ -61,6 +61,7 @@ def resize(path, paintings):
         delayPrint("{}. Resizing image {}".format(i, x), PRINT_SECONDS, getUpperPath(path))
         im = Image.open(image_path)
         height, width = im.size
+        print("{} x {}".format(round(height/2), round(width/2)))
         resized_scale = (int(round(height/2)), int(round(width/2)))
         rh, rw = resized_scale
         j += 1

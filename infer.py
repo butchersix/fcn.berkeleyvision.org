@@ -202,6 +202,7 @@ def loop(paintings_path, paintings, current_painting):
         createCurrentLog(paintings[x])
         start_time = datetime.datetime.now()
         delayPrint("---------- Start Time - {:s} ----------".format(str(start_time)), PRINT_SECONDS)
+        delayPrint("Index of painting: {}".format(x), REVIEW_SECONDS)
         try:
             segmentation(current_painting_path, paintings[x])
         except:
@@ -212,6 +213,7 @@ def loop(paintings_path, paintings, current_painting):
         delayPrint("---------- End Time - {:s} ----------".format(str(end_time)), PRINT_SECONDS)
         elapsed_time = end_time - start_time
         delayPrint("Elapsed time is: {:s}".format(str(elapsed_time)), REVIEW_SECONDS)
+        delayPrint("Index of painting: {}".format(x), REVIEW_SECONDS)
         if int(n) > 1 and x != last - 1: # rest (60 seconds) if images are greater to 1 and no rest if last image
             time.sleep(REST_SECONDS)
         # if x == last - 1:
