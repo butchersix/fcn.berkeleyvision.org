@@ -49,3 +49,7 @@ demo/Batch 1/ivan-shishkin_suuch-khan-crimea-1879.jpg - <class 'IndexError'>
 demo/Batch 1/ivan-shishkin_thaw-1883.jpg - <class 'IndexError'>
 demo/Batch 1/ivan-shishkin_the-bridge-over-the-river.jpg - <class 'IndexError'>
 demo/Batch 1/james-mcneill-whistler_the-limeburner.jpg - <class 'IndexError'>
+demo/Batch 1/james-tissot_a-widow.jpg - Image {height, width} has above 1000 pixels - (1428 x 1018)
+demo/Batch 1/james-tissot_an-interesting-story-1872.jpg - Image {height, width} has above 1000 pixels - (1257 x 1546)
+demo/Batch 1/james-tissot_bad-news.jpg - Image {height, width} has above 1000 pixels - (1243 x 1497)
+demo/Batch 1/james-tissot_convalescence.jpg - <class 'IndexError'>
