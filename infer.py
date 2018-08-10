@@ -169,14 +169,15 @@ def reshapeInputLayer(img, f="voc-fcn8s/test.prototxt"):
     else:
         delayPrint("File does not exist!", PRINT_SECONDS)
 
-def checkImageSize1000(img):
-    delayPrint("Checking if image {width, height} has 1000 above pixels...", PRINT_SECONDS)
+def checkImageSize1000000(img):
+    delayPrint("Checking if image {width, height} has 1,000,000 and above pixels...", PRINT_SECONDS)
     width, height = img.size
     dimensions = " - ({} x {})".format(height, width)
     global dm
     dm = dimensions
+    ONE_MIL = 1000000
     delayPrint("Images (H x W) has dimensions {} x {}".format(height, width), PRINT_SECONDS)
-    if(width >= 1000 and height >= 1000):
+    if((width * height) >= ONE_MIL):
         delayPrint(ERROR_ABOVE+dimensions, PRINT_SECONDS)
         return True
     else:
@@ -223,7 +224,7 @@ def segmentation(path, current_painting):
     # im = Image.open('demo/image.jpg')
     # path = "demo/Trials/twice.jpg"
     im = Image.open(path)
-    if checkImageSize1000(im):
+    if checkImageSize1000000(im):
         writeErrorFile(path, ERROR_ABOVE+dm)
     else:
         # reshape input layer from dimensions of image H x W
