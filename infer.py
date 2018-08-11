@@ -64,6 +64,13 @@ def setSession(file, flag=True):
     else:
         file.write("-------------------- SESSION - {} -------------------------\n".format(now.strftime("%Y-%m-%d %H:%M")))
 
+def endSession(flag=True):
+    now = datetime.datetime.now()
+    if flag:
+        return "\n-------------------- END SESSION - {} -------------------------\n".format(now.strftime("%Y-%m-%d %H:%M"))
+    else:
+        return "-------------------- END SESSION - {} -------------------------\n".format(now.strftime("%Y-%m-%d %H:%M"))
+    return ""
 
 def delayPrint(string, seconds): # n seconds delay printing
     time.sleep(seconds)
@@ -222,6 +229,7 @@ def loop(paintings_path, paintings, current_painting):
             time.sleep(REST_SECONDS)
         # if x == last - 1:
         writeResume(current_painting_path)
+    delayPrint(endSession(), PRINT_SECONDS)
 
 def segmentation(path, current_painting):
     # the demo image is "2007_000129" from PASCAL VOC
