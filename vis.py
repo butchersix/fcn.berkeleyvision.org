@@ -210,7 +210,7 @@ def delayPrint(string, seconds): # n seconds delay printing
     print(string)
     exportLogs(string)
 
-def exportLogs(logs, f="demo/logs.log", flag=True):
+def exportLogs(logs, f="demo/logs_lyle.log", flag=True):
     if flag:
         print(logs)
     logs += "\n"
