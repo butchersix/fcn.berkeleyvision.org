@@ -289,5 +289,6 @@ paintings_path = fp_resume.split("/")
 paintings_path.remove(paintings_path[len(paintings_path) - 1])
 paintings_path = delimiter.join(paintings_path)
 paintings = getPaintings(paintings_path)
+# print(paintings)
 loop(paintings_path, paintings, current_painting)
 
