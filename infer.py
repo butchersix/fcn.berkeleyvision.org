@@ -24,6 +24,7 @@ REST_SECONDS = 10
 ERROR_ABOVE = "Image {height, width} has above 1000 pixels"
 PASS_BELOW = "Image {height, width} has below 1000 pixels"
 dm = "" # global dimensions string
+JPG_FILETYPE = ".jpg"
 # flow
 """
     1. Enter number of images to segment 
@@ -78,7 +79,7 @@ def delayPrint(string, seconds): # n seconds delay printing
     print(string)
 
 def getPaintings(path):
-    paintings = [f.split(".")[0] for f in listdir(path) if isfile(join(path, f))]
+    paintings = [f.split(JPG_FILETYPE)[0] for f in listdir(path) if isfile(join(path, f))] # splits only for .jpg images
     paintings.sort()
     return paintings
 
@@ -101,7 +102,7 @@ def exportLogs(logs, f="demo/logs.log"):
 
 def createCurrentLog(fp):
     filepath = fp.split("/")
-    f = "demo/output/{}.log".format(filepath[len(filepath) - 1].split(".")[0])
+    f = "demo/output/{}.log".format(filepath[len(filepath) - 1].split(JPG_FILETYPE)[0])
     if(isfile(f)):
         delayPrint("Resuming {} file".format(f), PRINT_SECONDS)
         file = open(f, "w")
@@ -194,7 +195,7 @@ def checkImageSize1000000(img):
 
 def loop(paintings_path, paintings, current_painting):
     n = input("Enter number of images to segment: ")
-    index = paintings.index(current_painting.split(".")[0])
+    index = paintings.index(current_painting.split(JPG_FILETYPE)[0])
     end = len(paintings) - 1
     last = index+int(n)
     if(index != 0):
@@ -269,7 +270,7 @@ def segmentation(path, current_painting):
         voc_palette = vis.make_palette(21)
         out_im = Image.fromarray(vis.color_seg(out, voc_palette))
         # out_im.save('demo/output.png')
-        out_im.save('demo/output/output_%s.png'%(current_painting.split(".")[0]))
+        out_im.save('demo/output/output_%s.png'%(current_painting.split(JPG_FILETYPE)[0]))
         logfile = "demo/output/"+current_painting+".log"
         masked_im = Image.fromarray(vis.vis_seg(im, out, voc_palette, 0.5, logfile))
 
