@@ -86,3 +86,23 @@ Number of scales: 1
 Final dimension size: (479, 800)
 Number of scales: 2
 
+-------------------- SESSION - 2018-08-22 15:48 -------------------------
+1. Resizing image img.png
+Final dimension size: (526, 288)
+Number of scales: 1
+
+Creating directory
+Directory created
+
+-------------------- SESSION - 2018-08-22 15:49 -------------------------
+1. Resizing image img.png
+Final dimension size: (526, 288)
+Number of scales: 1
+
+Creating directory
+Directory created
+
+2. Resizing image label.png
+Final dimension size: (526, 288)
+Number of scales: 1
+

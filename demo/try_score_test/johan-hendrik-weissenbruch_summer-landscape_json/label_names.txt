@@ -1,0 +1,9 @@
+_background_
+House
+River
+Boat
+Person
+Cow
+Trees
+Grass
+Sky

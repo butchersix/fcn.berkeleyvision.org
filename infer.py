@@ -17,12 +17,16 @@ import datetime
 import math
 import sys
 
+import score
+import voc_layers
+
 # own code - Jasper
 PRINT_SECONDS = 0.2
 REVIEW_SECONDS = 5
 REST_SECONDS = 10
 ERROR_ABOVE = "Image {height, width} has above 1000 pixels"
 PASS_BELOW = "Image {height, width} has below 1000 pixels"
+OUTPUT_FOLDER = "output_score" # no slashes both first and last
 dm = "" # global dimensions string
 JPG_FILETYPE = ".jpg"
 # flow
@@ -102,7 +106,7 @@ def exportLogs(logs, f="demo/logs.log"):
 
 def createCurrentLog(fp):
     filepath = fp.split("/")
-    f = "demo/output/{}.log".format(filepath[len(filepath) - 1].split(JPG_FILETYPE)[0])
+    f = "demo/{}/{}.log".format(OUTPUT_FOLDER, filepath[len(filepath) - 1].split(JPG_FILETYPE)[0])
     if(isfile(f)):
         delayPrint("Resuming {} file".format(f), PRINT_SECONDS)
         file = open(f, "w")
@@ -160,7 +164,7 @@ def writeErrorFile(current_painting_path, error="", f="demo/error.log"):
 
 def reshapeInputLayer(img, f="voc-fcn8s/test.prototxt"):
     delayPrint("Checking {} file...".format(f), PRINT_SECONDS)
-    LINE_NUMBER = 7
+    LINE_NUMBER = 8
     width, height = img.size
     if(isfile(f)):
         with open(f, "r") as file:
@@ -213,12 +217,12 @@ def loop(paintings_path, paintings, current_painting):
         delayPrint("Index of painting: {}".format(x), PRINT_SECONDS)
         delayPrint("Last expected painting index: {}".format(last - 1), PRINT_SECONDS)
         delayPrint("", REVIEW_SECONDS)
-        try:
-            segmentation(current_painting_path, paintings[x])
-        except:
-            error = sys.exc_info()[0]
-            print("Error {} found! Writing error log.".format(error))
-            writeErrorFile(current_painting_path, error)
+        # try:
+        segmentation(current_painting_path, paintings[x])
+        # except:
+        #     error = sys.exc_info()[0]
+        #     print("Error {} found! Writing error log.".format(error))
+        #     writeErrorFile(current_painting_path, error)
         end_time = datetime.datetime.now()
         delayPrint("---------- End Time - {:s} ----------".format(str(end_time)), PRINT_SECONDS)
         elapsed_time = end_time - start_time
@@ -239,6 +243,9 @@ def segmentation(path, current_painting):
     # im = Image.open('demo/image.jpg')
     # path = "demo/Trials/twice.jpg"
     im = Image.open(path)
+
+    # try ground truth
+    gt = Image.open('demo/try_score_test/label.jpg')
     if checkImageSize1000000(im):
         writeErrorFile(path, ERROR_ABOVE+dm)
     else:
@@ -248,20 +255,38 @@ def segmentation(path, current_painting):
         # delay for 5 seconds for reviewing of image name
         time.sleep(REVIEW_SECONDS)
         in_ = np.array(im, dtype=np.float32)
+
+        # try ground truth
+        gt_ = np.array(gt, dtype=np.float32)
         # print(in_)
         in_ = in_[:,:,::-1]
+        gt_ = in_[:,:,::-1]
         # time.sleep(120)
         in_ -= np.array((104.00698793,116.66876762,122.67891434))
         in_ = in_.transpose((2,0,1))
+
+        gt_ -= np.array((104.00698793,116.66876762,122.67891434))
+        gt_ = gt_.transpose((2,0,1))
 
         # Own code:
         # Set mode to CPU since GPU can't handle much memory
         caffe.set_mode_cpu()
         # load net
-        net = caffe.Net('voc-fcn8s/deploy.prototxt', 'voc-fcn8s/fcn8s-heavy-pascal.caffemodel', caffe.TEST)
+        net = caffe.Net('voc-fcn8s/test.prototxt', 'voc-fcn8s/fcn8s-heavy-pascal.caffemodel', caffe.TEST)
         # shape for input (data blob is N x C x H x W), set data
+        # net.blobs['label'].data = gt_ 
+        
+        print(net.blobs)
+
+        # net = voc_layers.VOCSegDataLayer()
+        
         net.blobs['data'].reshape(1, *in_.shape)
         net.blobs['data'].data[...] = in_
+        net.blobs['label'].data[...] = gt_
+        
+        print("Stopping...")
+        return
+
         # run net and take argmax for prediction
         net.forward()
         out = net.blobs['score'].data[0].argmax(axis=0)
@@ -270,15 +295,20 @@ def segmentation(path, current_painting):
         voc_palette = vis.make_palette(21)
         out_im = Image.fromarray(vis.color_seg(out, voc_palette))
         # out_im.save('demo/output.png')
-        out_im.save('demo/output/output_%s.png'%(current_painting.split(JPG_FILETYPE)[0]))
-        logfile = "demo/output/"+current_painting+".log"
+        out_im.save('demo/%s/output_%s.png'%(OUTPUT_FOLDER, current_painting.split(JPG_FILETYPE)[0]))
+        logfile = "demo/"+OUTPUT_FOLDER+"/"+current_painting+".log"
         masked_im = Image.fromarray(vis.vis_seg(im, out, voc_palette, 0.5, logfile))
 
         # print extracted colors of original image
         vis.extractColors(path, logfile)
 
         # masked_im.save('demo/visualization.jpg')
-        masked_im.save('demo/output/output_%s.jpg'%(current_painting))
+        masked_im.save('demo/%s/output_%s.jpg'%(OUTPUT_FOLDER, current_painting))
+
+        # check accuracy
+        # val = np.loadtxt('demo/valid.txt', dtype=str)
+        # score.do_seg_tests(net, 1, False, val, layer='score', gt='score')
+        
 # end
 
 # main process
