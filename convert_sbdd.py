@@ -1,6 +1,7 @@
 import os
 import glob
 import numpy as np
+# import scipy.io
 import scipy.io.matlab.mio as scipy
 
 from PIL import Image

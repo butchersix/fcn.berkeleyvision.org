@@ -28,7 +28,7 @@ ERROR_ABOVE = "Image {height, width} has above 1000 pixels"
 PASS_BELOW = "Image {height, width} has below 1000 pixels"
 OUTPUT_FOLDER = "output_score" # no slashes both first and last
 dm = "" # global dimensions string
-JPG_FILETYPE = ".jpg"
+JPG_FILETYPE = ".png"
 # flow
 """
     1. Enter number of images to segment 
@@ -162,9 +162,9 @@ def writeErrorFile(current_painting_path, error="", f="demo/error.log"):
         delayPrint("Closing error file...", PRINT_SECONDS)
         file.close()
 
-def reshapeInputLayer(img, f="voc-fcn8s/test.prototxt"):
+def reshapeInputLayer(img, LINE_NUMBER=7, f="voc-fcn8s/test.prototxt"):
     delayPrint("Checking {} file...".format(f), PRINT_SECONDS)
-    LINE_NUMBER = 8
+    # LINE_NUMBER = 7
     width, height = img.size
     if(isfile(f)):
         with open(f, "r") as file:
@@ -172,6 +172,25 @@ def reshapeInputLayer(img, f="voc-fcn8s/test.prototxt"):
             data = file.readlines()
             delayPrint("Reshaping input layer...", PRINT_SECONDS)
             data[LINE_NUMBER] = "    shape { dim: 1 dim: 3 dim: %s dim: %s }\n"%(height, width)
+            delayPrint(data[LINE_NUMBER], PRINT_SECONDS)
+        with open(f, "w+") as file:
+            delayPrint("Writing file...", PRINT_SECONDS)
+            file.writelines(data)
+        delayPrint("Closing file...", PRINT_SECONDS)
+        file.close()
+    else:
+        delayPrint("File does not exist!", PRINT_SECONDS)
+
+def reshapeLabelLayer(img, LINE_NUMBER=7, f="voc-fcn8s/test.prototxt"):
+    delayPrint("Checking {} file...".format(f), PRINT_SECONDS)
+    # LINE_NUMBER = 7
+    width, height = img.size
+    if(isfile(f)):
+        with open(f, "r") as file:
+            delayPrint("Reading file...", PRINT_SECONDS)
+            data = file.readlines()
+            delayPrint("Reshaping label layer...", PRINT_SECONDS)
+            data[LINE_NUMBER] = "    shape { dim: 1 dim: %s dim: %s }\n"%(height, width)
             delayPrint(data[LINE_NUMBER], PRINT_SECONDS)
         with open(f, "w+") as file:
             delayPrint("Writing file...", PRINT_SECONDS)
@@ -209,7 +228,7 @@ def loop(paintings_path, paintings, current_painting):
             index += 1
             last += 1
     for x in range(index, last):
-        current_painting_path = paintings_path + "/" + paintings[x] + ".jpg"
+        current_painting_path = paintings_path + "/" + paintings[x] + JPG_FILETYPE
         delayPrint(current_painting_path, PRINT_SECONDS)
         createCurrentLog(paintings[x])
         start_time = datetime.datetime.now()
@@ -245,28 +264,33 @@ def segmentation(path, current_painting):
     im = Image.open(path)
 
     # try ground truth
-    gt = Image.open('demo/try_score_test/label.jpg')
+    gt = Image.open('demo/try_score_test/label.png')
+    gt = gt.resize(gt.size, Image.ANTIALIAS)
     if checkImageSize1000000(im):
         writeErrorFile(path, ERROR_ABOVE+dm)
     else:
         # reshape input layer from dimensions of image H x W
-        reshapeInputLayer(im)
+        reshapeInputLayer(im, 7)
+        reshapeLabelLayer(gt, 15)
         delayPrint("Starting to segment the image -- {} -- in {} seconds".format(current_painting, REVIEW_SECONDS), PRINT_SECONDS)
         # delay for 5 seconds for reviewing of image name
         time.sleep(REVIEW_SECONDS)
         in_ = np.array(im, dtype=np.float32)
 
         # try ground truth
-        gt_ = np.array(gt, dtype=np.float32)
+        gt_ = np.array(gt, dtype=np.uint8)
+        gt_ = gt_[np.newaxis, ...]
         # print(in_)
         in_ = in_[:,:,::-1]
-        gt_ = in_[:,:,::-1]
+        print(in_)
+        print(gt_)
+        # gt_ = gt_[:,:,::-1]
         # time.sleep(120)
         in_ -= np.array((104.00698793,116.66876762,122.67891434))
         in_ = in_.transpose((2,0,1))
 
-        gt_ -= np.array((104.00698793,116.66876762,122.67891434))
-        gt_ = gt_.transpose((2,0,1))
+        # gt_ -= np.array((104.00698793,116.66876762,122.67891434))
+        # gt_ = gt_.transpose((2,0,1))
 
         # Own code:
         # Set mode to CPU since GPU can't handle much memory
@@ -276,16 +300,16 @@ def segmentation(path, current_painting):
         # shape for input (data blob is N x C x H x W), set data
         # net.blobs['label'].data = gt_ 
         
-        print(net.blobs)
-
-        # net = voc_layers.VOCSegDataLayer()
+        # print(net.blobs)
         
         net.blobs['data'].reshape(1, *in_.shape)
         net.blobs['data'].data[...] = in_
+        net.blobs['label'].reshape(1, *gt_.shape)
         net.blobs['label'].data[...] = gt_
+
+        # print("Stopping...")
+        # return
         
-        print("Stopping...")
-        return
 
         # run net and take argmax for prediction
         net.forward()
@@ -304,10 +328,10 @@ def segmentation(path, current_painting):
 
         # masked_im.save('demo/visualization.jpg')
         masked_im.save('demo/%s/output_%s.jpg'%(OUTPUT_FOLDER, current_painting))
-
+        
         # check accuracy
-        # val = np.loadtxt('demo/valid.txt', dtype=str)
-        # score.do_seg_tests(net, 1, False, val, layer='score', gt='score')
+        val = np.loadtxt('demo/valid.txt', dtype=str)
+        score.do_seg_tests(net, 1, False, val, layer='score', gt='label')
         
 # end
 

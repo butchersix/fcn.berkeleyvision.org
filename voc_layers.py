@@ -225,8 +225,9 @@ class SBDDSegDataLayer(caffe.Layer):
         Load label image as 1 x height x width integer array of label indices.
         The leading singleton dimension is required by the loss.
         """
-        import scipy.io
-        mat = scipy.io.loadmat('{}/cls/{}.mat'.format(self.sbdd_dir, idx))
+        # import scipy.io
+        import scipy.io.matlab.mio as scipy
+        mat = scipy.loadmat('{}/cls/{}.mat'.format(self.sbdd_dir, idx))
         label = mat['GTcls'][0]['Segmentation'][0].astype(np.uint8)
         label = label[np.newaxis, ...]
         return label
