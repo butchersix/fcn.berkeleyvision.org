@@ -1,1 +1,1 @@
-demo/try_score/img.png
+demo/try_score/test.jpg

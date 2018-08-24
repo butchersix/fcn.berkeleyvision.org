@@ -18,7 +18,13 @@ def compute_hist(net, save_dir, dataset, layer='score', gt='label'):
     loss = 0
     for idx in dataset:
         net.forward()
-        hist += fast_hist(net.blobs[gt].data[0, 0].flatten(),
+        print("Ground truth: {}".format(net.blobs[gt].data[0].flatten().shape))
+        print("Segmeted output: {}".format(net.blobs[layer].data[0].argmax(0).flatten().shape))
+        # fixing the bug of shape mismatch, ground truth has only the shape of X columns and not X * Y
+        # hist += fast_hist(net.blobs[gt].data[0, 0].flatten(),
+        #                         net.blobs[layer].data[0].argmax(0).flatten(),
+        #                         n_cl)
+        hist += fast_hist(net.blobs[gt].data[0].flatten(),
                                 net.blobs[layer].data[0].argmax(0).flatten(),
                                 n_cl)
 

@@ -28,7 +28,7 @@ ERROR_ABOVE = "Image {height, width} has above 1000 pixels"
 PASS_BELOW = "Image {height, width} has below 1000 pixels"
 OUTPUT_FOLDER = "output_score" # no slashes both first and last
 dm = "" # global dimensions string
-JPG_FILETYPE = ".png"
+JPG_FILETYPE = ".jpg"
 # flow
 """
     1. Enter number of images to segment 
@@ -279,11 +279,11 @@ def segmentation(path, current_painting):
 
         # try ground truth
         gt_ = np.array(gt, dtype=np.uint8)
-        gt_ = gt_[np.newaxis, ...]
+        # gt_ = gt_[np.newaxis, ...]
         # print(in_)
         in_ = in_[:,:,::-1]
-        print(in_)
-        print(gt_)
+        # print(in_)
+        # print(gt_)
         # gt_ = gt_[:,:,::-1]
         # time.sleep(120)
         in_ -= np.array((104.00698793,116.66876762,122.67891434))
@@ -318,6 +318,29 @@ def segmentation(path, current_painting):
         # visualize segmentation in PASCAL VOC colors
         voc_palette = vis.make_palette(21)
         out_im = Image.fromarray(vis.color_seg(out, voc_palette))
+        out_ = np.array(out, dtype=np.uint8)
+        print("Ground truth image array: {}".format(gt_.flatten().shape))
+        # image_pixels = ""
+        # ycount_gt = 0
+        # ycount_out = 0
+        # for y in gt_:
+        #     for x in y:
+        #         # image_pixels += str(x)
+        #         if x == 4:
+        #             ycount_gt += 1
+        #     # image_pixels += "\n"
+        # for y in out_:
+        #     for x in y:
+        #         # image_pixels += str(x)
+        #         if x == 4:
+        #             ycount_out += 1
+            # image_pixels += "\n"
+        # print("Accuracy of 4: {:.5f}".format(ycount_out/ycount_gt))
+        # print(ycount)
+        # # print(image_pixels)
+        # with open("test.txt", "a+") as file:
+        #     file.writelines(image_pixels)
+        print("Segmentation result image array: {}".format(out_.flatten().shape))
         # out_im.save('demo/output.png')
         out_im.save('demo/%s/output_%s.png'%(OUTPUT_FOLDER, current_painting.split(JPG_FILETYPE)[0]))
         logfile = "demo/"+OUTPUT_FOLDER+"/"+current_painting+".log"
@@ -330,7 +353,12 @@ def segmentation(path, current_painting):
         masked_im.save('demo/%s/output_%s.jpg'%(OUTPUT_FOLDER, current_painting))
         
         # check accuracy
-        val = np.loadtxt('demo/valid.txt', dtype=str)
+        # val = np.loadtxt('demo/valid.txt', dtype=str)
+        val = np.array([1], dtype=np.uint8)
+
+        # reshaping blobs to 1-dimension
+        # net.blobs['data'].reshape(1,)
+        # net.blobs['label'].reshape(1,)
         score.do_seg_tests(net, 1, False, val, layer='score', gt='label')
         
 # end
