@@ -262,8 +262,74 @@ def segmentation(path, current_painting):
     # im = Image.open('demo/image.jpg')
     # path = "demo/Trials/twice.jpg"
     im = Image.open(path)
+    if checkImageSize1000000(im):
+        writeErrorFile(path, ERROR_ABOVE+dm)
+    else:
+        # reshape input layer from dimensions of image H x W
+        reshapeInputLayer(im, 7)
+        delayPrint("Starting to segment the image -- {} -- in {} seconds".format(current_painting, REVIEW_SECONDS), PRINT_SECONDS)
+        # delay for 5 seconds for reviewing of image name
+        time.sleep(REVIEW_SECONDS)
+        in_ = np.array(im, dtype=np.float32)
+        # print(in_)
+        in_ = in_[:,:,::-1]
+        # time.sleep(120)
+        in_ -= np.array((104.00698793,116.66876762,122.67891434))
+        in_ = in_.transpose((2,0,1))
 
-    # try ground truth
+        # Own code:
+        # Set mode to CPU since GPU can't handle much memory
+        caffe.set_mode_cpu()
+        # load net
+        net = caffe.Net('voc-fcn8s/test.prototxt', 'voc-fcn8s/fcn8s-heavy-pascal.caffemodel', caffe.TEST)
+        # shape for input (data blob is N x C x H x W), set data
+        net.blobs['data'].reshape(1, *in_.shape)
+        net.blobs['data'].data[...] = in_
+
+        # print("Stopping...")
+        # return
+        
+
+        # run net and take argmax for prediction
+        net.forward()
+        out = net.blobs['score'].data[0].argmax(axis=0)
+
+        # visualize segmentation in PASCAL VOC colors
+        voc_palette = vis.make_palette(21)
+        out_im = Image.fromarray(vis.color_seg(out, voc_palette))
+        # image_pixels = ""
+        # ycount_gt = 0
+        # ycount_out = 0
+        # for y in gt_:
+        #     for x in y:
+        #         # image_pixels += str(x)
+        #         if x == 4:
+        #             ycount_gt += 1
+        #     # image_pixels += "\n"
+        # for y in out_:
+        #     for x in y:
+        #         # image_pixels += str(x)
+        #         if x == 4:
+        #             ycount_out += 1
+            # image_pixels += "\n"
+        # print("Accuracy of 4: {:.5f}".format(ycount_out/ycount_gt))
+        # print(ycount)
+        # # print(image_pixels)
+        # with open("test.txt", "a+") as file:
+        #     file.writelines(image_pixels)
+        # out_im.save('demo/output.png')
+        out_im.save('demo/%s/output_%s.png'%(OUTPUT_FOLDER, current_painting.split(JPG_FILETYPE)[0]))
+        logfile = "demo/"+OUTPUT_FOLDER+"/"+current_painting+".log"
+        masked_im = Image.fromarray(vis.vis_seg(im, out, voc_palette, 0.5, logfile))
+
+        # print extracted colors of original image
+        vis.extractColors(path, logfile)
+
+        # masked_im.save('demo/visualization.jpg')
+        masked_im.save('demo/%s/output_%s.jpg'%(OUTPUT_FOLDER, current_painting))
+
+def validation(path, current_painting):
+    im = Image.open(path)
     gt = Image.open('demo/try_score_test/label.png')
     gt = gt.resize(gt.size, Image.ANTIALIAS)
     if checkImageSize1000000(im):
@@ -272,7 +338,7 @@ def segmentation(path, current_painting):
         # reshape input layer from dimensions of image H x W
         reshapeInputLayer(im, 7)
         reshapeLabelLayer(gt, 15)
-        delayPrint("Starting to segment the image -- {} -- in {} seconds".format(current_painting, REVIEW_SECONDS), PRINT_SECONDS)
+        delayPrint("Starting to validate the image -- {} -- in {} seconds".format(current_painting, REVIEW_SECONDS), PRINT_SECONDS)
         # delay for 5 seconds for reviewing of image name
         time.sleep(REVIEW_SECONDS)
         in_ = np.array(im, dtype=np.float32)
@@ -314,43 +380,9 @@ def segmentation(path, current_painting):
         # run net and take argmax for prediction
         net.forward()
         out = net.blobs['score'].data[0].argmax(axis=0)
-
-        # visualize segmentation in PASCAL VOC colors
-        voc_palette = vis.make_palette(21)
-        out_im = Image.fromarray(vis.color_seg(out, voc_palette))
-        out_ = np.array(out, dtype=np.uint8)
-        print("Ground truth image array: {}".format(gt_.flatten().shape))
-        # image_pixels = ""
-        # ycount_gt = 0
-        # ycount_out = 0
-        # for y in gt_:
-        #     for x in y:
-        #         # image_pixels += str(x)
-        #         if x == 4:
-        #             ycount_gt += 1
-        #     # image_pixels += "\n"
-        # for y in out_:
-        #     for x in y:
-        #         # image_pixels += str(x)
-        #         if x == 4:
-        #             ycount_out += 1
-            # image_pixels += "\n"
-        # print("Accuracy of 4: {:.5f}".format(ycount_out/ycount_gt))
-        # print(ycount)
-        # # print(image_pixels)
-        # with open("test.txt", "a+") as file:
-        #     file.writelines(image_pixels)
-        print("Segmentation result image array: {}".format(out_.flatten().shape))
-        # out_im.save('demo/output.png')
-        out_im.save('demo/%s/output_%s.png'%(OUTPUT_FOLDER, current_painting.split(JPG_FILETYPE)[0]))
-        logfile = "demo/"+OUTPUT_FOLDER+"/"+current_painting+".log"
-        masked_im = Image.fromarray(vis.vis_seg(im, out, voc_palette, 0.5, logfile))
-
-        # print extracted colors of original image
-        vis.extractColors(path, logfile)
-
-        # masked_im.save('demo/visualization.jpg')
-        masked_im.save('demo/%s/output_%s.jpg'%(OUTPUT_FOLDER, current_painting))
+        # out_ = np.array(out, dtype=np.uint8)
+        # delayPrint("Ground truth image array: {}".format(gt_.flatten().shape))
+        # print("Segmentation result image array: {}".format(out_.flatten().shape))
         
         # check accuracy
         # val = np.loadtxt('demo/valid.txt', dtype=str)
@@ -360,7 +392,6 @@ def segmentation(path, current_painting):
         # net.blobs['data'].reshape(1,)
         # net.blobs['label'].reshape(1,)
         score.do_seg_tests(net, 1, False, val, layer='score', gt='label')
-        
 # end
 
 # main process
