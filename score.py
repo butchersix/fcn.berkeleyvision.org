@@ -6,6 +6,62 @@ import sys
 from datetime import datetime
 from PIL import Image
 
+import time
+import os
+from os import listdir
+from os.path import isfile, join
+from pathlib import Path
+
+
+PRINT_SECONDS = 0.2
+
+session_count = 0
+def trackSession():
+    global session_count
+    if session_count == 0:
+        session_count += 1
+        return True
+    else:
+        return False
+    return False
+
+def setSession(file, flag=True):
+    now = datetime.now()
+    if flag:
+        file.write("\n-------------------- SESSION - {} -------------------------\n".format(now.strftime("%Y-%m-%d %H:%M")))
+    else:
+        file.write("-------------------- SESSION - {} -------------------------\n".format(now.strftime("%Y-%m-%d %H:%M")))
+
+def endSession(flag=True):
+    now = datetime.now()
+    if flag:
+        return "\n-------------------- END SESSION - {} -------------------------\n".format(now.strftime("%Y-%m-%d %H:%M"))
+    else:
+        return "-------------------- END SESSION - {} -------------------------\n".format(now.strftime("%Y-%m-%d %H:%M"))
+    return ""
+
+def delayPrint(string, seconds): # n seconds delay printing
+    time.sleep(seconds)
+    exportLogs(string)
+    print(string)
+
+def exportLogs(logs, f="demo/logs.log"):
+    logs += "\n"
+    if(isfile(f)):
+        file = open(f, "a")
+        if trackSession():
+            setSession(file)
+        file.write(logs)
+        file.close()
+    else:
+        print("Log file does not exist!")
+        print("Creating {} file...".format(f))
+        file = open(f, "a+")
+        if trackSession():
+            setSession(file)
+        file.write(logs)
+        file.close()
+
 def fast_hist(a, b, n):
     k = (a >= 0) & (a < n)
     return np.bincount(n * a[k].astype(int) + b[k], minlength=n**2).reshape(n, n)
@@ -18,8 +74,8 @@ def compute_hist(net, save_dir, dataset, layer='score', gt='label'):
     loss = 0
     for idx in dataset:
         net.forward()
-        print("Ground truth: {}".format(net.blobs[gt].data[0].flatten().shape))
-        print("Segmeted output: {}".format(net.blobs[layer].data[0].argmax(0).flatten().shape))
+        delayPrint("Ground truth: {}".format(net.blobs[gt].data[0].flatten().shape), PRINT_SECONDS)
+        delayPrint("Segmeted output: {}".format(net.blobs[layer].data[0].argmax(0).flatten().shape), PRINT_SECONDS)
         # fixing the bug of shape mismatch, ground truth has only the shape of X columns and not X * Y
         # hist += fast_hist(net.blobs[gt].data[0, 0].flatten(),
         #                         net.blobs[layer].data[0].argmax(0).flatten(),
@@ -37,7 +93,7 @@ def compute_hist(net, save_dir, dataset, layer='score', gt='label'):
 
 def seg_tests(solver, save_format, dataset, layer='score', gt='label'):
     # print '>>>', datetime.now(), 'Begin seg tests'
-    print(">>>{} Begin seg tests".format(datetime.now()))
+    delayPrint(">>>{} Begin seg tests".format(datetime.now()), PRINT_SECONDS)
     solver.test_nets[0].share_with(solver.net)
     do_seg_tests(solver.test_nets[0], solver.iter, save_format, dataset, layer, gt)
 
@@ -48,21 +104,21 @@ def do_seg_tests(net, iter, save_format, dataset, layer='score', gt='label'):
     hist, loss = compute_hist(net, save_format, dataset, layer, gt)
     # mean loss
     # print '>>>', datetime.now(), 'Iteration', iter, 'loss', loss
-    print(">>>{} Iteration: {} Loss: {}".format(datetime.now(), iter, loss))
+    delayPrint(">>>{} Iteration: {} Loss: {}".format(datetime.now(), iter, loss), PRINT_SECONDS)
     # overall accuracy
     acc = np.diag(hist).sum() / hist.sum()
     # print '>>>', datetime.now(), 'Iteration', iter, 'overall accuracy', acc
-    print(">>>{} Iteration: {} Overall accuracy: {}".format(datetime.now(), iter, acc))
+    delayPrint(">>>{} Iteration: {} Overall accuracy: {}".format(datetime.now(), iter, acc), PRINT_SECONDS)
     # per-class accuracy
     acc = np.diag(hist) / hist.sum(1)
     # print '>>>', datetime.now(), 'Iteration', iter, 'mean accuracy', np.nanmean(acc)
-    print(">>>{} Iteration: {} Mean Accuracy: {}".format(datetime.now(), iter, np.nanmean(acc)))
+    delayPrint(">>>{} Iteration: {} Mean Accuracy: {}".format(datetime.now(), iter, np.nanmean(acc)), PRINT_SECONDS)
     # per-class IU
     iu = np.diag(hist) / (hist.sum(1) + hist.sum(0) - np.diag(hist))
     # print '>>>', datetime.now(), 'Iteration', iter, 'mean IU', np.nanmean(iu)
-    print(">>>{} Iteration: {} Mean IU: {}".format(datetime.now(), iter, np.nanmean(iu)))
+    delayPrint(">>>{} Iteration: {} Mean IU: {}".format(datetime.now(), iter, np.nanmean(iu)), PRINT_SECONDS)
     freq = hist.sum(1) / hist.sum()
     # print '>>>', datetime.now(), 'Iteration', iter, 'fwavacc', \
     #         (freq[freq > 0] * iu[freq > 0]).sum()
-    print(">>>{} Iteration: {} Fwavacc: {}".format(datetime.now(), iter, (freq[freq > 0] * iu[freq > 0]).sum()))
+    delayPrint(">>>{} Iteration: {} Fwavacc: {}".format(datetime.now(), iter, (freq[freq > 0] * iu[freq > 0]).sum()), PRINT_SECONDS)
     return hist

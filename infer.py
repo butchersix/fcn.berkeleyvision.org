@@ -29,6 +29,7 @@ PASS_BELOW = "Image {height, width} has below 1000 pixels"
 OUTPUT_FOLDER = "output_score" # no slashes both first and last
 dm = "" # global dimensions string
 JPG_FILETYPE = ".jpg"
+PNG_FILETYPE = ".png"
 # flow
 """
     1. Enter number of images to segment 
@@ -84,6 +85,11 @@ def delayPrint(string, seconds): # n seconds delay printing
 
 def getPaintings(path):
     paintings = [f.split(JPG_FILETYPE)[0] for f in listdir(path) if isfile(join(path, f))] # splits only for .jpg images
+    paintings.sort()
+    return paintings
+
+def getLabels(path):
+    paintings = [f.split(PNG_FILETYPE)[0] for f in listdir(path) if isfile(join(path, f))] # splits only for .png images
     paintings.sort()
     return paintings
 
@@ -216,7 +222,7 @@ def checkImageSize1000000(img):
         return False
     return False
 
-def loop(paintings_path, paintings, current_painting):
+def loop(paintings_path, labels_path, paintings, current_painting):
     n = input("Enter number of images to segment: ")
     index = paintings.index(current_painting.split(JPG_FILETYPE)[0])
     end = len(paintings) - 1
@@ -229,6 +235,7 @@ def loop(paintings_path, paintings, current_painting):
             last += 1
     for x in range(index, last):
         current_painting_path = paintings_path + "/" + paintings[x] + JPG_FILETYPE
+        current_label_path = labels_path + "/" + paintings[x] + PNG_FILETYPE
         delayPrint(current_painting_path, PRINT_SECONDS)
         createCurrentLog(paintings[x])
         start_time = datetime.datetime.now()
@@ -236,12 +243,20 @@ def loop(paintings_path, paintings, current_painting):
         delayPrint("Index of painting: {}".format(x), PRINT_SECONDS)
         delayPrint("Last expected painting index: {}".format(last - 1), PRINT_SECONDS)
         delayPrint("", REVIEW_SECONDS)
-        # try:
-        segmentation(current_painting_path, paintings[x])
-        # except:
-        #     error = sys.exc_info()[0]
-        #     print("Error {} found! Writing error log.".format(error))
-        #     writeErrorFile(current_painting_path, error)
+        try:
+            delayPrint("Choose one of the following:\n", PRINT_SECONDS)
+            delayPrint("[1] Segmentation\t\t[2] Validation", PRINT_SECONDS)
+            option = int(input("Your answer [1/2]: "))
+            while option != 1 and option != 2:
+                option = int(input("Your answer [1/2]: "))
+            if option == 1:
+                segmentation(current_painting_path, paintings[x])
+            else:
+                validation(current_painting_path, current_label_path, paintings[x])
+        except:
+            error = sys.exc_info()[0]
+            print("Error {} found! Writing error log.".format(error))
+            writeErrorFile(current_painting_path, error)
         end_time = datetime.datetime.now()
         delayPrint("---------- End Time - {:s} ----------".format(str(end_time)), PRINT_SECONDS)
         elapsed_time = end_time - start_time
@@ -328,12 +343,12 @@ def segmentation(path, current_painting):
         # masked_im.save('demo/visualization.jpg')
         masked_im.save('demo/%s/output_%s.jpg'%(OUTPUT_FOLDER, current_painting))
 
-def validation(path, current_painting):
-    im = Image.open(path)
-    gt = Image.open('demo/try_score_test/label.png')
+def validation(painting_path, label_path, current_painting):
+    im = Image.open(painting_path)
+    gt = Image.open(label_path)
     gt = gt.resize(gt.size, Image.ANTIALIAS)
     if checkImageSize1000000(im):
-        writeErrorFile(path, ERROR_ABOVE+dm)
+        writeErrorFile(painting_path, ERROR_ABOVE+dm)
     else:
         # reshape input layer from dimensions of image H x W
         reshapeInputLayer(im, 7)
@@ -379,7 +394,8 @@ def validation(path, current_painting):
 
         # run net and take argmax for prediction
         net.forward()
-        out = net.blobs['score'].data[0].argmax(axis=0)
+        
+        # out = net.blobs['score'].data[0].argmax(axis=0)
         # out_ = np.array(out, dtype=np.uint8)
         # delayPrint("Ground truth image array: {}".format(gt_.flatten().shape))
         # print("Segmentation result image array: {}".format(out_.flatten().shape))
@@ -397,12 +413,24 @@ def validation(path, current_painting):
 # main process
 delimiter = "/"
 fp_resume = readResume()
+
+# current painting
 current_painting = fp_resume.split("/")
 current_painting = current_painting[len(current_painting) - 1].rstrip() # rstrip() for removing white spaces and new line instances
+
+# paintings_path
 paintings_path = fp_resume.split("/")
 paintings_path.remove(paintings_path[len(paintings_path) - 1])
 paintings_path = delimiter.join(paintings_path)
+
+# labels_path
+labels_path = fp_resume.split("/")
+labels_path.remove(labels_path[len(labels_path) - 1])
+labels_path.remove(labels_path[len(labels_path) - 1])
+labels_path.append("SegmentationClassPNG")
+labels_path = delimiter.join(labels_path)
+
 paintings = getPaintings(paintings_path)
 # print(paintings)
-loop(paintings_path, paintings, current_painting)
+loop(paintings_path, labels_path, paintings, current_painting)
 

@@ -27,7 +27,7 @@ def setSession(file, flag=True):
 
 def delayPrint(string, seconds, f=""): # n seconds delay printing
     time.sleep(seconds)
-    exportLogs(string)
+    exportLogs(string, "demo/resized_logs_random_samples.log")
     print(string)
 
 def exportLogs(logs, f="demo/resized_logs_test.log"):
