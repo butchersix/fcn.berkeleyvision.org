@@ -27,9 +27,15 @@ REST_SECONDS = 10
 ERROR_ABOVE = "Image {height, width} has above 1000 pixels"
 PASS_BELOW = "Image {height, width} has below 1000 pixels"
 OUTPUT_FOLDER = "output_score" # no slashes both first and last
+OUTPUT_FOLDER_VALIDATION = "output_validate"
 dm = "" # global dimensions string
 JPG_FILETYPE = ".jpg"
 PNG_FILETYPE = ".png"
+loss = 0
+over_acc_scores = []
+mean_acc_scores = []
+iu_scores = []
+freq_scores = []
 # flow
 """
     1. Enter number of images to segment 
@@ -110,9 +116,9 @@ def exportLogs(logs, f="demo/logs.log"):
         file.write(logs)
         file.close()
 
-def createCurrentLog(fp):
+def createCurrentLog(fp, output_folder=OUTPUT_FOLDER):
     filepath = fp.split("/")
-    f = "demo/{}/{}.log".format(OUTPUT_FOLDER, filepath[len(filepath) - 1].split(JPG_FILETYPE)[0])
+    f = "demo/{}/{}.log".format(output_folder, filepath[len(filepath) - 1].split(JPG_FILETYPE)[0])
     if(isfile(f)):
         delayPrint("Resuming {} file".format(f), PRINT_SECONDS)
         file = open(f, "w")
@@ -222,6 +228,82 @@ def checkImageSize1000000(img):
         return False
     return False
 
+def validationResultsLog(current_painting_path, results, f="demo/results.log"):
+    global loss
+    global over_acc_scores
+    global mean_acc_scores
+    global iu_scores
+    global freq_scores
+    loss += results['loss']
+    over_acc_scores.append(results['over_acc'])
+    mean_acc_scores.append(results['mean_acc'])
+    iu_scores.append(results['iu'])
+    freq_scores.append(results['freq'])
+    delayPrint("Checking {} file...".format(f), PRINT_SECONDS)
+    if(isfile(f)):
+        file = open(f, "a")
+        delayPrint("Writing results file...", PRINT_SECONDS)
+        file.write("{}\n".format(current_painting_path))
+        file.write("\t\tLoss: {}\n".format(results['loss']))
+        file.write("\t\tOverall accuracy: {}\n".format(results['over_acc']))
+        file.write("\t\tMean accuracy: {}\n".format(results['mean_acc']))
+        file.write("\t\tMean IU: {}\n".format(results['iu']))
+        file.write("\t\tFwavacc accuracy: {}\n".format(results['freq']))
+        file.write("\n")
+        delayPrint("Closing results file...", PRINT_SECONDS)
+        file.close()
+    else:
+        delayPrint("{} log file does not exist!".format(f), PRINT_SECONDS)
+        delayPrint("Creating {} file...".format(f), PRINT_SECONDS)
+        delayPrint("Writing results file...", PRINT_SECONDS)
+        file = open(f, "a+")
+        file.write("{}\n".format(current_painting_path))
+        file.write("\t\tLoss: {}\n".format(results['loss']))
+        file.write("\t\tOverall accuracy: {}\n".format(results['over_acc']))
+        file.write("\t\tMean accuracy: {}\n".format(results['mean_acc']))
+        file.write("\t\tMean IU: {}\n".format(results['iu']))
+        file.write("\t\tFwavacc accuracy: {}\n".format(results['freq']))
+        file.write("\n")
+        delayPrint("Closing results file...", PRINT_SECONDS)
+        file.close()
+
+def computeMeanScore(f="demo/results.log"):
+    global loss
+    global over_acc_scores
+    global mean_acc_scores
+    global iu_scores
+    global freq_scores
+    over_acc_scores = np.mean(over_acc_scores)
+    mean_acc_scores = np.mean(mean_acc_scores)
+    iu_scores = np.mean(iu_scores)
+    freq_scores = np.mean(freq_scores)
+    delayPrint("Checking {} file...".format(f), PRINT_SECONDS)
+    if(isfile(f)):
+        file = open(f, "a")
+        delayPrint("Writing mean results file...", PRINT_SECONDS)
+        file.write("Mean Results:\n")
+        file.write("\t\tLoss: {}\n".format(loss))
+        file.write("\t\tOverall accuracy (mean): {}\n".format(over_acc_scores))
+        file.write("\t\tMean accuracy (mean): {}\n".format(mean_acc_scores))
+        file.write("\t\tMean IU (mean): {}\n".format(iu_scores))
+        file.write("\t\tFwavacc accuracy (mean): {}\n".format(freq_scores))
+        delayPrint("Closing mean results file...", PRINT_SECONDS)
+        file.close()
+    else:
+        delayPrint("{} log file does not exist!".format(f), PRINT_SECONDS)
+        delayPrint("Creating {} file...".format(f), PRINT_SECONDS)
+        delayPrint("Writing mean results file...", PRINT_SECONDS)
+        file = open(f, "a+")
+        file.write("Mean Results:\n")
+        file.write("\t\tLoss: {}\n".format(loss))
+        file.write("\t\tOverall accuracy (mean): {}\n".format(over_acc_scores))
+        file.write("\t\tMean accuracy (mean): {}\n".format(mean_acc_scores))
+        file.write("\t\tMean IU (mean): {}\n".format(iu_scores))
+        file.write("\t\tFwavacc accuracy (mean): {}\n".format(freq_scores))
+        delayPrint("Closing mean results file...", PRINT_SECONDS)
+        file.close()
+    return {'loss_a' : loss, 'over_acc_m' : over_acc_scores, 'mean_acc_m' : mean_acc_scores, 'iu_m' : iu_scores, 'freq_m' : freq_scores}
+
 def loop(paintings_path, labels_path, paintings, current_painting):
     n = input("Enter number of images to segment: ")
     index = paintings.index(current_painting.split(JPG_FILETYPE)[0])
@@ -233,26 +315,27 @@ def loop(paintings_path, labels_path, paintings, current_painting):
         else:
             index += 1
             last += 1
+    delayPrint("Choose one of the following:\n", PRINT_SECONDS)
+    delayPrint("[1] Segmentation\t\t[2] Validation", PRINT_SECONDS)
+    option = int(input("Your answer [1/2]: "))
+    while option != 1 and option != 2:
+        option = int(input("Your answer [1/2]: "))
     for x in range(index, last):
         current_painting_path = paintings_path + "/" + paintings[x] + JPG_FILETYPE
         current_label_path = labels_path + "/" + paintings[x] + PNG_FILETYPE
         delayPrint(current_painting_path, PRINT_SECONDS)
-        createCurrentLog(paintings[x])
+        createCurrentLog(paintings[x], OUTPUT_FOLDER) if option is 1 else createCurrentLog(paintings[x], OUTPUT_FOLDER_VALIDATION)
         start_time = datetime.datetime.now()
         delayPrint("---------- Start Time - {:s} ----------".format(str(start_time)), PRINT_SECONDS)
         delayPrint("Index of painting: {}".format(x), PRINT_SECONDS)
         delayPrint("Last expected painting index: {}".format(last - 1), PRINT_SECONDS)
         delayPrint("", REVIEW_SECONDS)
         try:
-            delayPrint("Choose one of the following:\n", PRINT_SECONDS)
-            delayPrint("[1] Segmentation\t\t[2] Validation", PRINT_SECONDS)
-            option = int(input("Your answer [1/2]: "))
-            while option != 1 and option != 2:
-                option = int(input("Your answer [1/2]: "))
             if option == 1:
                 segmentation(current_painting_path, paintings[x])
             else:
-                validation(current_painting_path, current_label_path, paintings[x])
+                results = validation(current_painting_path, current_label_path, paintings[x])
+                validationResultsLog(current_painting_path, results)
         except:
             error = sys.exc_info()[0]
             print("Error {} found! Writing error log.".format(error))
@@ -268,6 +351,13 @@ def loop(paintings_path, labels_path, paintings, current_painting):
             time.sleep(REST_SECONDS)
         # if x == last - 1:
         writeResume(current_painting_path)
+    if option is 2:
+        mean_scores = computeMeanScore()
+        delayPrint("Loss: {}".format(mean_scores["loss_a"]), PRINT_SECONDS)
+        delayPrint("Overall Accuracy (mean): {}".format(mean_scores["over_acc_m"]), PRINT_SECONDS)
+        delayPrint("Mean Accuracy (mean): {}".format(mean_scores["mean_acc_m"]), PRINT_SECONDS)
+        delayPrint("Mean IU (mean): {}".format(mean_scores["iu_m"]), PRINT_SECONDS)
+        delayPrint("Fwavacc Accuracy (mean): {}".format(mean_scores["freq_m"]), PRINT_SECONDS)
     delayPrint(endSession(), PRINT_SECONDS)
 
 def segmentation(path, current_painting):
@@ -359,7 +449,7 @@ def validation(painting_path, label_path, current_painting):
         in_ = np.array(im, dtype=np.float32)
 
         # try ground truth
-        gt_ = np.array(gt, dtype=np.uint8)
+        gt_ = np.array(gt, dtype=np.float32)
         # gt_ = gt_[np.newaxis, ...]
         # print(in_)
         in_ = in_[:,:,::-1]
@@ -385,7 +475,7 @@ def validation(painting_path, label_path, current_painting):
         
         net.blobs['data'].reshape(1, *in_.shape)
         net.blobs['data'].data[...] = in_
-        net.blobs['label'].reshape(1, *gt_.shape)
+        # net.blobs['label'].reshape(1, *gt_.shape)
         net.blobs['label'].data[...] = gt_
 
         # print("Stopping...")
@@ -395,7 +485,18 @@ def validation(painting_path, label_path, current_painting):
         # run net and take argmax for prediction
         net.forward()
         
-        # out = net.blobs['score'].data[0].argmax(axis=0)
+        out = net.blobs['score'].data[0].argmax(axis=0)
+        voc_palette = vis.make_palette(21)
+        out_im = Image.fromarray(vis.color_seg(out, voc_palette))
+        out_im.save('demo/%s/output_%s.png'%(OUTPUT_FOLDER_VALIDATION, current_painting.split(JPG_FILETYPE)[0]))
+        logfile = "demo/"+OUTPUT_FOLDER_VALIDATION+"/"+current_painting+".log"
+        masked_im = Image.fromarray(vis.vis_seg(im, out, voc_palette, 0.5, logfile))
+
+        # print extracted colors of original image
+        vis.extractColors(painting_path, logfile)
+
+        # masked_im.save('demo/visualization.jpg')
+        masked_im.save('demo/%s/output_%s.jpg'%(OUTPUT_FOLDER_VALIDATION, current_painting))
         # out_ = np.array(out, dtype=np.uint8)
         # delayPrint("Ground truth image array: {}".format(gt_.flatten().shape))
         # print("Segmentation result image array: {}".format(out_.flatten().shape))
@@ -407,7 +508,7 @@ def validation(painting_path, label_path, current_painting):
         # reshaping blobs to 1-dimension
         # net.blobs['data'].reshape(1,)
         # net.blobs['label'].reshape(1,)
-        score.do_seg_tests(net, 1, False, val, layer='score', gt='label')
+        return score.do_seg_tests(net, 1, False, val, layer='score', gt='label')
 # end
 
 # main process

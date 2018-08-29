@@ -106,13 +106,15 @@ def do_seg_tests(net, iter, save_format, dataset, layer='score', gt='label'):
     # print '>>>', datetime.now(), 'Iteration', iter, 'loss', loss
     delayPrint(">>>{} Iteration: {} Loss: {}".format(datetime.now(), iter, loss), PRINT_SECONDS)
     # overall accuracy
-    acc = np.diag(hist).sum() / hist.sum()
+    # acc = np.diag(hist).sum() / hist.sum()
+    over_acc = np.diag(hist).sum() / hist.sum()
     # print '>>>', datetime.now(), 'Iteration', iter, 'overall accuracy', acc
-    delayPrint(">>>{} Iteration: {} Overall accuracy: {}".format(datetime.now(), iter, acc), PRINT_SECONDS)
+    delayPrint(">>>{} Iteration: {} Overall accuracy: {}".format(datetime.now(), iter, over_acc), PRINT_SECONDS)
     # per-class accuracy
-    acc = np.diag(hist) / hist.sum(1)
+    # acc = np.diag(hist) / hist.sum(1)
+    mean_acc = np.diag(hist) / hist.sum(1)
     # print '>>>', datetime.now(), 'Iteration', iter, 'mean accuracy', np.nanmean(acc)
-    delayPrint(">>>{} Iteration: {} Mean Accuracy: {}".format(datetime.now(), iter, np.nanmean(acc)), PRINT_SECONDS)
+    delayPrint(">>>{} Iteration: {} Mean Accuracy: {}".format(datetime.now(), iter, np.nanmean(mean_acc)), PRINT_SECONDS)
     # per-class IU
     iu = np.diag(hist) / (hist.sum(1) + hist.sum(0) - np.diag(hist))
     # print '>>>', datetime.now(), 'Iteration', iter, 'mean IU', np.nanmean(iu)
@@ -121,4 +123,6 @@ def do_seg_tests(net, iter, save_format, dataset, layer='score', gt='label'):
     # print '>>>', datetime.now(), 'Iteration', iter, 'fwavacc', \
     #         (freq[freq > 0] * iu[freq > 0]).sum()
     delayPrint(">>>{} Iteration: {} Fwavacc: {}".format(datetime.now(), iter, (freq[freq > 0] * iu[freq > 0]).sum()), PRINT_SECONDS)
-    return hist
+    # return hist
+    # returns a dictionary of results
+    return {'loss' : loss, 'over_acc' : over_acc, 'mean_acc' : np.nanmean(mean_acc), 'iu' : np.nanmean(iu), 'freq' : (freq[freq > 0] * iu[freq > 0]).sum()}

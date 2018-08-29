@@ -1,1 +1,1 @@
-demo/images_resized/johan-hendrik-weissenbruch_summer-day.jpg
+demo/test/presentation_voc/JPEGImages/camille-corot_the-mill-in-the-trees.jpg

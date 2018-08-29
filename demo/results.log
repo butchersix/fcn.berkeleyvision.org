@@ -1,0 +1,65 @@
+demo/test/presentation_voc/JPEGImages/albert-bierstadt_bison-with-coyotes-in-the-background.jpg
+		Overall accuracy: 0.956044398945646
+		Mean accuracy: 0.49793025852876227
+		Mean IU: 0.19220665570077705
+		Fwavacc accuracy: 0.9226096098565758
+
+demo/test/presentation_voc/JPEGImages/alexey-venetsianov_checkered-shawl.jpg
+		Overall accuracy: 0.9556798986486487
+		Mean accuracy: 0.9073453112005248
+		Mean IU: 0.865218380479851
+		Fwavacc accuracy: 0.9155341153559218
+
+demo/test/presentation_voc/JPEGImages/alexey-venetsianov_peasant-woman-with-milk.jpg
+		Overall accuracy: 0.8223826402697328
+		Mean accuracy: 0.8486861659239341
+		Mean IU: 0.47586041779768745
+		Fwavacc accuracy: 0.7160318701961599
+
+demo/test/presentation_voc/JPEGImages/anders-zorn_study-of-landscape-in-richmond-1882.jpg
+		Overall accuracy: 0.9959204487506375
+		Mean accuracy: 0.5
+		Mean IU: 0.4979602243753187
+		Fwavacc accuracy: 0.9918575402396711
+
+demo/test/presentation_voc/JPEGImages/andrei-ryabushkin_tea-party.jpg
+		Overall accuracy: 0.8911344537815126
+		Mean accuracy: 0.8870483719502242
+		Mean IU: 0.539291901101517
+		Fwavacc accuracy: 0.8102067823753853
+
+demo/test/presentation_voc/JPEGImages/boris-kustodiev_portrait-of-z-e-roze.jpg
+		Overall accuracy: 0.8616240963855422
+		Mean accuracy: 0.8708383254433654
+		Mean IU: 0.5012385258541877
+		Fwavacc accuracy: 0.7937430593974143
+
+demo/test/presentation_voc/JPEGImages/camille-corot_cow-in-a-stable-also-known-as-the-black-cow.jpg
+		Overall accuracy: 0.8646240591505093
+		Mean accuracy: 0.7787746534952698
+		Mean IU: 0.3502661774410135
+		Fwavacc accuracy: 0.7578776868835407
+
+demo/test/presentation_voc/JPEGImages/camille-corot_head-of-bearded-man-study-for-the-baptism-of-christ-1845.jpg
+		Overall accuracy: 0.8450468540829986
+		Mean accuracy: 0.7998926375353863
+		Mean IU: 0.6990064563149649
+		Fwavacc accuracy: 0.7236447687834107
+
+demo/test/presentation_voc/JPEGImages/camille-corot_peasants-near-a-village.jpg
+		Overall accuracy: 0.9905800637831825
+		Mean accuracy: 0.5
+		Mean IU: 0.49529003189159126
+		Fwavacc accuracy: 0.9812488627646939
+
+demo/test/presentation_voc/JPEGImages/camille-corot_the-mill-in-the-trees.jpg
+		Overall accuracy: 0.9874737945492662
+		Mean accuracy: 0.5
+		Mean IU: 0.4937368972746331
+		Fwavacc accuracy: 0.9751044949215264
+
+Mean Results:
+		Overall accuracy (mean): 0.9170510708347678
+		Mean accuracy (mean): 0.7090515724077466
+		Mean IU (mean): 0.5110075668231542
+		Fwavacc accuracy (mean): 0.85878587907743
