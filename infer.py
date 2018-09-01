@@ -20,6 +20,16 @@ import sys
 import score
 import voc_layers
 
+# sklearn libraries
+from sklearn.metrics import classification_report
+from sklearn.metrics import confusion_matrix
+
+# matplot libraries
+import matplotlib.pyplot as plt
+
+# graphviz library - visualization of trees library
+import graphviz
+
 # own code - Jasper
 PRINT_SECONDS = 0.2
 REVIEW_SECONDS = 5
@@ -510,6 +520,11 @@ def validation(painting_path, label_path, current_painting):
         # net.blobs['label'].reshape(1,)
         return score.do_seg_tests(net, 1, False, val, layer='score', gt='label')
 # end
+
+def createConfusionMatrix(label, segmented):
+    conf_mx = confusion_matrix(label, segmented)
+    plt.matshow(conf_mx, cmap=plt.cm.gray)
+    plt.show()
 
 # main process
 delimiter = "/"

@@ -5,3 +5,6 @@ demo/images_resized/johan-hendrik-weissenbruch_summer-day.jpg - <class 'Keyboard
 demo/images_resized/johan-hendrik-weissenbruch_summer-day.jpg - <class 'KeyboardInterrupt'>
 demo/images_resized/johan-hendrik-weissenbruch_summer-day.jpg - <class 'AttributeError'>
 demo/images_resized/johan-hendrik-weissenbruch_summer-day.jpg - <class 'KeyboardInterrupt'>
+demo/test/presentation_voc/JPEGImages/albert-bierstadt_bison-with-coyotes-in-the-background.jpg - <class 'NameError'>
+demo/test/presentation_voc/JPEGImages/albert-bierstadt_bison-with-coyotes-in-the-background.jpg - <class 'ValueError'>
+demo/test/presentation_voc/JPEGImages/albert-bierstadt_bison-with-coyotes-in-the-background.jpg - <class 'ValueError'>
