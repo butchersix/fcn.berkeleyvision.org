@@ -355,3 +355,77 @@ Mean Results:
 		Mean accuracy (mean): 0.49793025852876227
 		Mean IU (mean): 0.19220665570077705
 		Fwavacc accuracy (mean): 0.9226096098565758
+demo/test/presentation_voc/JPEGImages/albert-bierstadt_bison-with-coyotes-in-the-background.jpg
+		Loss: 53080.94921875
+		Overall accuracy: 0.956044398945646
+		Mean accuracy: 0.49793025852876227
+		Mean IU: 0.19220665570077705
+		Fwavacc accuracy: 0.9226096098565758
+
+Mean Results:
+		Loss: 53080.94921875
+		Overall accuracy (mean): 0.956044398945646
+		Mean accuracy (mean): 0.49793025852876227
+		Mean IU (mean): 0.19220665570077705
+		Fwavacc accuracy (mean): 0.9226096098565758
+demo/test/presentation_voc/JPEGImages/albert-bierstadt_bison-with-coyotes-in-the-background.jpg
+		Loss: 53080.94921875
+		Overall accuracy: 0.956044398945646
+		Mean accuracy: 0.49793025852876227
+		Mean IU: 0.19220665570077705
+		Fwavacc accuracy: 0.9226096098565758
+
+demo/test/presentation_voc/JPEGImages/albert-bierstadt_bison-with-coyotes-in-the-background.jpg
+		Loss: 53080.94921875
+		Overall accuracy: 0.956044398945646
+		Mean accuracy: 0.49793025852876227
+		Mean IU: 0.19220665570077705
+		Fwavacc accuracy: 0.9226096098565758
+
+demo/test/presentation_voc/JPEGImages/alexey-venetsianov_checkered-shawl.jpg
+		Loss: 5617.2294921875
+		Overall accuracy: 0.9556798986486487
+		Mean accuracy: 0.9073453112005248
+		Mean IU: 0.865218380479851
+		Fwavacc accuracy: 0.9155341153559218
+
+Mean Results:
+		Loss: 58698.1787109375
+		Overall accuracy (mean): 0.9558621487971473
+		Mean accuracy (mean): 0.7026377848646435
+		Mean IU (mean): 0.528712518090314
+		Fwavacc accuracy (mean): 0.9190718626062488
+demo/test/presentation_voc/JPEGImages/albert-bierstadt_bison-with-coyotes-in-the-background.jpg
+		Loss: 53080.94921875
+		Overall accuracy: 0.956044398945646
+		Mean accuracy: 0.49793025852876227
+		Mean IU: 0.19220665570077705
+		Fwavacc accuracy: 0.9226096098565758
+
+demo/test/presentation_voc/JPEGImages/alexey-venetsianov_checkered-shawl.jpg
+		Loss: 5617.2294921875
+		Overall accuracy: 0.9556798986486487
+		Mean accuracy: 0.9073453112005248
+		Mean IU: 0.865218380479851
+		Fwavacc accuracy: 0.9155341153559218
+
+demo/test/presentation_voc/JPEGImages/alexey-venetsianov_peasant-woman-with-milk.jpg
+		Loss: 59213.07421875
+		Overall accuracy: 0.8223826402697328
+		Mean accuracy: 0.8486861659239341
+		Mean IU: 0.47586041779768745
+		Fwavacc accuracy: 0.7160318701961599
+
+demo/test/presentation_voc/JPEGImages/anders-zorn_study-of-landscape-in-richmond-1882.jpg
+		Loss: 1720.9306640625
+		Overall accuracy: 0.9959204487506375
+		Mean accuracy: 0.5
+		Mean IU: 0.4979602243753187
+		Fwavacc accuracy: 0.9918575402396711
+
+Mean Results:
+		Loss: 119632.18359375
+		Overall accuracy (mean): 0.9325068466536662
+		Mean accuracy (mean): 0.6884904339133052
+		Mean IU (mean): 0.5078114195884086
+		Fwavacc accuracy (mean): 0.8865082839120821
