@@ -5,7 +5,7 @@ layer {
   input_param {
     # These dimensions are purely for sake of example;
     # see infer.py for how to reshape the net to the given input size.
-    shape { dim: 1 dim: 3 dim: 352 dim: 502 }
+    shape { dim: 1 dim: 3 dim: 344 dim: 269 }
   }
 }
 layer {
@@ -13,7 +13,7 @@ layer {
   type: "Input"
   top: "label"
   input_param {
-    shape { dim: 1 dim: 352 dim: 502 }
+    shape { dim: 1 dim: 344 dim: 269 }
   }
 }
 layer {
