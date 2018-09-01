@@ -125,4 +125,4 @@ def do_seg_tests(net, iter, save_format, dataset, layer='score', gt='label'):
     delayPrint(">>>{} Iteration: {} Fwavacc: {}".format(datetime.now(), iter, (freq[freq > 0] * iu[freq > 0]).sum()), PRINT_SECONDS)
     # return hist
     # returns a dictionary of results
-    return {'loss' : loss, 'over_acc' : float(over_acc), 'mean_acc' : float(np.nanmean(mean_acc)), 'iu' : float(np.nanmean(iu)), 'freq' : (freq[freq > 0] * iu[freq > 0]).sum()}
+    return {'loss' : loss, 'over_acc' : float(over_acc), 'mean_acc' : float(np.nanmean(mean_acc)), 'iu' : float(np.nanmean(iu)), 'freq' : float((freq[freq > 0] * iu[freq > 0]).sum())}
