@@ -1094,3 +1094,69 @@ Mean Results:
 		Mean accuracy (mean): 0.7090515724077466
 		Mean IU (mean): 0.5110075668231542
 		Fwavacc accuracy (mean): 0.85878587907743
+demo/test/presentation_voc/JPEGImages/albert-bierstadt_bison-with-coyotes-in-the-background.jpg
+		Loss: 53080.94921875
+		Overall accuracy: 0.956044398945646
+		Mean accuracy: 0.49793025852876227
+		Mean IU: 0.19220665570077705
+		Fwavacc accuracy: 0.9226096098565758
+
+demo/test/presentation_voc/JPEGImages/albert-bierstadt_bison-with-coyotes-in-the-background.jpg
+		Loss: 53080.94921875
+		Overall accuracy: 0.956044398945646
+		Mean accuracy: 0.49793025852876227
+		Mean IU: 0.19220665570077705
+		Fwavacc accuracy: 0.9226096098565758
+
+demo/test/presentation_voc/JPEGImages/albert-bierstadt_bison-with-coyotes-in-the-background.jpg
+		Loss: 53080.94921875
+		Overall accuracy: 0.956044398945646
+		Mean accuracy: 0.49793025852876227
+		Mean IU: 0.19220665570077705
+		Fwavacc accuracy: 0.9226096098565758
+
+demo/test/presentation_voc/JPEGImages/albert-bierstadt_bison-with-coyotes-in-the-background.jpg
+		Loss: 53080.94921875
+		Overall accuracy: 0.956044398945646
+		Mean accuracy: 0.49793025852876227
+		Mean IU: 0.19220665570077705
+		Fwavacc accuracy: 0.9226096098565758
+
+demo/test/presentation_voc/JPEGImages/albert-bierstadt_bison-with-coyotes-in-the-background.jpg
+		Loss: 53080.94921875
+		Overall accuracy: 0.956044398945646
+		Mean accuracy: 0.49793025852876227
+		Mean IU: 0.19220665570077705
+		Fwavacc accuracy: 0.9226096098565758
+
+demo/test/presentation_voc/JPEGImages/alexey-venetsianov_checkered-shawl.jpg
+		Loss: 5617.2294921875
+		Overall accuracy: 0.9556798986486487
+		Mean accuracy: 0.9073453112005248
+		Mean IU: 0.865218380479851
+		Fwavacc accuracy: 0.9155341153559218
+
+Mean Results:
+		Loss: 0
+		Overall accuracy (mean): nan
+		Mean accuracy (mean): nan
+		Mean IU (mean): nan
+		Fwavacc accuracy (mean): nan
+Mean Results:
+		Loss: 0
+		Overall accuracy (mean): nan
+		Mean accuracy (mean): nan
+		Mean IU (mean): nan
+		Fwavacc accuracy (mean): nan
+Mean Results:
+		Loss: 0
+		Overall accuracy (mean): nan
+		Mean accuracy (mean): nan
+		Mean IU (mean): nan
+		Fwavacc accuracy (mean): nan
+Mean Results:
+		Loss: 0
+		Overall accuracy (mean): nan
+		Mean accuracy (mean): nan
+		Mean IU (mean): nan
+		Fwavacc accuracy (mean): nan
