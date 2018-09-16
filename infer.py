@@ -1,4 +1,5 @@
 import numpy as np
+import pandas as pd
 from PIL import Image
 
 import caffe
@@ -16,6 +17,7 @@ import time
 import datetime
 import math
 import sys
+import re
 
 import score
 import voc_layers
@@ -30,10 +32,16 @@ import matplotlib.pyplot as plt
 # graphviz library - visualization of trees library
 import graphviz
 
+# ast library- used to convert string expressions to python expressions
+import ast
+
+# for bell sound
+import subprocess
+
 # own code - Jasper
-PRINT_SECONDS = 0.2
-REVIEW_SECONDS = 5
-REST_SECONDS = 10
+PRINT_SECONDS = 0 # 0.2
+REVIEW_SECONDS = 0 # 5
+REST_SECONDS = 0 # 10
 ERROR_ABOVE = "Image {height, width} has above 1000 pixels"
 PASS_BELOW = "Image {height, width} has below 1000 pixels"
 OUTPUT_FOLDER = "output_score" # no slashes both first and last
@@ -46,6 +54,12 @@ over_acc_scores = []
 mean_acc_scores = []
 iu_scores = []
 freq_scores = []
+session_count = 0
+plot = 0 # initialize plot for global use
+n = 0 # initialize number of paintings for global use
+LIMIT_X = 4 # limit columns for figure
+labels = [] # labels for the confusion_matrix_board (x and y axis)
+figsize = (30, 20)
 # flow
 """
     1. Enter number of images to segment 
@@ -184,6 +198,11 @@ def writeErrorFile(current_painting_path, error="", f="demo/error.log"):
         delayPrint("Closing error file...", PRINT_SECONDS)
         file.close()
 
+def writeListOfPaintings(lop, f="demo/list_of_paintings.txt"):
+    with open(f, "w+") as file:
+        delayPrint("Writing list of paintings to {}".format(f), PRINT_SECONDS)
+        file.write("{}".format(lop))
+
 def reshapeInputLayer(img, LINE_NUMBER=7, f="voc-fcn8s/test.prototxt"):
     delayPrint("Checking {} file...".format(f), PRINT_SECONDS)
     # LINE_NUMBER = 7
@@ -244,21 +263,29 @@ def validationResultsLog(current_painting_path, results, f="demo/results.log"):
     global mean_acc_scores
     global iu_scores
     global freq_scores
+    labels = ["Overall accuracy", "Mean accuracy", "Mean IU", "Fwavacc accuracy"]
+    initValidationScores(labels) # initialize file first
+    labels, scores = getValidationScores()
+    over_acc_scores = scores[0]
+    mean_acc_scores = scores[1]
+    iu_scores = scores[2]
+    freq_scores = scores[3]
     loss += results['loss']
     over_acc_scores.append(results['over_acc'])
     mean_acc_scores.append(results['mean_acc'])
     iu_scores.append(results['iu'])
     freq_scores.append(results['freq'])
+    scores = [results['over_acc'], results['mean_acc'], results['iu'], results['freq']]
+    labels = ["Overall accuracy", "Mean accuracy", "Mean IU", "Fwavacc accuracy"]
     delayPrint("Checking {} file...".format(f), PRINT_SECONDS)
     if(isfile(f)):
         file = open(f, "a")
         delayPrint("Writing results file...", PRINT_SECONDS)
         file.write("{}\n".format(current_painting_path))
         file.write("\t\tLoss: {}\n".format(results['loss']))
-        file.write("\t\tOverall accuracy: {}\n".format(results['over_acc']))
-        file.write("\t\tMean accuracy: {}\n".format(results['mean_acc']))
-        file.write("\t\tMean IU: {}\n".format(results['iu']))
-        file.write("\t\tFwavacc accuracy: {}\n".format(results['freq']))
+        if len(scores) == len(labels):
+            for x in range(len(labels)):
+                file.write("\t\t{}: {}\n".format(labels[x], scores[x]))
         file.write("\n")
         delayPrint("Closing results file...", PRINT_SECONDS)
         file.close()
@@ -269,34 +296,40 @@ def validationResultsLog(current_painting_path, results, f="demo/results.log"):
         file = open(f, "a+")
         file.write("{}\n".format(current_painting_path))
         file.write("\t\tLoss: {}\n".format(results['loss']))
-        file.write("\t\tOverall accuracy: {}\n".format(results['over_acc']))
-        file.write("\t\tMean accuracy: {}\n".format(results['mean_acc']))
-        file.write("\t\tMean IU: {}\n".format(results['iu']))
-        file.write("\t\tFwavacc accuracy: {}\n".format(results['freq']))
+        if len(scores) == len(labels):
+            for x in range(len(labels)):
+                file.write("\t\t{}: {}\n".format(labels[x], scores[x]))
         file.write("\n")
         delayPrint("Closing results file...", PRINT_SECONDS)
         file.close()
+    scores = [over_acc_scores, mean_acc_scores, iu_scores, freq_scores]
+    saveValidationScores(labels, scores)
 
 def computeMeanScore(f="demo/results.log"):
     global loss
     global over_acc_scores
     global mean_acc_scores
     global iu_scores
-    global freq_scores
-    over_acc_scores = np.mean(over_acc_scores)
-    mean_acc_scores = np.mean(mean_acc_scores)
-    iu_scores = np.mean(iu_scores)
-    freq_scores = np.mean(freq_scores)
+    global freq_scores    
+    labels, scores = getValidationScores()
+    over_acc_scores = scores[0]
+    mean_acc_scores = scores[1]
+    iu_scores = scores[2]
+    freq_scores = scores[3]
+    over_acc_scores_m = np.mean(over_acc_scores)
+    mean_acc_scores_m = np.mean(mean_acc_scores)
+    iu_scores_m = np.mean(iu_scores)
+    freq_scores_m = np.mean(freq_scores)
     delayPrint("Checking {} file...".format(f), PRINT_SECONDS)
     if(isfile(f)):
         file = open(f, "a")
         delayPrint("Writing mean results file...", PRINT_SECONDS)
         file.write("Mean Results:\n")
         file.write("\t\tLoss: {}\n".format(loss))
-        file.write("\t\tOverall accuracy (mean): {}\n".format(over_acc_scores))
-        file.write("\t\tMean accuracy (mean): {}\n".format(mean_acc_scores))
-        file.write("\t\tMean IU (mean): {}\n".format(iu_scores))
-        file.write("\t\tFwavacc accuracy (mean): {}\n".format(freq_scores))
+        file.write("\t\tOverall accuracy (mean): {}\n".format(over_acc_scores_m))
+        file.write("\t\tMean accuracy (mean): {}\n".format(mean_acc_scores_m))
+        file.write("\t\tMean IU (mean): {}\n".format(iu_scores_m))
+        file.write("\t\tFwavacc accuracy (mean): {}\n".format(freq_scores_m))
         delayPrint("Closing mean results file...", PRINT_SECONDS)
         file.close()
     else:
@@ -306,30 +339,94 @@ def computeMeanScore(f="demo/results.log"):
         file = open(f, "a+")
         file.write("Mean Results:\n")
         file.write("\t\tLoss: {}\n".format(loss))
-        file.write("\t\tOverall accuracy (mean): {}\n".format(over_acc_scores))
-        file.write("\t\tMean accuracy (mean): {}\n".format(mean_acc_scores))
-        file.write("\t\tMean IU (mean): {}\n".format(iu_scores))
-        file.write("\t\tFwavacc accuracy (mean): {}\n".format(freq_scores))
+        file.write("\t\tOverall accuracy (mean): {}\n".format(over_acc_scores_m))
+        file.write("\t\tMean accuracy (mean): {}\n".format(mean_acc_scores_m))
+        file.write("\t\tMean IU (mean): {}\n".format(iu_scores_m))
+        file.write("\t\tFwavacc accuracy (mean): {}\n".format(freq_scores_m))
         delayPrint("Closing mean results file...", PRINT_SECONDS)
         file.close()
-    return {'loss_a' : loss, 'over_acc_m' : over_acc_scores, 'mean_acc_m' : mean_acc_scores, 'iu_m' : iu_scores, 'freq_m' : freq_scores}
+    return {'loss_a' : loss, 'over_acc_m' : over_acc_scores_m, 'mean_acc_m' : mean_acc_scores_m, 'iu_m' : iu_scores_m, 'freq_m' : freq_scores_m}
+
+def initValidationScores(labels, f="demo/validation_scores.txt"):
+    delayPrint("Checking {} file if empty...".format(f), PRINT_SECONDS)
+    with open(f, "r+") as file:
+        num_lines = sum(1 for line in file)
+        # print(num_lines)
+        if num_lines == 0:
+            delayPrint("Initializing {} file...".format(f), PRINT_SECONDS)
+            for x in labels:
+                file.write("{}: []\n".format(x))
+            delayPrint("Done initializing {}".format(f), PRINT_SECONDS)
+        else:
+            delayPrint("{} not empty...".format(f), PRINT_SECONDS)
+
+def getValidationScores(f="demo/validation_scores.txt"):
+    labels = []
+    scores = []
+    with open(f, "r+") as file:
+        data = file.readlines()
+        num_lines = len(data)
+        delayPrint("Reading {} file...".format(f), PRINT_SECONDS)
+        # print(data)
+        for x in range(num_lines):
+            # print(data[x])
+            dt = list(filter(None, re.split("(:\W)", data[x].rstrip()))) # filter removes blank strings in data[x] list
+            label = dt[0]
+            score = ast.literal_eval(dt[len(dt) - 1])
+            # print(dt)
+            labels.append(label)
+            scores.append(score)
+            delayPrint("Fetched {} list...".format(label), PRINT_SECONDS)
+        # print("Labels: {} Scores: {}".format(labels, scores))
+    return labels, scores
+
+def saveValidationScores(labels, scores, f="demo/validation_scores.txt"):
+    with open(f, "w+") as file:
+        print("Labels: {} Scores: {}".format(labels, scores))
+        if len(labels) == len(scores):
+            for x in range(len(labels)):
+                delayPrint("Saving validation scores...", PRINT_SECONDS)
+                file.write("{} : {}\n".format(labels[x], scores[x]))
+            delayPrint("Saved validation scores...", PRINT_SECONDS)
 
 def loop(paintings_path, labels_path, paintings, current_painting):
-    n = input("Enter number of images to segment: ")
+    global n
+    global plot
+    global LIMIT_X
+    global over_acc_scores
+    global mean_acc_scores
+    global iu_scores
+    global freq_scores
+    n = int(input("Enter number of images to segment: "))
     index = paintings.index(current_painting.split(JPG_FILETYPE)[0])
-    end = len(paintings) - 1
-    last = index+int(n)
-    if(index != 0):
-        if(index == end):
-            last = end
-        else:
+    end = len(paintings)
+    last = index+n
+    if(index >= end):
+        last = end
+    elif last >= end:
+        last = end
+    else:
+        if(index != 0):
             index += 1
             last += 1
+    # convert current global n value to its real/absolute value in the entire process
+    n = len(range(index, last))
     delayPrint("Choose one of the following:\n", PRINT_SECONDS)
     delayPrint("[1] Segmentation\t\t[2] Validation", PRINT_SECONDS)
     option = int(input("Your answer [1/2]: "))
     while option != 1 and option != 2:
         option = int(input("Your answer [1/2]: "))
+    
+    if option == 2:
+        # creating Figure
+        plot = createFigure(getYLimitValue(n), LIMIT_X)
+
+        # graphs
+        acc_plot = createFigure(1, 1)
+
+        # mean graph
+        mean_acc_plot = createFigure(1, 1)
+    
     for x in range(index, last):
         current_painting_path = paintings_path + "/" + paintings[x] + JPG_FILETYPE
         current_label_path = labels_path + "/" + paintings[x] + PNG_FILETYPE
@@ -345,9 +442,16 @@ def loop(paintings_path, labels_path, paintings, current_painting):
                 segmentation(current_painting_path, paintings[x])
             else:
                 results = validation(current_painting_path, current_label_path, paintings[x])
-                validationResultsLog(current_painting_path, results)
+                # print("Current PAINTING: {}".format(paintings[x]))
+                print("Index: {} X: {} Last - 1: {}".format(index, x, last - 1))
+                plot = collectConfusionMatrix(plot, x-index+1, results[1], paintings[index], paintings[x], paintings[last - 1])
+                validationResultsLog(current_painting_path, results[0])
         except:
             error = sys.exc_info()[0]
+            # make a bell sound 3 times when error is detected
+            for x in range(3):
+                delayPrint("Bell {}".format(x), PRINT_SECONDS)
+                subprocess.call(['/usr/bin/canberra-gtk-play','--id','bell'])
             print("Error {} found! Writing error log.".format(error))
             writeErrorFile(current_painting_path, error)
         end_time = datetime.datetime.now()
@@ -361,13 +465,48 @@ def loop(paintings_path, labels_path, paintings, current_painting):
             time.sleep(REST_SECONDS)
         # if x == last - 1:
         writeResume(current_painting_path)
-    if option is 2:
-        mean_scores = computeMeanScore()
-        delayPrint("Loss: {}".format(mean_scores["loss_a"]), PRINT_SECONDS)
-        delayPrint("Overall Accuracy (mean): {}".format(mean_scores["over_acc_m"]), PRINT_SECONDS)
-        delayPrint("Mean Accuracy (mean): {}".format(mean_scores["mean_acc_m"]), PRINT_SECONDS)
-        delayPrint("Mean IU (mean): {}".format(mean_scores["iu_m"]), PRINT_SECONDS)
-        delayPrint("Fwavacc Accuracy (mean): {}".format(mean_scores["freq_m"]), PRINT_SECONDS)
+    try:
+        if option == 2:
+
+            # show the figure of accuracy scores
+            sap_option = input("Do you want to show accuracy plot? [y/n]: ")
+            while sap_option != 'y' and sap_option != 'n':
+                sap_option = input("Do you want to show accuracy plot? [y/n]: ")
+
+            if sap_option == 'y':
+                # data = [over_acc_scores, mean_acc_scores, iu_scores, freq_scores]
+                # labels = ["Overall Accuracy Scores", "Mean Accuracy Scores", "Mean IoU Scores", "Frequency Weighted Average Accuracy Scores"]
+
+                mean_labels = ["Overall Accuracy (mean)", "Mean Accuracy (mean)", "Mean IU (mean)", "Fwavacc Accuracy (mean)"]
+                # show mean scores
+                mean_scores = computeMeanScore()
+                delayPrint("Loss: {}".format(mean_scores["loss_a"]), PRINT_SECONDS)
+                delayPrint("{}: {}".format(mean_labels[0], mean_scores["over_acc_m"]), PRINT_SECONDS)
+                delayPrint("{}: {}".format(mean_labels[1], mean_scores["mean_acc_m"]), PRINT_SECONDS)
+                delayPrint("{}: {}".format(mean_labels[2], mean_scores["iu_m"]), PRINT_SECONDS)
+                delayPrint("{}: {}".format(mean_labels[3], mean_scores["freq_m"]), PRINT_SECONDS)
+
+                # method to call store figure of accuracy scores
+                labels, scores = getValidationScores()
+                storeAccPlot(acc_plot, labels, scores)
+                
+                # method to call store figure of mean scores
+                mean_data = [mean_scores["over_acc_m"], mean_scores["mean_acc_m"], mean_scores["iu_m"], mean_scores["freq_m"]]
+                mean_acc_plot = storeMeanBarGraph(mean_acc_plot, mean_labels, mean_data)
+                
+                # show the figure of the collected confusion matrix
+                # showFigures()
+
+                # saving figures
+                saveFigure(acc_plot, "accuracy_graphs", OUTPUT_FOLDER_VALIDATION) # accuracy scores
+                saveFigure(mean_acc_plot, "mean_accuracy_bar_graph", OUTPUT_FOLDER_VALIDATION) # bar graph for mean scores
+    except:
+        error = sys.exc_info()[0]
+        # make a bell sound 3 times when error is detected
+        for x in range(3):
+            delayPrint("Bell {}".format(x), PRINT_SECONDS)
+            subprocess.call(['/usr/bin/canberra-gtk-play','--id','bell'])
+        print("Error {} found! Writing error log.".format(error))
     delayPrint(endSession(), PRINT_SECONDS)
 
 def segmentation(path, current_painting):
@@ -507,9 +646,13 @@ def validation(painting_path, label_path, current_painting):
 
         # masked_im.save('demo/visualization.jpg')
         masked_im.save('demo/%s/output_%s.jpg'%(OUTPUT_FOLDER_VALIDATION, current_painting))
-        # out_ = np.array(out, dtype=np.uint8)
-        # delayPrint("Ground truth image array: {}".format(gt_.flatten().shape))
-        # print("Segmentation result image array: {}".format(out_.flatten().shape))
+        
+        # store data for label and segmented 
+        out_ = np.array(out, dtype=np.float32)
+        lbl_ = np.array(gt, dtype=np.float32)
+        
+        delayPrint("Ground truth image array: {}".format(np.unique(gt_.flatten())), PRINT_SECONDS)
+        delayPrint("Segmentation result image array: {}".format(np.unique(out_.flatten())), PRINT_SECONDS)
         
         # check accuracy
         # val = np.loadtxt('demo/valid.txt', dtype=str)
@@ -518,13 +661,168 @@ def validation(painting_path, label_path, current_painting):
         # reshaping blobs to 1-dimension
         # net.blobs['data'].reshape(1,)
         # net.blobs['label'].reshape(1,)
-        return score.do_seg_tests(net, 1, False, val, layer='score', gt='label')
+        conf_mx = createConfusionMatrix(lbl_.flatten(), out_.flatten())
+        return (score.do_seg_tests(net, 1, False, val, layer='score', gt='label'), conf_mx)
 # end
 
 def createConfusionMatrix(label, segmented):
+    global labels
+    class_names = ["background", "aeroplane", "bicycle", "bird",
+               "boat", "bottle", "bus", "car",
+               "cat", "chair", "cow", "diningtable",
+               "dog", "horse", "motorbike", "person",
+               "pottedplant", "sheep", "sofa", "train",
+               "tvmonitor"]
+    delayPrint("Creating confusion matrix...", PRINT_SECONDS)
+    lbl_seg_ci_lst = list(map(int, list(set(list(np.unique(label)) + list(np.unique(segmented))))))
+    labels = lbl_seg_ci_lst
+#     print(labels)
+#     print("List of lbl_seg: {}".format(lbl_seg_ci_lst))
+#     print("1st element of lbl_seg: {}".format(class_names[lbl_seg_ci_lst[0]]))
+#     print("Type of ignore element of lbl: {}".format(lbl_seg_ci_lst[5] == 255))
+#     label = list(map(int, label))
+#     segmented = list(map(int, segmented))
+#     label = list(map((lambda x: "ignore" if x == 255 else class_names[x]), label))
+#     segmented = list(map((lambda x: "ignore" if x == 255 else class_names[x]), segmented))
+#     conf_mx = confusion_matrix(label, segmented, labels=list(map((lambda x: "ignore" if x == 255 else class_names[x]), lbl_seg_ci_lst)))
+#     plt.matshow(conf_mx, cmap=plt.cm.gray)
     conf_mx = confusion_matrix(label, segmented)
-    plt.matshow(conf_mx, cmap=plt.cm.gray)
+    return conf_mx
+
+def getYLimitValue(n):
+    global LIMIT_X
+#     if n % LIMIT_X == 0:
+#         y = int(math.ceil(n / LIMIT_X))
+#     else:
+#         y = int(math.ceil(n / LIMIT_X)) + 1
+    return int(math.ceil(n / LIMIT_X))
+
+def createFigure(y, x, fs=None):
+    global figsize
+    if fs == None:
+        fs = figsize
+#     y = getYLimitValue(n)
+#     x = LIMIT_X
+    delayPrint("Creating figure...", PRINT_SECONDS)
+    fig, axes = plt.subplots(y, x)
+    fig.set_size_inches(fs)
+    return fig, axes
+
+def storeAccPlot(plot, labels, data):
+    fig, axes = plot
+#     colors = ['b', 'g', 'r', 'c', 'm', 'y', 'k', 'w']
+    colors = ['g', 'c', 'm', 'y']
+    line_type = '.-'
+    loc = list(map((lambda x: x+line_type), colors))
+    for x in range(len(labels)):
+#         ri = random.randint(0, len(colors))
+#         print("type of array: {}".format(type(data[x][0])))
+#         print("Index: {} data: {} label: {} ri: {} loc: {}".format(x, data[x], labels[x], ri, loc[x]))
+        axes.plot(data[x], loc[x], label=labels[x])
+    axes.legend(loc='best')
+    axes.set_xticks(range(len(data[0])))
+    axes.set_title("Accuracy Score Graph")
+    axes.set_xlabel("Image Index")
+    axes.set_ylabel("Accuracy Score")
+
+def storeMeanBarGraph(plot, labels, data):
+    fig, axes = plot
+    global figsize
+    # df = pd.DataFrame(np.array(data).reshape(4,1), index=labels)
+    # df.plot(kind='barh', ax=axes, color='k', alpha=0.7, figsize=(18, 13))
+    # fig = axes.get_figure()
+    barlist = axes.barh(range(len(data)), data, color=plt.cm.Pastel1(np.arange(len(data))), tick_label=labels)
+    axes.legend(barlist, labels)
+    axes.set_title("Mean Accuracy Score Graph")
+    axes.set_xlabel("Mean Accuracy Score Value")
+    axes.set_ylabel("Mean Accuracy Score Names")
+    fig.set_size_inches((18, 12))
+    return fig, axes
+
+def showFigures():
+    delayPrint("Showing figure...", PRINT_SECONDS)
+#     plt.subplots_adjust(wspace=0, hspace=0)
     plt.show()
+
+def saveFigure(plot, name, output_dir):
+    fig, axes = plot
+    delayPrint("Saving {} figure...".format(name), PRINT_SECONDS)
+    fig.savefig("demo/{}/{}.png".format(output_dir, name))
+
+def collectConfusionMatrix(plot, current_index, conf_mx, sp, cp, ep):
+    global LIMIT_X
+    global labels
+    global n
+    class_names = ["background", "aeroplane", "bicycle", "bird",
+               "boat", "bottle", "bus", "car",
+               "cat", "chair", "cow", "diningtable",
+               "dog", "horse", "motorbike", "person",
+               "pottedplant", "sheep", "sofa", "train",
+               "tvmonitor"]
+    
+    delayPrint("Collecting confusion matrix...", PRINT_SECONDS)
+    index = 0
+    fig, axes = plot
+    for y in range(getYLimitValue(current_index)):
+        for x in range(LIMIT_X):
+#             print("{} check condition: {}".format(index, (index is n - 1)))
+            if index == current_index - 1:
+                delayPrint("Storing confusion matrix...", PRINT_SECONDS)
+#                 print("{}, {}".format(y, x))
+                if n > LIMIT_X:
+                    axes[y, x].axis("on")
+                    axes[y, x].matshow(conf_mx, cmap=plt.cm.gray)
+                    axes[y, x].set_xticklabels([''] + list(map((lambda x: "ignore" if x == 255 else class_names[x]), labels)))
+                    axes[y, x].set_yticklabels([''] + list(map((lambda x: "ignore" if x == 255 else class_names[x]), labels)))
+                    axes[y, x].set_ylabel("Ground Truth")
+                    axes[y, x].set_xlabel("Segmented Image")
+                    axes[y, x].set_title(cp)
+                    
+                    # saving each confusion matrix
+#                     cm_fig, cm_axes = createFigure(1, 1)
+#                     cm_axes.set_figure(axes[y, x].get_figure())
+#                     cm = (cm_fig, cm_axes)
+#                     saveFigure(cm, "cm_{}".format(cp), OUTPUT_FOLDER_VALIDATION)
+#                     plt.close(cm_fig)
+                    # axes[y, x].get_figure().savefig("demo/{}/cm_{} - {}".format(OUTPUT_FOLDER_VALIDATION, sp, ep))
+                else:
+                    axes[x].axis("on")
+                    axes[x].matshow(conf_mx, cmap=plt.cm.gray)
+                    axes[x].set_xticklabels([''] + list(map((lambda x: "ignore" if x == 255 else class_names[x]), labels)))
+                    axes[x].set_yticklabels([''] + list(map((lambda x: "ignore" if x == 255 else class_names[x]), labels)))
+                    axes[x].set_ylabel("Ground Truth")
+                    axes[x].set_xlabel("Segmented Image")
+                    axes[x].set_title(cp)
+                    
+                    # saving each confusion matrix
+#                     cm_fig, cm_axes = createFigure(1, 1)
+#                     cm_fig = axes[x].get_figure()
+#                     cm = (cm_fig, cm_axes)
+#                     saveFigure(cm, "cm_{}".format(cp), OUTPUT_FOLDER_VALIDATION)
+#                     plt.close(cm_fig)
+                    # axes[x].get_figure().savefig("demo/{}/cm_{} - {}".format(OUTPUT_FOLDER_VALIDATION, sp, ep))
+            elif index > current_index - 1:
+                if current_index > LIMIT_X:
+                    if current_index >= n:
+                        fig.delaxes(axes[y, x])
+                        # if cp == ep:
+                            # saving each confusion matrix
+                            # saveFigure((fig, axes), "cm_{} - {}".format(sp, ep), OUTPUT_FOLDER_VALIDATION)
+                            
+                else:
+                    if current_index >= n:
+                        fig.delaxes(axes[x])
+                        # if cp == ep:
+                            # saving each confusion matrix
+                            # saveFigure((fig, axes), "cm_{} - {}".format(sp, ep), OUTPUT_FOLDER_VALIDATION)
+            index += 1
+            
+    if cp == ep:
+        # saving each confusion matrix
+        fig.tight_layout() # fixes the overlapping confusion matrix subplots
+        print("Length of axes: {}".format(len(axes.flatten())))
+        saveFigure((fig, axes), "cm_{} - {}".format(sp, ep), OUTPUT_FOLDER_VALIDATION)
+    return fig, axes
 
 # main process
 delimiter = "/"
@@ -548,5 +846,9 @@ labels_path = delimiter.join(labels_path)
 
 paintings = getPaintings(paintings_path)
 # print(paintings)
+# write the paintings list to a text file
+lop_f = "demo/list_of_paintings.txt"
+writeListOfPaintings(paintings, lop_f)
+
 loop(paintings_path, labels_path, paintings, current_painting)
 

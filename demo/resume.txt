@@ -1,1 +1,1 @@
-demo/test/presentation_voc/JPEGImages/albert-bierstadt_bison-with-coyotes-in-the-background.jpg
+demo/test/presentation_voc/JPEGImages/camille-corot_the-mill-in-the-trees.jpg
