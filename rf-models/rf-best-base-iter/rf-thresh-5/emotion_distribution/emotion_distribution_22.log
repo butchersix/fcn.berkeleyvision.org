@@ -1,0 +1,10 @@
+['disgust', 'disgust', 'disgust', 'disgust', 'disgust', 'disgust', 'disgust', 'disgust', 'disgust', 'disgust', 'disgust', 'disgust', 'surprise', 'disgust', 'disgust', 'disgust', 'sadness', 'disgust', 'surprise', 'disgust', 'disgust', 'disgust', 'surprise', 'disgust', 'anger', 'sadness', 'sadness', 'sadness', 'sadness', 'sadness', 'sadness', 'sadness', 'anger', 'sadness', 'sadness', 'sadness', 'sadness', 'sadness', 'sadness', 'sadness']
+Number of AMBIGUOUS: 0
+Number of anger: 2
+Number of anticipation: 0
+Number of disgust: 20
+Number of fear: 0
+Number of joy: 0
+Number of sadness: 15
+Number of surprise: 3
+Number of trust: 0

@@ -1,2 +1,0 @@
-Elapsed Time Iteration : [datetime.timedelta(0, 351, 969893), datetime.timedelta(0, 361, 266661), datetime.timedelta(0, 367, 858135), datetime.timedelta(0, 366, 113913)]
-Time Passed : [datetime.timedelta(0, 351, 972664), datetime.timedelta(0, 713, 283794), datetime.timedelta(0, 1081, 189921), datetime.timedelta(0, 1447, 351792)]

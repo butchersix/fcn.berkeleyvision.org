@@ -1,0 +1,10 @@
+['disgust', 'anger', 'sadness', 'sadness', 'trust', 'disgust', 'surprise', 'sadness', 'sadness', 'trust', 'AMBIGUOUS', 'sadness', 'disgust', 'disgust', 'surprise', 'AMBIGUOUS', 'anger', 'fear', 'sadness', 'surprise', 'disgust', 'trust', 'surprise', 'joy', 'AMBIGUOUS', 'trust', 'surprise', 'trust', 'sadness', 'fear', 'trust', 'sadness', 'sadness', 'sadness', 'trust', 'disgust', 'sadness', 'sadness']
+Number of AMBIGUOUS: 3
+Number of anger: 2
+Number of anticipation: 0
+Number of disgust: 6
+Number of fear: 2
+Number of joy: 1
+Number of sadness: 12
+Number of surprise: 5
+Number of trust: 7

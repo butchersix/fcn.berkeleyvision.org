@@ -44,7 +44,7 @@ REVIEW_SECONDS = 0 # 5
 REST_SECONDS = 0 # 10
 ERROR_ABOVE = "Image {height, width} has above 1000 pixels"
 PASS_BELOW = "Image {height, width} has below 1000 pixels"
-OUTPUT_FOLDER = "output_score" # no slashes both first and last
+OUTPUT_FOLDER = "output_new_instances" # no slashes both first and last
 OUTPUT_FOLDER_VALIDATION = "output_validate"
 dm = "" # global dimensions string
 JPG_FILETYPE = ".jpg"
@@ -59,6 +59,8 @@ plot = 0 # initialize plot for global use
 n = 0 # initialize number of paintings for global use
 LIMIT_X = 4 # limit columns for figure
 labels = [] # labels for the confusion_matrix_board (x and y axis)
+gt_labels = [] # labels for the confusion_matrix_board (x and y axis)
+sg_labels = [] # labels for the confusion_matrix_board (x and y axis)
 figsize = (30, 20)
 # flow
 """
@@ -399,7 +401,7 @@ def loop(paintings_path, labels_path, paintings, current_painting):
     global freq_scores
     n = int(input("Enter number of images to segment: "))
     index = paintings.index(current_painting.split(JPG_FILETYPE)[0])
-    end = len(paintings)
+    end = len(paintings) - 1
     last = index+n
     if(index >= end):
         last = end
@@ -535,7 +537,7 @@ def segmentation(path, current_painting):
         # Set mode to CPU since GPU can't handle much memory
         caffe.set_mode_cpu()
         # load net
-        net = caffe.Net('voc-fcn8s/test.prototxt', 'voc-fcn8s/fcn8s-heavy-pascal.caffemodel', caffe.TEST)
+        net = caffe.Net('voc-fcn8s/deploy.prototxt', 'voc-fcn8s/fcn8s-heavy-pascal.caffemodel', caffe.TEST)
         # shape for input (data blob is N x C x H x W), set data
         net.blobs['data'].reshape(1, *in_.shape)
         net.blobs['data'].data[...] = in_
@@ -551,26 +553,27 @@ def segmentation(path, current_painting):
         # visualize segmentation in PASCAL VOC colors
         voc_palette = vis.make_palette(21)
         out_im = Image.fromarray(vis.color_seg(out, voc_palette))
-        # image_pixels = ""
+        image_pixels = ""
+        out_ = np.array(out, dtype=np.float32)
         # ycount_gt = 0
-        # ycount_out = 0
+        ycount_out = 0
         # for y in gt_:
         #     for x in y:
         #         # image_pixels += str(x)
         #         if x == 4:
         #             ycount_gt += 1
         #     # image_pixels += "\n"
-        # for y in out_:
-        #     for x in y:
-        #         # image_pixels += str(x)
-        #         if x == 4:
-        #             ycount_out += 1
-            # image_pixels += "\n"
+        for y in out_:
+            for x in y:
+                image_pixels += str(x)
+                if x == 4:
+                    ycount_out += 1
+            image_pixels += "\n"
         # print("Accuracy of 4: {:.5f}".format(ycount_out/ycount_gt))
         # print(ycount)
-        # # print(image_pixels)
-        # with open("test.txt", "a+") as file:
-        #     file.writelines(image_pixels)
+        # print(image_pixels)
+        with open("class_indices_{}.txt".format(current_painting), "a+") as file:
+            file.writelines(image_pixels)
         # out_im.save('demo/output.png')
         out_im.save('demo/%s/output_%s.png'%(OUTPUT_FOLDER, current_painting.split(JPG_FILETYPE)[0]))
         logfile = "demo/"+OUTPUT_FOLDER+"/"+current_painting+".log"
@@ -667,6 +670,8 @@ def validation(painting_path, label_path, current_painting):
 
 def createConfusionMatrix(label, segmented):
     global labels
+    global gt_labels
+    global sg_labels
     class_names = ["background", "aeroplane", "bicycle", "bird",
                "boat", "bottle", "bus", "car",
                "cat", "chair", "cow", "diningtable",
@@ -674,8 +679,12 @@ def createConfusionMatrix(label, segmented):
                "pottedplant", "sheep", "sofa", "train",
                "tvmonitor"]
     delayPrint("Creating confusion matrix...", PRINT_SECONDS)
-    lbl_seg_ci_lst = list(map(int, list(set(list(np.unique(label)) + list(np.unique(segmented))))))
-    labels = lbl_seg_ci_lst
+    lbl_gt_ci_lst = list(map(int, list(set(list(np.unique(label))))))
+    lbl_seg_ci_lst = list(map(int, list(set(list(np.unique(segmented))))))
+    lbl_gt_seg_ci_lst = list(map(int, list(set(list(np.unique(label)) + list(np.unique(segmented))))))
+    labels = sorted(lbl_gt_seg_ci_lst)
+    gt_labels = sorted(lbl_gt_ci_lst)
+    sg_labels = sorted(lbl_seg_ci_lst)
 #     print(labels)
 #     print("List of lbl_seg: {}".format(lbl_seg_ci_lst))
 #     print("1st element of lbl_seg: {}".format(class_names[lbl_seg_ci_lst[0]]))
@@ -711,14 +720,17 @@ def createFigure(y, x, fs=None):
 def storeAccPlot(plot, labels, data):
     fig, axes = plot
 #     colors = ['b', 'g', 'r', 'c', 'm', 'y', 'k', 'w']
-    colors = ['g', 'c', 'm', 'y']
+    colors = ['g', 'c', 'r', 'y']
     line_type = '.-'
     loc = list(map((lambda x: x+line_type), colors))
     for x in range(len(labels)):
 #         ri = random.randint(0, len(colors))
 #         print("type of array: {}".format(type(data[x][0])))
 #         print("Index: {} data: {} label: {} ri: {} loc: {}".format(x, data[x], labels[x], ri, loc[x]))
-        axes.plot(data[x], loc[x], label=labels[x])
+        if(labels[x] == labels[2]):
+            axes.plot(data[x], loc[x], label=labels[x])
+        else:
+            axes.plot(data[x], loc[x], label=labels[x], alpha=0.2)
     axes.legend(loc='best')
     axes.set_xticks(range(len(data[0])))
     axes.set_title("Accuracy Score Graph")
@@ -752,6 +764,8 @@ def saveFigure(plot, name, output_dir):
 def collectConfusionMatrix(plot, current_index, conf_mx, sp, cp, ep):
     global LIMIT_X
     global labels
+    global gt_labels
+    global sg_labels
     global n
     class_names = ["background", "aeroplane", "bicycle", "bird",
                "boat", "bottle", "bus", "car",

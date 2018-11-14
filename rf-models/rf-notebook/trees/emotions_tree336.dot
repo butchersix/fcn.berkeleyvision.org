@@ -1,0 +1,17 @@
+digraph Tree {
+node [shape=box, style="filled, rounded", color="black", fontname=helvetica] ;
+edge [fontname=helvetica] ;
+0 [label="red <= 0.678\nentropy = 2.047\nsamples = 482\nvalue = [157, 3, 3, 120, 271, 6, 190, 0, 0]\nclass = surprise", fillcolor="#39d7e525"] ;
+1 [label="green <= 0.057\nentropy = 1.518\nsamples = 223\nvalue = [59, 0, 0, 96, 5, 0, 186, 0, 0]\nclass = trust", fillcolor="#8139e55c"] ;
+0 -> 1 [labeldistance=2.5, labelangle=45, headlabel="True"] ;
+2 [label="entropy = 1.544\nsamples = 106\nvalue = [33, 0, 0, 96, 5, 0, 35, 0, 0]\nclass = disgust", fillcolor="#39e58174"] ;
+1 -> 2 ;
+3 [label="entropy = 0.602\nsamples = 117\nvalue = [26, 0, 0, 0, 0, 0, 151, 0, 0]\nclass = trust", fillcolor="#8139e5d3"] ;
+1 -> 3 ;
+4 [label="green <= 0.01\nentropy = 1.396\nsamples = 259\nvalue = [98, 3, 3, 24, 266, 6, 4, 0, 0]\nclass = surprise", fillcolor="#39d7e58c"] ;
+0 -> 4 [labeldistance=2.5, labelangle=-45, headlabel="False"] ;
+5 [label="entropy = 1.105\nsamples = 184\nvalue = [22, 3, 3, 24, 237, 6, 1, 0, 0]\nclass = surprise", fillcolor="#39d7e5c8"] ;
+4 -> 5 ;
+6 [label="entropy = 1.01\nsamples = 75\nvalue = [76, 0, 0, 0, 29, 0, 3, 0, 0]\nclass = joy", fillcolor="#e5813998"] ;
+4 -> 6 ;
+}

@@ -1,0 +1,10 @@
+['AMBIGUOUS', 'AMBIGUOUS', 'AMBIGUOUS', 'AMBIGUOUS', 'joy', 'sadness', 'fear', 'surprise', 'sadness', 'sadness', 'AMBIGUOUS', 'AMBIGUOUS', 'AMBIGUOUS', 'AMBIGUOUS', 'AMBIGUOUS', 'AMBIGUOUS', 'AMBIGUOUS', 'AMBIGUOUS', 'AMBIGUOUS', 'AMBIGUOUS', 'AMBIGUOUS', 'AMBIGUOUS', 'sadness', 'surprise', 'fear', 'surprise', 'AMBIGUOUS', 'AMBIGUOUS', 'fear', 'AMBIGUOUS', 'sadness', 'AMBIGUOUS']
+Number of AMBIGUOUS: 20
+Number of anger: 0
+Number of anticipation: 0
+Number of disgust: 0
+Number of fear: 3
+Number of joy: 1
+Number of sadness: 5
+Number of surprise: 3
+Number of trust: 0

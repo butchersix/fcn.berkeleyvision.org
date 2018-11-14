@@ -1,0 +1,17 @@
+digraph Tree {
+node [shape=box, style="filled, rounded", color="black", fontname=helvetica] ;
+edge [fontname=helvetica] ;
+0 [label="n_magenta <= 4.09\ngini = 0.889\nsamples = 2484\nvalue = [397, 411, 449, 420, 455, 440, 432, 446, 438]\nclass = trust", fillcolor="#39d7e500"] ;
+1 [label="cyan <= 0.002\ngini = 0.832\nsamples = 769\nvalue = [32, 56, 158, 279, 20, 82, 248, 257, 84]\nclass = AMBIGUOUS", fillcolor="#39e58106"] ;
+0 -> 1 [labeldistance=2.5, labelangle=45, headlabel="True"] ;
+2 [label="gini = 0.797\nsamples = 524\nvalue = [11, 45, 144, 238, 11, 51, 231, 48, 53]\nclass = AMBIGUOUS", fillcolor="#39e58103"] ;
+1 -> 2 ;
+3 [label="gini = 0.672\nsamples = 245\nvalue = [21, 11, 14, 41, 9, 31, 17, 209, 31]\nclass = anger", fillcolor="#e539d77d"] ;
+1 -> 3 ;
+4 [label="background <= 0.888\ngini = 0.877\nsamples = 1715\nvalue = [365, 355, 291, 141, 435, 358, 184, 189, 354]\nclass = trust", fillcolor="#39d7e508"] ;
+0 -> 4 [labeldistance=2.5, labelangle=-45, headlabel="False"] ;
+5 [label="gini = 0.822\nsamples = 752\nvalue = [75, 326, 78, 130, 135, 60, 7, 70, 280]\nclass = joy", fillcolor="#d7e5390d"] ;
+4 -> 5 ;
+6 [label="gini = 0.842\nsamples = 963\nvalue = [290, 29, 213, 11, 300, 298, 177, 119, 74]\nclass = trust", fillcolor="#39d7e500"] ;
+4 -> 6 ;
+}

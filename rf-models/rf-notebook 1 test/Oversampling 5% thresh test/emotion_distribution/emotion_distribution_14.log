@@ -1,0 +1,10 @@
+['fear', 'fear', 'fear', 'sadness', 'sadness', 'sadness', 'sadness', 'sadness', 'fear', 'fear', 'fear', 'sadness', 'anger', 'AMBIGUOUS', 'joy', 'surprise', 'surprise', 'sadness', 'sadness', 'sadness', 'sadness', 'surprise', 'fear', 'fear', 'sadness', 'fear', 'sadness', 'fear', 'sadness', 'sadness', 'joy', 'AMBIGUOUS', 'AMBIGUOUS', 'fear', 'sadness', 'sadness', 'sadness', 'fear', 'surprise', 'surprise', 'sadness', 'anger', 'AMBIGUOUS', 'sadness', 'trust', 'surprise', 'surprise', 'joy', 'surprise', 'sadness', 'sadness', 'sadness', 'sadness', 'sadness', 'surprise', 'AMBIGUOUS', 'fear', 'anger', 'sadness', 'sadness', 'AMBIGUOUS', 'fear', 'surprise', 'sadness', 'fear', 'fear', 'sadness', 'sadness', 'sadness', 'sadness']
+Number of AMBIGUOUS: 6
+Number of anger: 3
+Number of anticipation: 0
+Number of disgust: 0
+Number of fear: 16
+Number of joy: 3
+Number of sadness: 31
+Number of surprise: 10
+Number of trust: 1

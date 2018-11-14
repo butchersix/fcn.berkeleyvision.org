@@ -1,0 +1,29 @@
+true false
+
+false true
+
+Base
+
+1. grid search once
+	- no grid search model yet
+2. fit once
+	- there is grid search model
+	- no rfc model yet
+3. pass model and hyperparameters to all iterations
+	- there is rfc model
+
+> 1st iters
+- use existing gs model
+- use existing rfc model
+
+Base-iter
+
+1. grid search every iter
+	- no gs model yet
+2. fit every iter
+	- no rfc model yet
+
+> 1st iters
+- do grid search
+- do fit
+

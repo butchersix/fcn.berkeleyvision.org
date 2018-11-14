@@ -1,0 +1,17 @@
+digraph Tree {
+node [shape=box, style="filled, rounded", color="black", fontname=helvetica] ;
+edge [fontname=helvetica] ;
+0 [label="person <= 0.005\ngini = 0.763\nsamples = 1386\nvalue = [462, 30, 77, 22, 134, 109, 139, 401, 876]\nclass = anticipation", fillcolor="#e539643b"] ;
+1 [label="n_cyan <= 2.5\ngini = 0.771\nsamples = 712\nvalue = [346, 3, 55, 12, 75, 80, 80, 387, 113]\nclass = anger", fillcolor="#e539d70d"] ;
+0 -> 1 [labeldistance=2.5, labelangle=45, headlabel="True"] ;
+2 [label="gini = 0.622\nsamples = 345\nvalue = [331, 2, 34, 7, 42, 29, 37, 47, 29]\nclass = joy", fillcolor="#e581398e"] ;
+1 -> 2 ;
+3 [label="gini = 0.633\nsamples = 367\nvalue = [15, 1, 21, 5, 33, 51, 43, 340, 84]\nclass = anger", fillcolor="#e539d780"] ;
+1 -> 3 ;
+4 [label="red <= 1.0\ngini = 0.499\nsamples = 674\nvalue = [116, 27, 22, 10, 59, 29, 59, 14, 763]\nclass = anticipation", fillcolor="#e53964a8"] ;
+0 -> 4 [labeldistance=2.5, labelangle=-45, headlabel="False"] ;
+5 [label="gini = 0.451\nsamples = 637\nvalue = [64, 26, 22, 9, 55, 29, 59, 14, 763]\nclass = anticipation", fillcolor="#e53964b6"] ;
+4 -> 5 ;
+6 [label="gini = 0.191\nsamples = 37\nvalue = [52, 1, 0, 1, 4, 0, 0, 0, 0]\nclass = joy", fillcolor="#e58139e3"] ;
+4 -> 6 ;
+}

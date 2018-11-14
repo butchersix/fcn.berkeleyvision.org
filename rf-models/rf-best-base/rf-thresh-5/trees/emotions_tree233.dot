@@ -1,0 +1,17 @@
+digraph Tree {
+node [shape=box, style="filled, rounded", color="black", fontname=helvetica] ;
+edge [fontname=helvetica] ;
+0 [label="n_magenta <= 4.001\nentropy = 3.168\nsamples = 3116\nvalue = [579, 501, 588, 545, 552, 554, 513, 525, 548]\nclass = sadness", fillcolor="#64e53901"] ;
+1 [label="background <= 0.84\nentropy = 2.826\nsamples = 992\nvalue = [90, 97, 118, 361, 36, 122, 195, 419, 97]\nclass = anger", fillcolor="#e539d70d"] ;
+0 -> 1 [labeldistance=2.5, labelangle=45, headlabel="True"] ;
+2 [label="entropy = 2.233\nsamples = 448\nvalue = [45, 94, 26, 334, 4, 3, 8, 107, 68]\nclass = AMBIGUOUS", fillcolor="#39e58163"] ;
+1 -> 2 ;
+3 [label="entropy = 2.516\nsamples = 544\nvalue = [45, 3, 92, 27, 32, 119, 187, 312, 29]\nclass = anger", fillcolor="#e539d730"] ;
+1 -> 3 ;
+4 [label="person <= 0.029\nentropy = 3.057\nsamples = 2124\nvalue = [489, 404, 470, 184, 516, 432, 318, 106, 451]\nclass = trust", fillcolor="#39d7e502"] ;
+0 -> 4 [labeldistance=2.5, labelangle=-45, headlabel="False"] ;
+5 [label="entropy = 2.621\nsamples = 954\nvalue = [349, 24, 160, 7, 162, 398, 309, 69, 41]\nclass = fear", fillcolor="#3964e50b"] ;
+4 -> 5 ;
+6 [label="entropy = 2.7\nsamples = 1170\nvalue = [140, 380, 310, 177, 354, 34, 9, 37, 410]\nclass = surprise", fillcolor="#e5396405"] ;
+4 -> 6 ;
+}
